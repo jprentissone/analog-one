@@ -2,27 +2,27 @@
 <debugInfo>
     <manifest filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/manifest.xml"/>
     <pcToLineNum>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/JonathanWatchFaceApp.mc" id="1" lineNum="26" parent="globals" pc="268435460" symbol="getApp"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/JonathanWatchFaceApp.mc" id="1" lineNum="27" parent="globals" pc="268435470" symbol="getApp"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/JonathanWatchFaceView.mc" id="2" lineNum="6" parent="globals/JonathanWatchFaceView" pc="268435481" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceApp.mc" id="1" lineNum="26" parent="globals" pc="268435460" symbol="getApp"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceApp.mc" id="1" lineNum="27" parent="globals" pc="268435470" symbol="getApp"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="2" lineNum="6" parent="globals/JonathanWatchFaceView" pc="268435481" symbol="&lt;init&gt;"/>
         <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/bin/gen/006-B4536-00/source/Rez.mcgen" id="3" lineNum="7" parent="globals/Rez" pc="268435493" symbol="&lt;init&gt;"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/JonathanWatchFaceApp.mc" id="4" lineNum="5" parent="globals/JonathanWatchFaceApp" pc="268435513" symbol="&lt;init&gt;"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/JonathanWatchFaceView.mc" id="7" lineNum="13" parent="globals/JonathanWatchFaceView" pc="268435525" symbol="onLayout"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/JonathanWatchFaceView.mc" id="7" lineNum="14" parent="globals/JonathanWatchFaceView" pc="268435527" symbol="onLayout"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/JonathanWatchFaceView.mc" id="9" lineNum="8" parent="globals/JonathanWatchFaceView" pc="268435561" symbol="initialize"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/JonathanWatchFaceView.mc" id="9" lineNum="9" parent="globals/JonathanWatchFaceView" pc="268435563" symbol="initialize"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/JonathanWatchFaceView.mc" id="11" lineNum="24" parent="globals/JonathanWatchFaceView" pc="268435576" symbol="onUpdate"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/JonathanWatchFaceView.mc" id="11" lineNum="26" parent="globals/JonathanWatchFaceView" pc="268435579" symbol="onUpdate"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/JonathanWatchFaceView.mc" id="11" lineNum="27" parent="globals/JonathanWatchFaceView" pc="268435591" symbol="onUpdate"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/JonathanWatchFaceView.mc" id="11" lineNum="28" parent="globals/JonathanWatchFaceView" pc="268435645" symbol="onUpdate"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/JonathanWatchFaceView.mc" id="11" lineNum="29" parent="globals/JonathanWatchFaceView" pc="268435669" symbol="onUpdate"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/JonathanWatchFaceView.mc" id="11" lineNum="32" parent="globals/JonathanWatchFaceView" pc="268435681" symbol="onUpdate"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/JonathanWatchFaceApp.mc" id="12" lineNum="12" parent="globals/JonathanWatchFaceApp" pc="268435702" symbol="onStart"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/JonathanWatchFaceApp.mc" id="13" lineNum="20" parent="globals/JonathanWatchFaceApp" pc="268435705" symbol="getInitialView"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/JonathanWatchFaceApp.mc" id="13" lineNum="21" parent="globals/JonathanWatchFaceApp" pc="268435707" symbol="getInitialView"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/JonathanWatchFaceApp.mc" id="14" lineNum="7" parent="globals/JonathanWatchFaceApp" pc="268435733" symbol="initialize"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/JonathanWatchFaceApp.mc" id="14" lineNum="8" parent="globals/JonathanWatchFaceApp" pc="268435735" symbol="initialize"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/JonathanWatchFaceApp.mc" id="15" lineNum="16" parent="globals/JonathanWatchFaceApp" pc="268435748" symbol="onStop"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceApp.mc" id="4" lineNum="5" parent="globals/JonathanWatchFaceApp" pc="268435513" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="7" lineNum="13" parent="globals/JonathanWatchFaceView" pc="268435525" symbol="onLayout"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="7" lineNum="14" parent="globals/JonathanWatchFaceView" pc="268435527" symbol="onLayout"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="9" lineNum="8" parent="globals/JonathanWatchFaceView" pc="268435561" symbol="initialize"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="9" lineNum="9" parent="globals/JonathanWatchFaceView" pc="268435563" symbol="initialize"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="11" lineNum="24" parent="globals/JonathanWatchFaceView" pc="268435576" symbol="onUpdate"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="11" lineNum="26" parent="globals/JonathanWatchFaceView" pc="268435579" symbol="onUpdate"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="11" lineNum="27" parent="globals/JonathanWatchFaceView" pc="268435591" symbol="onUpdate"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="11" lineNum="28" parent="globals/JonathanWatchFaceView" pc="268435645" symbol="onUpdate"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="11" lineNum="29" parent="globals/JonathanWatchFaceView" pc="268435669" symbol="onUpdate"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="11" lineNum="32" parent="globals/JonathanWatchFaceView" pc="268435681" symbol="onUpdate"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceApp.mc" id="12" lineNum="12" parent="globals/JonathanWatchFaceApp" pc="268435702" symbol="onStart"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceApp.mc" id="13" lineNum="20" parent="globals/JonathanWatchFaceApp" pc="268435705" symbol="getInitialView"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceApp.mc" id="13" lineNum="21" parent="globals/JonathanWatchFaceApp" pc="268435707" symbol="getInitialView"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceApp.mc" id="14" lineNum="7" parent="globals/JonathanWatchFaceApp" pc="268435733" symbol="initialize"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceApp.mc" id="14" lineNum="8" parent="globals/JonathanWatchFaceApp" pc="268435735" symbol="initialize"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceApp.mc" id="15" lineNum="16" parent="globals/JonathanWatchFaceApp" pc="268435748" symbol="onStop"/>
         <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/bin/gen/006-B4536-00/source/Rez.mcgen" id="16" lineNum="13" parent="globals/Rez/Layouts" pc="268435751" symbol="WatchFace"/>
         <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/bin/gen/006-B4536-00/source/Rez.mcgen" id="16" lineNum="14" parent="globals/Rez/Layouts" pc="268435762" symbol="WatchFace"/>
         <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/bin/gen/006-B4536-00/source/Rez.mcgen" id="16" lineNum="16" parent="globals/Rez/Layouts" pc="268435878" symbol="WatchFace"/>
