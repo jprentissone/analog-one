@@ -15,83 +15,93 @@ class JonathanWatchFaceView extends WatchUi.WatchFace {
     static
     <init> {
     }
-    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc"; @line = 8; @position = 4; @symbol_vardef = [_timeRenderer,8,4,17]; @symbol_type<0> = [TimeRenderer,8,21,33]; ]
+    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc"; @line = 8; @position = 8; @symbol_vardef = [_timeRenderer,8,8,21]; @symbol_type<0> = [TimeRenderer,8,25,37]; ]
     var _timeRenderer as TimeRenderer;
-    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc"; @line = 9; @position = 4; @symbol_vardef = [_dataManager,9,4,16]; @symbol_type<0> = [DataManager,9,20,31]; ]
+    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc"; @line = 9; @position = 8; @symbol_vardef = [_dataManager,9,8,20]; @symbol_type<0> = [DataManager,9,24,35]; ]
     var _dataManager as DataManager;
-    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc"; @line = 11; @symbol_functiondef = [initialize,11,13,23]; ]
+    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc"; @line = 10; @position = 8; @symbol_vardef = [_layoutManager,10,8,22]; @symbol_type<0> = [LayoutManager,10,26,39]; ]
+    var _layoutManager as LayoutManager;
+    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc"; @line = 12; @symbol_functiondef = [initialize,12,13,23]; ]
     function initialize() as Void {
-_Users_craghopper_Documents_Garmin_JonathanWatchFace_source_app_JonathanWatchFaceView_mc_11_26_19_0_start:
-[ "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" 13 4 ]
-        symbol [ WatchFace %tmp.2 13 4 13 ];
+_Users_craghopper_Documents_Garmin_JonathanWatchFace_source_app_JonathanWatchFaceView_mc_12_26_22_4_start:
+[ "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" 13 8 ]
+        symbol [ WatchFace %tmp.2 13 8 17 ];
         %tmp.2 = getv ? :WatchFace;
-        symbol [ initialize %tmp.3 13 14 24 ];
+        symbol [ initialize %tmp.3 13 18 28 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-[ "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" 15 4 ]
-        symbol [ DataManager %tmp.7 15 23 34 ];
+[ "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" 15 8 ]
+        symbol [ DataManager %tmp.7 15 27 38 ];
         %tmp.7 = getv ? :DataManager;
         %tmp.4 = newc %tmp.7 ();
-        symbol [ _dataManager ? 15 4 16 ];
+        symbol [ _dataManager ? 15 8 20 ];
         putv self :_dataManager %tmp.4;
-[ "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" 16 4 ]
-        symbol [ TimeRenderer %tmp.11 16 24 36 ];
-        %tmp.11 = getv ? :TimeRenderer;
-        symbol [ _dataManager %tmp.13 16 37 49 ];
-        %tmp.13 = getv ? :_dataManager;
-        %tmp.8 = newc %tmp.11 (%tmp.13);
-        symbol [ _timeRenderer ? 16 4 17 ];
-        putv self :_timeRenderer %tmp.8;
-_Users_craghopper_Documents_Garmin_JonathanWatchFace_source_app_JonathanWatchFaceView_mc_11_26_19_0_stop:
+[ "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" 16 8 ]
+        symbol [ LayoutManager %tmp.11 16 29 42 ];
+        %tmp.11 = getv ? :LayoutManager;
+        %tmp.8 = newc %tmp.11 ();
+        symbol [ _layoutManager ? 16 8 22 ];
+        putv self :_layoutManager %tmp.8;
+[ "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" 18 8 ]
+        symbol [ TimeRenderer %tmp.15 18 28 40 ];
+        %tmp.15 = getv ? :TimeRenderer;
+        symbol [ _dataManager %tmp.17 19 12 24 ];
+        %tmp.17 = getv ? :_dataManager;
+        symbol [ _layoutManager %tmp.19 20 12 26 ];
+        %tmp.19 = getv ? :_layoutManager;
+        %tmp.12 = newc %tmp.15 (%tmp.17, %tmp.19);
+        symbol [ _timeRenderer ? 18 8 21 ];
+        putv self :_timeRenderer %tmp.12;
+_Users_craghopper_Documents_Garmin_JonathanWatchFace_source_app_JonathanWatchFaceView_mc_12_26_22_4_stop:
     }
-    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc"; @line = 22; @symbol_functiondef = [onLayout,22,13,21]; @symbol_param<0> = [dc,22,22,24]; @symbol_param<0>_type<0> = [Dc,22,28,30]; ]
+    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc"; @line = 25; @symbol_functiondef = [onLayout,25,13,21]; @symbol_param<0> = [dc,25,22,24]; @symbol_param<0>_type<0> = [Dc,25,28,30]; ]
     function onLayout(dc as Dc) as Void {
-_Users_craghopper_Documents_Garmin_JonathanWatchFace_source_app_JonathanWatchFaceView_mc_22_40_24_4_start:
-[ "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" 23 8 ]
+_Users_craghopper_Documents_Garmin_JonathanWatchFace_source_app_JonathanWatchFaceView_mc_25_40_27_4_start:
+[ "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" 26 8 ]
         %tmp.1 = self;
-        symbol [ setLayout %tmp.2 23 8 17 ];
+        symbol [ setLayout %tmp.2 26 8 17 ];
         %tmp.2 = getv function %tmp.1 :setLayout;
-        symbol [ Rez %tmp.4 23 18 21 ];
+        symbol [ Rez %tmp.4 26 18 21 ];
         %tmp.4 = getv ? :Rez;
-        symbol [ Layouts %tmp.5 23 22 29 ];
+        symbol [ Layouts %tmp.5 26 22 29 ];
         %tmp.5 = getv %tmp.4 :Layouts;
-        symbol [ WatchFace %tmp.6 23 30 39 ];
+        symbol [ WatchFace %tmp.6 26 30 39 ];
         %tmp.6 = getv function %tmp.5 :WatchFace;
         %tmp.7 = lgetv %dc;
-        symbol [ dc %tmp.7 23 40 42 ];
+        symbol [ dc %tmp.7 26 40 42 ];
         %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
         invoke %tmp.1 %tmp.2(%tmp.8);
-_Users_craghopper_Documents_Garmin_JonathanWatchFace_source_app_JonathanWatchFaceView_mc_22_40_24_4_stop:
+_Users_craghopper_Documents_Garmin_JonathanWatchFace_source_app_JonathanWatchFaceView_mc_25_40_27_4_stop:
     }
     [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc"; @line = 29; @symbol_functiondef = [onShow,29,13,19]; ]
     function onShow() as Void {
     }
     [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc"; @line = 33; @symbol_functiondef = [onUpdate,33,13,21]; @symbol_param<0> = [dc,33,22,24]; @symbol_param<0>_type<0> = [Dc,33,28,30]; ]
     function onUpdate(dc as Dc) as Void {
-_Users_craghopper_Documents_Garmin_JonathanWatchFace_source_app_JonathanWatchFaceView_mc_33_40_39_0_start:
-[ "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" 35 4 ]
+_Users_craghopper_Documents_Garmin_JonathanWatchFace_source_app_JonathanWatchFaceView_mc_33_40_36_4_start:
+[ "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" 34 8 ]
         %tmp.1 = lgetv %dc;
-        symbol [ dc %tmp.1 35 4 6 ];
-        symbol [ clear %tmp.2 35 7 12 ];
+        symbol [ dc %tmp.1 34 8 10 ];
+        symbol [ clear %tmp.2 34 11 16 ];
         %tmp.2 = getv function %tmp.1 :clear;
         invoke %tmp.1 %tmp.2();
-[ "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" 37 4 ]
-        symbol [ _timeRenderer %tmp.4 37 4 17 ];
+[ "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" 35 8 ]
+        symbol [ _timeRenderer %tmp.4 35 8 21 ];
         %tmp.4 = getv ? :_timeRenderer;
-        symbol [ draw %tmp.5 37 18 22 ];
+        symbol [ draw %tmp.5 35 22 26 ];
         %tmp.5 = getv function %tmp.4 :draw;
         %tmp.6 = lgetv %dc;
-        symbol [ dc %tmp.6 37 23 25 ];
+        symbol [ dc %tmp.6 35 27 29 ];
         invoke %tmp.4 %tmp.5(%tmp.6);
-_Users_craghopper_Documents_Garmin_JonathanWatchFace_source_app_JonathanWatchFaceView_mc_33_40_39_0_stop:
+_Users_craghopper_Documents_Garmin_JonathanWatchFace_source_app_JonathanWatchFaceView_mc_33_40_36_4_stop:
     }
-    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc"; @line = 44; @symbol_functiondef = [onHide,44,13,19]; ]
+    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc"; @line = 38; @symbol_functiondef = [onHide,38,13,19]; ]
     function onHide() as Void {
     }
-    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc"; @line = 48; @symbol_functiondef = [onExitSleep,48,13,24]; ]
+    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc"; @line = 42; @symbol_functiondef = [onExitSleep,42,13,24]; ]
     function onExitSleep() as Void {
     }
-    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc"; @line = 52; @symbol_functiondef = [onEnterSleep,52,13,25]; ]
+    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc"; @line = 46; @symbol_functiondef = [onEnterSleep,46,13,25]; ]
     function onEnterSleep() as Void {
     }
 }

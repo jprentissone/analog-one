@@ -1,0 +1,46 @@
+[ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/core/LayoutManager/LayoutManager.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Graphics,1,14,22]; ]
+import Toybox.Graphics;
+[ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/core/LayoutManager/LayoutManager.mc"; @line = 3; @symbol_classdef = [LayoutManager,3,6,19]; ]
+class LayoutManager {
+    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/core/LayoutManager/LayoutManager.mc"; @line = 3; ]
+    <init> {
+    }
+    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/core/LayoutManager/LayoutManager.mc"; @line = 3; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/core/LayoutManager/LayoutManager.mc"; @line = 5; @symbol_functiondef = [initialize,5,13,23]; ]
+    function initialize() as Void {
+    }
+    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/core/LayoutManager/LayoutManager.mc"; @line = 8; @symbol_functiondef = [getCenterX,8,13,23]; @symbol_param<0> = [dc,8,24,26]; @symbol_param<0>_type<0> = [Graphics,8,30,38]; @symbol_param<0>_type<1> = [Dc,8,39,41]; ]
+    function getCenterX(dc as Graphics.Dc) {
+_Users_craghopper_Documents_Garmin_JonathanWatchFace_source_core_LayoutManager_LayoutManager_mc_8_43_10_4_start:
+[ "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/core/LayoutManager/LayoutManager.mc" 9 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 9 15 17 ];
+        symbol [ getWidth %tmp.2 9 18 26 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = 2;
+        %tmp.5 = div %tmp.3 %tmp.4;
+        ret %tmp.5;
+_Users_craghopper_Documents_Garmin_JonathanWatchFace_source_core_LayoutManager_LayoutManager_mc_8_43_10_4_stop:
+    }
+    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/core/LayoutManager/LayoutManager.mc"; @line = 12; @symbol_functiondef = [getCenterY,12,13,23]; @symbol_param<0> = [dc,12,24,26]; @symbol_param<0>_type<0> = [Graphics,12,30,38]; @symbol_param<0>_type<1> = [Dc,12,39,41]; ]
+    function getCenterY(dc as Graphics.Dc) {
+_Users_craghopper_Documents_Garmin_JonathanWatchFace_source_core_LayoutManager_LayoutManager_mc_12_43_14_4_start:
+[ "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/core/LayoutManager/LayoutManager.mc" 13 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 13 15 17 ];
+        symbol [ getHeight %tmp.2 13 18 27 ];
+        %tmp.2 = getv function %tmp.1 :getHeight;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = 2;
+        %tmp.5 = div %tmp.3 %tmp.4;
+        ret %tmp.5;
+_Users_craghopper_Documents_Garmin_JonathanWatchFace_source_core_LayoutManager_LayoutManager_mc_12_43_14_4_stop:
+    }
+}
+[ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/core/LayoutManager/LayoutManager.mc"; @line = 1; ]
+<init> {
+}

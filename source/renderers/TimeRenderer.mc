@@ -3,11 +3,15 @@ import Toybox.Lang;
 
 class TimeRenderer {
 
-    var _dataManager;
+	var _dataManager;
+	var _layoutManager;
 
-    function initialize(dataManager) {
-        _dataManager = dataManager;
-    }
+    function initialize(dataManager, layoutManager) {
+
+    _dataManager = dataManager;
+    _layoutManager = layoutManager;
+
+}
 
     function draw(dc as Dc) as Void {
 
@@ -24,11 +28,11 @@ class TimeRenderer {
         dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_TRANSPARENT);
 
         dc.drawText(
-            dc.getWidth()/2,
-            dc.getHeight()/2,
-            Graphics.FONT_SMALL,
-            timeString,
-            Graphics.TEXT_JUSTIFY_CENTER
-        );
+    _layoutManager.getCenterX(dc),
+    _layoutManager.getCenterY(dc),
+    Graphics.FONT_SMALL,
+    timeString,
+    Graphics.TEXT_JUSTIFY_CENTER
+);
     }
 }
