@@ -4,16 +4,18 @@ import Toybox.System;
 import Toybox.WatchUi;
 
 class JonathanWatchFaceView extends WatchUi.WatchFace {
-
-    var _timeRenderer as TimeRenderer;
-    var _dataManager as DataManager;
-    var _layoutManager as LayoutManager;
+	
+	var _timeRenderer as TimeRenderer;
+	var _dataManager as DataManager;
+	var _layoutManager as LayoutManager;
+	var _backgroundRenderer as BackgroundRenderer;
 
     function initialize() {
         WatchFace.initialize();
 
         _dataManager = new DataManager();
         _layoutManager = new LayoutManager();
+	_backgroundRenderer = new BackgroundRenderer();
 
         _timeRenderer = new TimeRenderer(
             _dataManager,
@@ -29,14 +31,22 @@ class JonathanWatchFaceView extends WatchUi.WatchFace {
     function onShow() as Void {
     }
 
+
+
     // Update the view
-    function onUpdate(dc as Dc) as Void {
-        dc.clear();
-        _timeRenderer.draw(dc);
-    }
+	function onUpdate(dc as Dc) as Void {
+
+    _backgroundRenderer.draw(dc);
+
+    _timeRenderer.draw(dc);
+}
+
+
 
     function onHide() as Void {
     }
+
+
 
     // The user has just looked at their watch.
     function onExitSleep() as Void {
