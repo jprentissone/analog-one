@@ -7,32 +7,43 @@
         <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="2" lineNum="6" parent="globals/JonathanWatchFaceView" pc="268435481" symbol="&lt;init&gt;"/>
         <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/bin/gen/006-B4536-00/source/Rez.mcgen" id="3" lineNum="7" parent="globals/Rez" pc="268435493" symbol="&lt;init&gt;"/>
         <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceApp.mc" id="4" lineNum="5" parent="globals/JonathanWatchFaceApp" pc="268435513" symbol="&lt;init&gt;"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="7" lineNum="13" parent="globals/JonathanWatchFaceView" pc="268435525" symbol="onLayout"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="7" lineNum="14" parent="globals/JonathanWatchFaceView" pc="268435527" symbol="onLayout"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="9" lineNum="8" parent="globals/JonathanWatchFaceView" pc="268435561" symbol="initialize"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="9" lineNum="9" parent="globals/JonathanWatchFaceView" pc="268435563" symbol="initialize"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="11" lineNum="24" parent="globals/JonathanWatchFaceView" pc="268435576" symbol="onUpdate"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="11" lineNum="26" parent="globals/JonathanWatchFaceView" pc="268435579" symbol="onUpdate"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="11" lineNum="27" parent="globals/JonathanWatchFaceView" pc="268435591" symbol="onUpdate"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="11" lineNum="28" parent="globals/JonathanWatchFaceView" pc="268435645" symbol="onUpdate"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="11" lineNum="29" parent="globals/JonathanWatchFaceView" pc="268435669" symbol="onUpdate"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="11" lineNum="32" parent="globals/JonathanWatchFaceView" pc="268435681" symbol="onUpdate"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceApp.mc" id="12" lineNum="12" parent="globals/JonathanWatchFaceApp" pc="268435702" symbol="onStart"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceApp.mc" id="13" lineNum="20" parent="globals/JonathanWatchFaceApp" pc="268435705" symbol="getInitialView"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceApp.mc" id="13" lineNum="21" parent="globals/JonathanWatchFaceApp" pc="268435707" symbol="getInitialView"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceApp.mc" id="14" lineNum="7" parent="globals/JonathanWatchFaceApp" pc="268435733" symbol="initialize"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceApp.mc" id="14" lineNum="8" parent="globals/JonathanWatchFaceApp" pc="268435735" symbol="initialize"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceApp.mc" id="15" lineNum="16" parent="globals/JonathanWatchFaceApp" pc="268435748" symbol="onStop"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/bin/gen/006-B4536-00/source/Rez.mcgen" id="16" lineNum="13" parent="globals/Rez/Layouts" pc="268435751" symbol="WatchFace"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/bin/gen/006-B4536-00/source/Rez.mcgen" id="16" lineNum="14" parent="globals/Rez/Layouts" pc="268435762" symbol="WatchFace"/>
-        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/bin/gen/006-B4536-00/source/Rez.mcgen" id="16" lineNum="16" parent="globals/Rez/Layouts" pc="268435878" symbol="WatchFace"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="7" lineNum="22" parent="globals/JonathanWatchFaceView" pc="268435525" symbol="onLayout"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="7" lineNum="23" parent="globals/JonathanWatchFaceView" pc="268435527" symbol="onLayout"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="9" lineNum="11" parent="globals/JonathanWatchFaceView" pc="268435561" symbol="initialize"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="9" lineNum="13" parent="globals/JonathanWatchFaceView" pc="268435563" symbol="initialize"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="9" lineNum="15" parent="globals/JonathanWatchFaceView" pc="268435575" symbol="initialize"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="9" lineNum="16" parent="globals/JonathanWatchFaceView" pc="268435600" symbol="initialize"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="11" lineNum="33" parent="globals/JonathanWatchFaceView" pc="268435631" symbol="onUpdate"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="11" lineNum="35" parent="globals/JonathanWatchFaceView" pc="268435633" symbol="onUpdate"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceView.mc" id="11" lineNum="37" parent="globals/JonathanWatchFaceView" pc="268435641" symbol="onUpdate"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/renderers/TimeRenderer.mc" id="12" lineNum="8" parent="globals/TimeRenderer" pc="268435658" symbol="initialize"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/renderers/TimeRenderer.mc" id="12" lineNum="9" parent="globals/TimeRenderer" pc="268435660" symbol="initialize"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/renderers/TimeRenderer.mc" id="13" lineNum="12" parent="globals/TimeRenderer" pc="268435670" symbol="draw"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/renderers/TimeRenderer.mc" id="13" lineNum="14" parent="globals/TimeRenderer" pc="268435673" symbol="draw"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/renderers/TimeRenderer.mc" id="13" lineNum="16" parent="globals/TimeRenderer" pc="268435686" symbol="draw"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/renderers/TimeRenderer.mc" id="13" lineNum="24" parent="globals/TimeRenderer" pc="268435740" symbol="draw"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/renderers/TimeRenderer.mc" id="13" lineNum="26" parent="globals/TimeRenderer" pc="268435756" symbol="draw"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/managers/DataManager.mc" id="14" lineNum="8" parent="globals/DataManager" pc="268435793" symbol="getClockTime"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/managers/DataManager.mc" id="14" lineNum="9" parent="globals/DataManager" pc="268435795" symbol="getClockTime"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceApp.mc" id="16" lineNum="12" parent="globals/JonathanWatchFaceApp" pc="268435806" symbol="onStart"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceApp.mc" id="17" lineNum="20" parent="globals/JonathanWatchFaceApp" pc="268435809" symbol="getInitialView"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceApp.mc" id="17" lineNum="21" parent="globals/JonathanWatchFaceApp" pc="268435811" symbol="getInitialView"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceApp.mc" id="18" lineNum="7" parent="globals/JonathanWatchFaceApp" pc="268435837" symbol="initialize"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceApp.mc" id="18" lineNum="8" parent="globals/JonathanWatchFaceApp" pc="268435839" symbol="initialize"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/app/JonathanWatchFaceApp.mc" id="19" lineNum="16" parent="globals/JonathanWatchFaceApp" pc="268435852" symbol="onStop"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/bin/gen/006-B4536-00/source/Rez.mcgen" id="20" lineNum="13" parent="globals/Rez/Layouts" pc="268435855" symbol="WatchFace"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/bin/gen/006-B4536-00/source/Rez.mcgen" id="20" lineNum="14" parent="globals/Rez/Layouts" pc="268435866" symbol="WatchFace"/>
+        <entry filename="/Users/craghopper/Documents/Garmin/JonathanWatchFace/bin/gen/006-B4536-00/source/Rez.mcgen" id="20" lineNum="16" parent="globals/Rez/Layouts" pc="268435982" symbol="WatchFace"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="8388639" module="true" symbol="Graphics"/>
         <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
-        <entry id="7" object="true" symbol="JonathanWatchFaceView"/>
+        <entry id="9" object="true" symbol="TimeRenderer"/>
+        <entry id="8" object="true" symbol="JonathanWatchFaceView"/>
+        <entry field="true" id="11" symbol="_timeRenderer"/>
         <entry field="true" id="8388611" module="true" symbol="Toybox"/>
-        <entry field="true" id="10" symbol="AppName"/>
+        <entry id="8388714" method="true" symbol="getClockTime"/>
+        <entry field="true" id="14" symbol="AppName"/>
         <entry id="5" module="true" symbol="globals/Rez/Strings"/>
         <entry id="8388648" module="true" symbol="WatchUi"/>
         <entry id="2" module="true" symbol="globals/Rez"/>
@@ -41,20 +52,22 @@
         <entry field="true" id="8389065" symbol="locY"/>
         <entry field="true" id="8389064" symbol="locX"/>
         <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="6" object="true" symbol="DataManager"/>
         <entry id="8389348" symbol="font"/>
         <entry id="8389275" method="true" symbol="getApp"/>
         <entry id="4" module="true" symbol="globals/Rez/Layouts"/>
         <entry id="8389122" method="true" symbol="onLayout"/>
         <entry id="8389376" method="true" symbol="onEnterSleep"/>
         <entry field="true" id="8389063" symbol="identifier"/>
-        <entry id="6" object="true" symbol="JonathanWatchFaceApp"/>
+        <entry id="7" object="true" symbol="JonathanWatchFaceApp"/>
         <entry id="8389349" symbol="justification"/>
         <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
         <entry id="8389377" method="true" symbol="onExitSleep"/>
         <entry id="8388644" module="true" symbol="System"/>
         <entry id="8388769" module="true" object="true" symbol="Rez"/>
         <entry id="8388640" module="true" symbol="Lang"/>
-        <entry field="true" id="9" symbol="LauncherIcon"/>
+        <entry id="8389068" method="true" symbol="draw"/>
+        <entry field="true" id="13" symbol="LauncherIcon"/>
         <entry id="8388610" symbol="statics"/>
         <entry id="8389123" method="true" symbol="onShow"/>
         <entry id="8389350" module="true" symbol="globals"/>
@@ -64,18 +77,20 @@
         <entry id="8389280" method="true" symbol="getInitialView"/>
         <entry id="8389281" method="true" symbol="onStop"/>
         <entry field="true" id="8389347" symbol="color"/>
-        <entry id="8" module="true" symbol="Layouts"/>
+        <entry id="12" module="true" symbol="Layouts"/>
+        <entry field="true" id="10" symbol="_dataManager"/>
         <entry id="8389125" method="true" symbol="onHide"/>
         <entry id="8388635" module="true" symbol="Application"/>
     </symbolTable>
     <localVars>
         <entry arg="true" endPc="268435560" name="dc" stackId="1" startPc="268435525"/>
-        <entry arg="true" endPc="268435701" name="dc" stackId="1" startPc="268435576"/>
-        <entry endPc="268435700" name="clockTime" stackId="2" startPc="268435579"/>
-        <entry endPc="268435700" name="timeString" stackId="3" startPc="268435579"/>
-        <entry endPc="268435700" name="view" stackId="4" startPc="268435579"/>
-        <entry arg="true" endPc="268435887" name="dc" stackId="1" startPc="268435751"/>
-        <entry endPc="268435887" name="rez_cmp_local_text_TimeLabel" stackId="2" startPc="268435762"/>
+        <entry arg="true" endPc="268435657" name="dc" stackId="1" startPc="268435631"/>
+        <entry arg="true" endPc="268435669" name="dataManager" stackId="1" startPc="268435658"/>
+        <entry arg="true" endPc="268435792" name="dc" stackId="1" startPc="268435670"/>
+        <entry endPc="268435791" name="clockTime" stackId="2" startPc="268435673"/>
+        <entry endPc="268435791" name="timeString" stackId="3" startPc="268435673"/>
+        <entry arg="true" endPc="268435991" name="dc" stackId="1" startPc="268435855"/>
+        <entry endPc="268435991" name="rez_cmp_local_text_TimeLabel" stackId="2" startPc="268435866"/>
     </localVars>
     <deviceInfo deviceVersion="361e256b74f66f7ba19da23c7ec7c7f06ab33c5c" partNumber="006-B4536-00"/>
     <annotations>
@@ -84,12 +99,14 @@
     </annotations>
     <dataEntryOffsetMappings>
         <dataEntry label="globals" offset="58" parentId="" symbolId="globals" type="module"/>
-        <dataEntry label="globals/JonathanWatchFaceView" offset="125" parentId="globals" symbolId="JonathanWatchFaceView" type="class"/>
-        <dataEntry label="globals/Rez" offset="223" parentId="globals" symbolId="Rez" type="module"/>
-        <dataEntry label="globals/JonathanWatchFaceApp" offset="276" parentId="globals" symbolId="JonathanWatchFaceApp" type="class"/>
-        <dataEntry label="globals/Rez/Drawables" offset="347" parentId="Rez" symbolId="Drawables" type="module"/>
-        <dataEntry label="globals/Rez/Layouts" offset="382" parentId="Rez" symbolId="Layouts" type="module"/>
-        <dataEntry label="globals/Rez/Strings" offset="417" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/JonathanWatchFaceView" offset="143" parentId="globals" symbolId="JonathanWatchFaceView" type="class"/>
+        <dataEntry label="globals/Rez" offset="259" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/TimeRenderer" offset="312" parentId="globals" symbolId="TimeRenderer" type="class"/>
+        <dataEntry label="globals/DataManager" offset="374" parentId="globals" symbolId="DataManager" type="class"/>
+        <dataEntry label="globals/JonathanWatchFaceApp" offset="427" parentId="globals" symbolId="JonathanWatchFaceApp" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="498" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="533" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="568" parentId="Rez" symbolId="Strings" type="module"/>
     </dataEntryOffsetMappings>
     <functions>
         <functionEntry accessMode="public" endPc="268435480" name="getApp" startPc="268435460">
@@ -99,6 +116,12 @@
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" endPc="268435512" name="&lt;init&gt;" parent="Rez" startPc="268435493">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="TimeRenderer">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="DataManager">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" endPc="268435524" name="&lt;init&gt;" parent="JonathanWatchFaceApp" startPc="268435513">
@@ -117,13 +140,13 @@
         <functionEntry accessMode="public" name="onEnterSleep" parent="JonathanWatchFaceView">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435575" name="initialize" parent="JonathanWatchFaceView" startPc="268435561">
+        <functionEntry accessMode="public" endPc="268435630" name="initialize" parent="JonathanWatchFaceView" startPc="268435561">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="onHide" parent="JonathanWatchFaceView">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435701" name="onUpdate" parent="JonathanWatchFaceView" startPc="268435576">
+        <functionEntry accessMode="public" endPc="268435657" name="onUpdate" parent="JonathanWatchFaceView" startPc="268435631">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
@@ -136,21 +159,35 @@
         <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435704" name="onStart" parent="JonathanWatchFaceApp" startPc="268435702">
+        <functionEntry accessMode="public" endPc="268435669" name="initialize" parent="TimeRenderer" startPc="268435658">
+            <param id="dataManager"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435792" name="draw" parent="TimeRenderer" startPc="268435670">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435805" name="getClockTime" parent="DataManager" startPc="268435793">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="DataManager">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435808" name="onStart" parent="JonathanWatchFaceApp" startPc="268435806">
             <param id="state"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435732" name="getInitialView" parent="JonathanWatchFaceApp" startPc="268435705">
+        <functionEntry accessMode="public" endPc="268435836" name="getInitialView" parent="JonathanWatchFaceApp" startPc="268435809">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435747" name="initialize" parent="JonathanWatchFaceApp" startPc="268435733">
+        <functionEntry accessMode="public" endPc="268435851" name="initialize" parent="JonathanWatchFaceApp" startPc="268435837">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435750" name="onStop" parent="JonathanWatchFaceApp" startPc="268435748">
+        <functionEntry accessMode="public" endPc="268435854" name="onStop" parent="JonathanWatchFaceApp" startPc="268435852">
             <param id="state"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435887" name="WatchFace" parent="Layouts" startPc="268435751">
+        <functionEntry accessMode="public" endPc="268435991" name="WatchFace" parent="Layouts" startPc="268435855">
             <param id="dc"/>
             <documentation/>
         </functionEntry>

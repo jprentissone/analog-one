@@ -1,0 +1,30 @@
+[ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/managers/DataManager.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [System,1,14,20]; ]
+import Toybox.System;
+[ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/managers/DataManager.mc"; @line = 3; @symbol_classdef = [DataManager,3,6,17]; ]
+class DataManager {
+    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/managers/DataManager.mc"; @line = 3; ]
+    <init> {
+    }
+    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/managers/DataManager.mc"; @line = 3; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/managers/DataManager.mc"; @line = 5; @symbol_functiondef = [initialize,5,13,23]; ]
+    function initialize() as Void {
+    }
+    [ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/managers/DataManager.mc"; @line = 8; @symbol_functiondef = [getClockTime,8,13,25]; ]
+    function getClockTime() {
+_Users_craghopper_Documents_Garmin_JonathanWatchFace_source_managers_DataManager_mc_8_28_10_4_start:
+[ "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/managers/DataManager.mc" 9 8 ]
+        symbol [ System %tmp.1 9 15 21 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ getClockTime %tmp.2 9 22 34 ];
+        %tmp.2 = getv function %tmp.1 :getClockTime;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        ret %tmp.3;
+_Users_craghopper_Documents_Garmin_JonathanWatchFace_source_managers_DataManager_mc_8_28_10_4_stop:
+    }
+}
+[ @file = "/Users/craghopper/Documents/Garmin/JonathanWatchFace/source/managers/DataManager.mc"; @line = 1; ]
+<init> {
+}

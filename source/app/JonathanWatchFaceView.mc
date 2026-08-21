@@ -5,9 +5,18 @@ import Toybox.WatchUi;
 
 class JonathanWatchFaceView extends WatchUi.WatchFace {
 
+var _timeRenderer as TimeRenderer;
+var _dataManager as DataManager;
+
     function initialize() {
-        WatchFace.initialize();
-    }
+
+    WatchFace.initialize();
+
+    _dataManager = new DataManager();
+    _timeRenderer = new TimeRenderer(_dataManager);
+
+
+}
 
     // Load your resources here
     function onLayout(dc as Dc) as Void {
@@ -22,15 +31,12 @@ class JonathanWatchFaceView extends WatchUi.WatchFace {
 
     // Update the view
     function onUpdate(dc as Dc) as Void {
-        // Get and show the current time
-        var clockTime = System.getClockTime();
-        var timeString = Lang.format("$1$:$2$", [clockTime.hour, clockTime.min.format("%02d")]);
-        var view = View.findDrawableById("TimeLabel") as Text;
-        view.setText(timeString);
 
-        // Call the parent onUpdate function to redraw the layout
-        View.onUpdate(dc);
-    }
+    dc.clear();
+
+    _timeRenderer.draw(dc);
+
+}
 
     // Called when this View is removed from the screen. Save the
     // state of this View here. This includes freeing resources from
