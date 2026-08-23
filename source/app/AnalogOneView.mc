@@ -3,7 +3,7 @@ import Toybox.Lang;
 import Toybox.System;
 import Toybox.WatchUi;
 
-class JonathanWatchFaceView extends WatchUi.WatchFace {
+class AnalogOneView extends WatchUi.WatchFace {
     var _timeRenderer as TimeRenderer;
     var _dataManager as DataManager;
     var _layoutManager as LayoutManager;

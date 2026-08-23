@@ -2,7 +2,7 @@ import Toybox.Application;
 import Toybox.Lang;
 import Toybox.WatchUi;
 
-class JonathanWatchFaceApp extends Application.AppBase {
+class AnalogOneApp extends Application.AppBase {
 
     function initialize() {
         AppBase.initialize();
@@ -18,11 +18,11 @@ class JonathanWatchFaceApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() as [Views] or [Views, InputDelegates] {
-        return [ new JonathanWatchFaceView() ];
+        return [ new AnalogOneView() ];
     }
 
 }
 
-function getApp() as JonathanWatchFaceApp {
-    return Application.getApp() as JonathanWatchFaceApp;
+function getApp() as AnalogOneApp {
+    return Application.getApp() as AnalogOneApp;
 }
