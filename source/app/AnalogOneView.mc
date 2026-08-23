@@ -12,18 +12,23 @@ class AnalogOneView extends WatchUi.WatchFace {
     var _handRenderer as HandRenderer;
     var _centerCapRenderer as CenterCapRenderer;
     var _logoRenderer as LogoRenderer;
+    var _themeManager as ThemeManager;
+    var _theme as Theme;
 
     function initialize() {
         WatchFace.initialize();
 
+        _themeManager = new ThemeManager();
+        _theme = _themeManager.getTheme();
+
         _dataManager = new DataManager();
         _layoutManager = new LayoutManager();
-        _backgroundRenderer = new BackgroundRenderer();
-        _dialRenderer = new DialRenderer();
-        _handRenderer = new HandRenderer();
+        _backgroundRenderer = new BackgroundRenderer(_theme);
+        _dialRenderer = new DialRenderer(_theme);
+        _handRenderer = new HandRenderer(_theme);
         _timeRenderer = new TimeRenderer(_dataManager, _layoutManager);
-        _centerCapRenderer = new CenterCapRenderer();
-        _logoRenderer = new LogoRenderer();
+        _centerCapRenderer = new CenterCapRenderer(_theme);
+        _logoRenderer = new LogoRenderer(_theme);
     }
 
     // Load your resources here

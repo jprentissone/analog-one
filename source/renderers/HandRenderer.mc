@@ -58,12 +58,11 @@ class HandRenderer {
     // Colors
     // ==========================================================
 
-    const BORDER_COLOR = Graphics.COLOR_DK_GRAY;
-    const HAND_COLOR = Graphics.COLOR_WHITE;
-    const WINDOW_COLOR = Graphics.COLOR_BLACK;
-    const SECOND_HAND_COLOR = Graphics.COLOR_RED;
+    var _theme as Theme;
 
-    function initialize() {}
+    function initialize(theme as Theme) {
+        _theme = theme;
+    }
 
     function draw(dc as Graphics.Dc) {
         var centerX = dc.getWidth() / 2;
@@ -140,7 +139,7 @@ class HandRenderer {
     }
 
     function drawSecondHand(dc, centerX, centerY, angle) {
-        dc.setColor(SECOND_HAND_COLOR, Graphics.COLOR_TRANSPARENT);
+        dc.setColor(_theme.accentColor, Graphics.COLOR_TRANSPARENT);
 
         // Front tip
         var tip = polarToPoint(centerX, centerY, SECOND_HAND_LENGTH, angle);
@@ -184,7 +183,7 @@ class HandRenderer {
             length,
             outerWidth,
             angle,
-            BORDER_COLOR
+            _theme.handBorderColor
         );
 
         // ------------------------------------------------------
@@ -199,7 +198,7 @@ class HandRenderer {
             length - BORDER_GAP,
             whiteWidth,
             angle,
-            HAND_COLOR
+            _theme.handColor
         );
 
         // ------------------------------------------------------
@@ -337,7 +336,7 @@ class HandRenderer {
             angle + 90
         );
 
-        dc.setColor(WINDOW_COLOR, Graphics.COLOR_TRANSPARENT);
+        dc.setColor(_theme.backgroundColor, Graphics.COLOR_TRANSPARENT);
 
         dc.fillPolygon([
             [startLeft[0], startLeft[1]],

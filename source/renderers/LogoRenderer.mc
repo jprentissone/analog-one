@@ -1,16 +1,19 @@
 import Toybox.Graphics;
 
 class LogoRenderer {
-    const EMBLEM_COLOR = 0x202020;
     const LINE_WIDTH = 6;
 
-    function initialize() {}
+    var _theme as Theme;
+
+    function initialize(theme as Theme) {
+        _theme = theme;
+    }
 
     function draw(dc as Graphics.Dc) {
         var centerX = dc.getWidth() / 2;
         var centerY = dc.getHeight() / 2;
 
-        dc.setColor(EMBLEM_COLOR, Graphics.COLOR_TRANSPARENT);
+        dc.setColor(_theme.emblemColor, Graphics.COLOR_TRANSPARENT);
 
         dc.setPenWidth(LINE_WIDTH);
 

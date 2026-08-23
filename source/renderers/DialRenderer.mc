@@ -20,7 +20,7 @@ class DialRenderer {
     // Colors
     // ==========================================================
 
-    const DIAL_COLOR = Graphics.COLOR_WHITE;
+    var _theme as Theme;
 
     // ==========================================================
     // Typography
@@ -28,10 +28,12 @@ class DialRenderer {
 
     const DIAL_NUMBER_FONT = Graphics.FONT_XTINY;
 
-    function initialize() {}
+    function initialize(theme as Theme) {
+        _theme = theme;
+    }
 
     function draw(dc as Graphics.Dc) {
-        dc.setColor(DIAL_COLOR, Graphics.COLOR_TRANSPARENT);
+        dc.setColor(_theme.dialColor, Graphics.COLOR_TRANSPARENT);
 
         var centerX = dc.getWidth() / 2;
         var centerY = dc.getHeight() / 2;
