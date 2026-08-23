@@ -1,3 +1,8 @@
+module ThemeIds {
+    const CLASSIC = 0;
+    const SCARLET_NIGHT = 1;
+}
+
 class Theme {
     var backgroundColor;
     var dialColor;

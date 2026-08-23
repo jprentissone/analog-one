@@ -3,8 +3,12 @@ import Toybox.Graphics;
 class ThemeManager {
     var _activeTheme as Theme;
 
-    function initialize() {
-        _activeTheme = createAnalogOneClassic();
+    function initialize(themeId) {
+        if (themeId == ThemeIds.SCARLET_NIGHT) {
+            _activeTheme = createScarletNight();
+        } else {
+            _activeTheme = createAnalogOneClassic();
+        }
     }
 
     function getTheme() as Theme {

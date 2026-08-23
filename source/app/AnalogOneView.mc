@@ -14,11 +14,16 @@ class AnalogOneView extends WatchUi.WatchFace {
     var _logoRenderer as LogoRenderer;
     var _themeManager as ThemeManager;
     var _theme as Theme;
+    var _settingsManager as SettingsManager;
 
     function initialize() {
         WatchFace.initialize();
 
-        _themeManager = new ThemeManager();
+        _settingsManager = new SettingsManager();
+
+        _themeManager = new ThemeManager(_settingsManager.getThemeId());
+
+        _themeManager = new ThemeManager(_settingsManager.getThemeId());
         _theme = _themeManager.getTheme();
 
         _dataManager = new DataManager();
