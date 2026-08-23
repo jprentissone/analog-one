@@ -1,0 +1,9 @@
+# Garmin build output
+bin/
+*.prg
+
+# macOS metadata
+.DS_Store
+
+# VS Code user settings
+.vscode/settings.json
