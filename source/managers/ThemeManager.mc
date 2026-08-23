@@ -1,5 +1,3 @@
-import Toybox.Graphics;
-
 class ThemeManager {
     var _activeTheme as Theme;
 
@@ -17,23 +15,25 @@ class ThemeManager {
 
     function createAnalogOneClassic() as Theme {
         return new Theme(
-            Graphics.COLOR_BLACK, // Background
-            Graphics.COLOR_WHITE, // Dial
-            Graphics.COLOR_WHITE, // Hands
-            Graphics.COLOR_DK_GRAY, // Hand borders
-            Graphics.COLOR_RED, // Accent
-            0x202020 // Ghosted emblem
+            AnalogColors.TRUE_BLACK,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY,
+            AnalogColors.HAND_WHITE,
+            AnalogColors.GRAPHITE,
+            AnalogColors.SCARLET,
+            AnalogColors.GHOST_GRAY
         );
     }
 
     function createScarletNight() as Theme {
         return new Theme(
-            Graphics.COLOR_BLACK, // Background
-            0xcccccc, // Dial
-            Graphics.COLOR_WHITE, // Hands
-            0x660000, // Hand borders
-            Graphics.COLOR_RED, // Accent
-            0x300000 // Ghosted emblem
+            AnalogColors.TRUE_BLACK,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY,
+            AnalogColors.HAND_WHITE,
+            AnalogColors.DARK_SCARLET,
+            AnalogColors.SCARLET,
+            AnalogColors.GHOST_SCARLET
         );
     }
 }

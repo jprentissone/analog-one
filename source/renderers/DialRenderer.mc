@@ -79,6 +79,14 @@ class DialRenderer {
                 angle
             );
 
+            if (isHourMarker(minute)) {
+                dc.setColor(_theme.dialColor, Graphics.COLOR_TRANSPARENT);
+            } else {
+                dc.setColor(
+                    _theme.minuteTrackColor,
+                    Graphics.COLOR_TRANSPARENT
+                );
+            }
             dc.drawLine(
                 outerPoint[0],
                 outerPoint[1],
