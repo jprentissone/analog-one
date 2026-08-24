@@ -18,8 +18,8 @@ class SportsServiceDelegate extends System.ServiceDelegate {
     function onTemporalEvent() as Void {
         Background.registerForTemporalEvent(new Time.Duration(5 * 60));
 
-        var themeId = Application.Properties.getValue("theme");
-        var profileId = CollegeProfileIds.forTheme(themeId);
+        var schoolId = new SettingsManager().getSchoolId();
+        var profileId = CollegeProfileIds.forSchool(schoolId);
         var requestUrl = SPORTS_URL + "?team=" + profileId;
 
         var options = {

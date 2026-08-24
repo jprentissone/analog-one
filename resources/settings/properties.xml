@@ -2,5 +2,6 @@
             xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
 
     <property id="theme" type="number">0</property>
+    <property id="school" type="number">-1</property>
 
 </properties>

@@ -5,24 +5,24 @@ module CollegeProfileIds {
     const PENN_STATE = "penn_state";
     const MICHIGAN_STATE = "michigan_state";
 
-    function forTheme(themeId) {
-        if (themeId == ThemeIds.MAIZE_BLUE) {
+    function forSchool(schoolId) {
+        if (schoolId == SchoolIds.MICHIGAN) {
             return MICHIGAN;
-        } else if (themeId == ThemeIds.NAVY_WHITE) {
+        } else if (schoolId == SchoolIds.PENN_STATE) {
             return PENN_STATE;
-        } else if (themeId == ThemeIds.SPARTAN_GREEN) {
+        } else if (schoolId == SchoolIds.MICHIGAN_STATE) {
             return MICHIGAN_STATE;
         }
 
         return OSU;
     }
 
-    function abbreviationForTheme(themeId) {
-        if (themeId == ThemeIds.MAIZE_BLUE) {
+    function abbreviationForSchool(schoolId) {
+        if (schoolId == SchoolIds.MICHIGAN) {
             return "MICH";
-        } else if (themeId == ThemeIds.NAVY_WHITE) {
+        } else if (schoolId == SchoolIds.PENN_STATE) {
             return "PSU";
-        } else if (themeId == ThemeIds.SPARTAN_GREEN) {
+        } else if (schoolId == SchoolIds.MICHIGAN_STATE) {
             return "MSU";
         }
 

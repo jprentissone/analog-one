@@ -29,16 +29,33 @@ class AnalogOneView extends WatchUi.WatchFace {
 
         _settingsManager = new SettingsManager();
 
-        _themeManager = new ThemeManager(_settingsManager.getThemeId());
-
-        _theme = _themeManager.getTheme();
-
         _dataManager = new DataManager();
         _layoutManager = new LayoutManager();
+        _timeRenderer = new TimeRenderer(_dataManager, _layoutManager);
+
+        _themeManager = new ThemeManager(_settingsManager.getThemeId());
+        _theme = _themeManager.getTheme();
+
         _backgroundRenderer = new BackgroundRenderer(_theme);
         _dialRenderer = new DialRenderer(_theme);
         _handRenderer = new HandRenderer(_theme);
-        _timeRenderer = new TimeRenderer(_dataManager, _layoutManager);
+        _centerCapRenderer = new CenterCapRenderer(_theme);
+        _logoRenderer = new LogoRenderer(_theme);
+
+        _dateRenderer = new DateRenderer(_theme);
+        _stepsRenderer = new StepsRenderer(_theme);
+        _weatherRenderer = new WeatherRenderer(_theme);
+        _batteryRenderer = new BatteryRenderer(_theme);
+        _sportsRenderer = new SportsRenderer(_theme);
+    }
+
+    function reloadSchoolTheme() as Void {
+        _themeManager = new ThemeManager(_settingsManager.getThemeId());
+        _theme = _themeManager.getTheme();
+
+        _backgroundRenderer = new BackgroundRenderer(_theme);
+        _dialRenderer = new DialRenderer(_theme);
+        _handRenderer = new HandRenderer(_theme);
         _centerCapRenderer = new CenterCapRenderer(_theme);
         _logoRenderer = new LogoRenderer(_theme);
 

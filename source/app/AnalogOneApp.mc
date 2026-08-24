@@ -7,18 +7,17 @@ import Toybox.WatchUi;
 
 (:background)
 class AnalogOneApp extends Application.AppBase {
+    var _mainView;
 
     function initialize() {
         AppBase.initialize();
     }
 
     // onStart() is called on application start up
-    function onStart(state as Dictionary?) as Void {
-    }
+    function onStart(state as Dictionary?) as Void {}
 
     // onStop() is called when your application is exiting
-    function onStop(state as Dictionary?) as Void {
-    }
+    function onStop(state as Dictionary?) as Void {}
 
     // Return the initial view of your application here
     function getInitialView() as [Views] or [Views, InputDelegates] {
@@ -33,7 +32,16 @@ class AnalogOneApp extends Application.AppBase {
             Background.registerForTemporalEvent(Time.now());
         }
 
-        return [ new AnalogOneView() ];
+        _mainView = new AnalogOneView();
+        return [_mainView];
+    }
+
+    function onSettingsChanged() as Void {
+        if (_mainView != null) {
+            _mainView.reloadSchoolTheme();
+        }
+
+        WatchUi.requestUpdate();
     }
 
     function getServiceDelegate() as [System.ServiceDelegate] {
@@ -46,7 +54,6 @@ class AnalogOneApp extends Application.AppBase {
             WatchUi.requestUpdate();
         }
     }
-
 }
 
 function getApp() as AnalogOneApp {
