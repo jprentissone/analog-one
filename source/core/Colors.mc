@@ -87,6 +87,20 @@ module AnalogColors {
     const MARYLAND_YELLOW = 0xffd520;
     const GHOST_MARYLAND = 0x410f12;
 
+    const PURDUE_GRAPHITE = 0x303030;
+    const PURDUE_RING = 0x6e6250;
+    const PURDUE_GOLD = 0xceb888;
+    const GHOST_PURDUE = 0x181818;
+
+    const RUTGERS_SCARLET = 0xcc0033;
+    const RUTGERS_RING = 0xe23b5b;
+    const GHOST_RUTGERS = 0x3b0010;
+
+    const UCLA_BLUE = 0x2d68c4;
+    const UCLA_RING = 0x4d86d1;
+    const UCLA_GOLD = 0xf2a900;
+    const GHOST_UCLA = 0x132e57;
+
     // Semantic weather colors
     const WEATHER_SUN = 0xffc400;
     const WEATHER_CLOUD = 0xd9d9d9;

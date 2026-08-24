@@ -32,6 +32,12 @@ class ThemeManager {
             _activeTheme = createIndianaCrimson();
         } else if (themeId == ThemeIds.MARYLAND_RED) {
             _activeTheme = createMarylandRed();
+        } else if (themeId == ThemeIds.PURDUE_BLACK_GOLD) {
+            _activeTheme = createPurdueBlackGold();
+        } else if (themeId == ThemeIds.RUTGERS_SCARLET) {
+            _activeTheme = createRutgersScarlet();
+        } else if (themeId == ThemeIds.UCLA_BLUE_GOLD) {
+            _activeTheme = createUclaBlueGold();
         } else {
             _activeTheme = createAnalogOneClassic();
         }
@@ -292,6 +298,54 @@ class ThemeManager {
             AnalogColors.GHOST_MARYLAND,
             AnalogColors.MARYLAND_RING,
             AnalogColors.MARYLAND_YELLOW,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY
+        );
+    }
+
+    function createPurdueBlackGold() as Theme {
+        return new Theme(
+            AnalogColors.TRUE_BLACK,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY,
+            AnalogColors.HAND_WHITE,
+            AnalogColors.PURDUE_GRAPHITE,
+            AnalogColors.PURDUE_GOLD,
+            AnalogColors.GHOST_PURDUE,
+            AnalogColors.PURDUE_RING,
+            AnalogColors.PURDUE_GOLD,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY
+        );
+    }
+
+    function createRutgersScarlet() as Theme {
+        return new Theme(
+            AnalogColors.TRUE_BLACK,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY,
+            AnalogColors.HAND_WHITE,
+            AnalogColors.RUTGERS_SCARLET,
+            AnalogColors.HAND_WHITE,
+            AnalogColors.GHOST_RUTGERS,
+            AnalogColors.RUTGERS_RING,
+            AnalogColors.HAND_WHITE,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY
+        );
+    }
+
+    function createUclaBlueGold() as Theme {
+        return new Theme(
+            AnalogColors.TRUE_BLACK,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY,
+            AnalogColors.HAND_WHITE,
+            AnalogColors.UCLA_BLUE,
+            AnalogColors.UCLA_GOLD,
+            AnalogColors.GHOST_UCLA,
+            AnalogColors.UCLA_RING,
+            AnalogColors.UCLA_GOLD,
             AnalogColors.DIAL_WHITE,
             AnalogColors.MINUTE_GRAY
         );

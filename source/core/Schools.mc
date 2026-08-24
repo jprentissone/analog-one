@@ -16,6 +16,9 @@ module SchoolIds {
     const ILLINOIS = 13;
     const INDIANA = 14;
     const MARYLAND = 15;
+    const PURDUE = 16;
+    const RUTGERS = 17;
+    const UCLA = 18;
 
     function themeForSchool(schoolId) {
         if (schoolId == OHIO_STATE) {
@@ -48,6 +51,12 @@ module SchoolIds {
             return ThemeIds.INDIANA_CRIMSON;
         } else if (schoolId == MARYLAND) {
             return ThemeIds.MARYLAND_RED;
+        } else if (schoolId == PURDUE) {
+            return ThemeIds.PURDUE_BLACK_GOLD;
+        } else if (schoolId == RUTGERS) {
+            return ThemeIds.RUTGERS_SCARLET;
+        } else if (schoolId == UCLA) {
+            return ThemeIds.UCLA_BLUE_GOLD;
         }
 
         return ThemeIds.CLASSIC;
@@ -84,6 +93,12 @@ module SchoolIds {
             return INDIANA;
         } else if (themeId == ThemeIds.MARYLAND_RED) {
             return MARYLAND;
+        } else if (themeId == ThemeIds.PURDUE_BLACK_GOLD) {
+            return PURDUE;
+        } else if (themeId == ThemeIds.RUTGERS_SCARLET) {
+            return RUTGERS;
+        } else if (themeId == ThemeIds.UCLA_BLUE_GOLD) {
+            return UCLA;
         }
 
         return NEUTRAL;

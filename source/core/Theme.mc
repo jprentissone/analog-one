@@ -16,6 +16,9 @@ module ThemeIds {
     const ILLINOIS_ORANGE = 13;
     const INDIANA_CRIMSON = 14;
     const MARYLAND_RED = 15;
+    const PURDUE_BLACK_GOLD = 16;
+    const RUTGERS_SCARLET = 17;
+    const UCLA_BLUE_GOLD = 18;
 }
 
 class Theme {
