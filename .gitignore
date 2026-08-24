@@ -12,3 +12,6 @@ bin/
 services/sports-api/node_modules/
 services/sports-api/.dev.vars*
 services/sports-api/.env*
+.pnpm-store/
+services/sports-api/.cloudflare-config/
+services/sports-api/.wrangler/
