@@ -13,6 +13,9 @@ module ThemeIds {
     const NEBRASKA_SCARLET = 10;
     const MINNESOTA_MAROON = 11;
     const NORTHWESTERN_PURPLE = 12;
+    const ILLINOIS_ORANGE = 13;
+    const INDIANA_CRIMSON = 14;
+    const MARYLAND_RED = 15;
 }
 
 class Theme {

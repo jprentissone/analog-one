@@ -26,6 +26,12 @@ class ThemeManager {
             _activeTheme = createMinnesotaMaroon();
         } else if (themeId == ThemeIds.NORTHWESTERN_PURPLE) {
             _activeTheme = createNorthwesternPurple();
+        } else if (themeId == ThemeIds.ILLINOIS_ORANGE) {
+            _activeTheme = createIllinoisOrange();
+        } else if (themeId == ThemeIds.INDIANA_CRIMSON) {
+            _activeTheme = createIndianaCrimson();
+        } else if (themeId == ThemeIds.MARYLAND_RED) {
+            _activeTheme = createMarylandRed();
         } else {
             _activeTheme = createAnalogOneClassic();
         }
@@ -238,6 +244,54 @@ class ThemeManager {
             AnalogColors.GHOST_NORTHWESTERN,
             AnalogColors.NORTHWESTERN_RING,
             AnalogColors.HAND_WHITE,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY
+        );
+    }
+
+    function createIllinoisOrange() as Theme {
+        return new Theme(
+            AnalogColors.TRUE_BLACK,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY,
+            AnalogColors.HAND_WHITE,
+            AnalogColors.ILLINOIS_NAVY,
+            AnalogColors.ILLINOIS_ORANGE,
+            AnalogColors.GHOST_ILLINOIS,
+            AnalogColors.ILLINOIS_RING,
+            AnalogColors.ILLINOIS_ORANGE,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY
+        );
+    }
+
+    function createIndianaCrimson() as Theme {
+        return new Theme(
+            AnalogColors.TRUE_BLACK,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY,
+            AnalogColors.HAND_WHITE,
+            AnalogColors.INDIANA_CRIMSON,
+            AnalogColors.INDIANA_CREAM,
+            AnalogColors.GHOST_INDIANA,
+            AnalogColors.INDIANA_RING,
+            AnalogColors.INDIANA_CREAM,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY
+        );
+    }
+
+    function createMarylandRed() as Theme {
+        return new Theme(
+            AnalogColors.TRUE_BLACK,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY,
+            AnalogColors.HAND_WHITE,
+            AnalogColors.MARYLAND_RED,
+            AnalogColors.MARYLAND_YELLOW,
+            AnalogColors.GHOST_MARYLAND,
+            AnalogColors.MARYLAND_RING,
+            AnalogColors.MARYLAND_YELLOW,
             AnalogColors.DIAL_WHITE,
             AnalogColors.MINUTE_GRAY
         );

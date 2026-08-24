@@ -72,6 +72,21 @@ module AnalogColors {
     const NORTHWESTERN_RING = 0x7a5aad;
     const GHOST_NORTHWESTERN = 0x261440;
 
+    const ILLINOIS_ORANGE = 0xe84a27;
+    const ILLINOIS_NAVY = 0x13294b;
+    const ILLINOIS_RING = 0x2a5d8f;
+    const GHOST_ILLINOIS = 0x091526;
+
+    const INDIANA_CRIMSON = 0x990000;
+    const INDIANA_RING = 0xc6283c;
+    const INDIANA_CREAM = 0xeeedeb;
+    const GHOST_INDIANA = 0x330000;
+
+    const MARYLAND_RED = 0xe03a3e;
+    const MARYLAND_RING = 0xf05b5e;
+    const MARYLAND_YELLOW = 0xffd520;
+    const GHOST_MARYLAND = 0x410f12;
+
     // Semantic weather colors
     const WEATHER_SUN = 0xffc400;
     const WEATHER_CLOUD = 0xd9d9d9;

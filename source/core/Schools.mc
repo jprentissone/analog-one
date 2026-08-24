@@ -13,6 +13,9 @@ module SchoolIds {
     const NEBRASKA = 10;
     const MINNESOTA = 11;
     const NORTHWESTERN = 12;
+    const ILLINOIS = 13;
+    const INDIANA = 14;
+    const MARYLAND = 15;
 
     function themeForSchool(schoolId) {
         if (schoolId == OHIO_STATE) {
@@ -39,6 +42,12 @@ module SchoolIds {
             return ThemeIds.MINNESOTA_MAROON;
         } else if (schoolId == NORTHWESTERN) {
             return ThemeIds.NORTHWESTERN_PURPLE;
+        } else if (schoolId == ILLINOIS) {
+            return ThemeIds.ILLINOIS_ORANGE;
+        } else if (schoolId == INDIANA) {
+            return ThemeIds.INDIANA_CRIMSON;
+        } else if (schoolId == MARYLAND) {
+            return ThemeIds.MARYLAND_RED;
         }
 
         return ThemeIds.CLASSIC;
@@ -69,6 +78,12 @@ module SchoolIds {
             return MINNESOTA;
         } else if (themeId == ThemeIds.NORTHWESTERN_PURPLE) {
             return NORTHWESTERN;
+        } else if (themeId == ThemeIds.ILLINOIS_ORANGE) {
+            return ILLINOIS;
+        } else if (themeId == ThemeIds.INDIANA_CRIMSON) {
+            return INDIANA;
+        } else if (themeId == ThemeIds.MARYLAND_RED) {
+            return MARYLAND;
         }
 
         return NEUTRAL;
