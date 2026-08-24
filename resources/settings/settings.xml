@@ -10,6 +10,7 @@
             <listEntry value="1">@Strings.ThemeScarletNight</listEntry>
             <listEntry value="2">@Strings.ThemeMaizeBlue</listEntry>
             <listEntry value="3">@Strings.ThemeNavyWhite</listEntry>
+            <listEntry value="4">@Strings.ThemeSpartanGreen</listEntry>
         </settingConfig>
     </setting>
 

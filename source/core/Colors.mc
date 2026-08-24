@@ -28,6 +28,11 @@ module AnalogColors {
     const PENN_STATE_WHITE = 0xffffff;
     const GHOST_NAVY = 0x020f21;
 
+    const MICHIGAN_STATE_GREEN = 0x18453b;
+    // Brighter related green for thin details on true-black AMOLED.
+    const MICHIGAN_STATE_RING = 0x2f806e;
+    const GHOST_GREEN = 0x0c241f;
+
     // Semantic weather colors
     const WEATHER_SUN = 0xffc400;
     const WEATHER_CLOUD = 0xd9d9d9;

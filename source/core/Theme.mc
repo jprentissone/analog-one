@@ -4,6 +4,7 @@ module ThemeIds {
     const SCARLET_NIGHT = 1;
     const MAIZE_BLUE = 2;
     const NAVY_WHITE = 3;
+    const SPARTAN_GREEN = 4;
 }
 
 class Theme {
