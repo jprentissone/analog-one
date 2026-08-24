@@ -14,6 +14,7 @@ type Team = {
 export type ScoreboardGame = {
   id: number;
   startDate: string;
+  startTimeTBD: boolean;
   status: "scheduled" | "in_progress" | "completed";
   period: number | null;
   clock: string | null;
@@ -33,7 +34,7 @@ export type WatchSportsResponse = {
 };
 
 type NormalizeOptions = {
-  featuredTeam: string;
+  featuredTeamId: number;
   featuredAbbreviation: string;
   timeZone: string;
   now?: Date;
@@ -41,10 +42,20 @@ type NormalizeOptions = {
 
 const FINAL_RETENTION_MS = 48 * 60 * 60 * 1000;
 
-const TEAM_ABBREVIATIONS: Record<string, string> = {
-  "Ohio State": "OSU",
-  Michigan: "MICH",
-  Texas: "TEX",
+const TEAM_ABBREVIATIONS: Record<number, string> = {
+  30: "USC",
+  77: "NW",
+  84: "IND",
+  120: "MD",
+  130: "MICH",
+  158: "NEB",
+  194: "OSU",
+  251: "TEX",
+  356: "ILL",
+  2050: "BALL ST",
+  2294: "IOWA",
+  2309: "KENT ST",
+  2483: "ORE",
 };
 
 export function emptySportsResponse(): WatchSportsResponse {
@@ -67,8 +78,8 @@ export function normalizeScoreboard(
   const now = options.now ?? new Date();
   const teamGames = games.filter(
     (game) =>
-      game.homeTeam.name === options.featuredTeam ||
-      game.awayTeam.name === options.featuredTeam,
+      game.homeTeam.id === options.featuredTeamId ||
+      game.awayTeam.id === options.featuredTeamId,
   );
 
   const game = selectGame(teamGames, now);
@@ -77,9 +88,9 @@ export function normalizeScoreboard(
   }
 
   const base = {
-    away: abbreviate(game.awayTeam.name, options),
+    away: abbreviate(game.awayTeam, options),
     awayScore: game.awayTeam.points ?? 0,
-    home: abbreviate(game.homeTeam.name, options),
+    home: abbreviate(game.homeTeam, options),
     homeScore: game.homeTeam.points ?? 0,
     featured: options.featuredAbbreviation,
   };
@@ -106,7 +117,9 @@ export function normalizeScoreboard(
     state: SportsStates.UPCOMING,
     ...base,
     status: "",
-    startTime: formatStartTime(game.startDate, options.timeZone),
+    startTime: game.startTimeTBD
+      ? "TBD"
+      : formatStartTime(game.startDate, options.timeZone),
   };
 }
 
@@ -144,12 +157,20 @@ function selectGame(games: ScoreboardGame[], now: Date) {
     )[0];
 }
 
-function abbreviate(teamName: string, options: NormalizeOptions) {
-  if (teamName === options.featuredTeam) {
+function abbreviate(team: Team, options: NormalizeOptions) {
+  if (team.id === options.featuredTeamId) {
     return options.featuredAbbreviation;
   }
 
-  return TEAM_ABBREVIATIONS[teamName] ?? teamName.slice(0, 4).toUpperCase();
+  return TEAM_ABBREVIATIONS[team.id] ?? fallbackAbbreviation(team.name);
+}
+
+function fallbackAbbreviation(teamName: string) {
+  return teamName
+    .split(/\s+/)
+    .slice(0, 2)
+    .map((word) => word.slice(0, 4).toUpperCase())
+    .join(" ");
 }
 
 function formatLiveStatus(period: number | null, clock: string | null) {

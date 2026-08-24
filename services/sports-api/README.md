@@ -30,3 +30,11 @@ npm run dev
 ```
 
 Deployment will be configured after the local normalization tests pass.
+
+## Reliability behavior
+
+- The featured team is matched by its stable CFBD team ID.
+- Kickoffs without an announced time are returned as `TBD`.
+- A legitimate absence of games returns sports state `0` with HTTP 200.
+- Provider or service failures return an HTTP error, allowing the watch to keep
+  its last successful result.

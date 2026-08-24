@@ -4,7 +4,7 @@
   "main": "src/index.ts",
   "compatibility_date": "2026-08-24",
   "vars": {
-    "FEATURED_TEAM": "Ohio State Buckeyes",
+    "FEATURED_TEAM_ID": "194",
     "FEATURED_ABBREVIATION": "OSU",
     "TIME_ZONE": "America/New_York"
   },

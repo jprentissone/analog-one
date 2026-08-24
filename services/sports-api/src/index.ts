@@ -1,13 +1,12 @@
 import {
-  emptySportsResponse,
   normalizeScoreboard,
   type ScoreboardGame,
   type WatchSportsResponse,
-} from "./normalize";
+} from "./normalize.ts";
 
 type Env = {
   CFBD_API_KEY: string;
-  FEATURED_TEAM: string;
+  FEATURED_TEAM_ID: string;
   FEATURED_ABBREVIATION: string;
   TIME_ZONE: string;
 };
@@ -35,19 +34,25 @@ export default {
       });
 
       if (!providerResponse.ok) {
-        return jsonResponse(emptySportsResponse(), 200, 300);
+        return jsonResponse({ error: "Sports provider unavailable" }, 502, 60);
       }
 
       const games = (await providerResponse.json()) as ScoreboardGame[];
+      const featuredTeamId = Number(env.FEATURED_TEAM_ID);
+
+      if (!Number.isInteger(featuredTeamId)) {
+        return jsonResponse({ error: "Invalid team configuration" }, 500, 60);
+      }
+
       const result = normalizeScoreboard(games, {
-        featuredTeam: env.FEATURED_TEAM,
+        featuredTeamId,
         featuredAbbreviation: env.FEATURED_ABBREVIATION,
         timeZone: env.TIME_ZONE,
       });
 
       return jsonResponse(result, 200, cacheSeconds(result));
     } catch {
-      return jsonResponse(emptySportsResponse(), 200, 300);
+      return jsonResponse({ error: "Sports service unavailable" }, 503, 60);
     }
   },
 };
