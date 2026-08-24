@@ -21,7 +21,11 @@ class ThemeManager {
             AnalogColors.HAND_WHITE,
             AnalogColors.GRAPHITE,
             AnalogColors.SCARLET,
-            AnalogColors.GHOST_GRAY
+            AnalogColors.GHOST_GRAY,
+            AnalogColors.GRAPHITE,
+            AnalogColors.SCARLET,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY
         );
     }
 
@@ -33,7 +37,11 @@ class ThemeManager {
             AnalogColors.HAND_WHITE,
             AnalogColors.DARK_SCARLET,
             AnalogColors.SCARLET,
-            AnalogColors.GHOST_SCARLET
+            AnalogColors.GHOST_SCARLET,
+            AnalogColors.DARK_SCARLET,
+            AnalogColors.SCARLET,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY
         );
     }
 }

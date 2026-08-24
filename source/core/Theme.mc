@@ -12,6 +12,11 @@ class Theme {
     var accentColor;
     var emblemColor;
 
+    var complicationBorderColor;
+    var complicationIconColor;
+    var complicationValueColor;
+    var complicationLabelColor;
+
     function initialize(
         background,
         dial,
@@ -19,7 +24,11 @@ class Theme {
         hand,
         handBorder,
         accent,
-        emblem
+        emblem,
+        complicationBorder,
+        complicationIcon,
+        complicationValue,
+        complicationLabel
     ) {
         backgroundColor = background;
         dialColor = dial;
@@ -28,5 +37,10 @@ class Theme {
         handBorderColor = handBorder;
         accentColor = accent;
         emblemColor = emblem;
+
+        complicationBorderColor = complicationBorder;
+        complicationIconColor = complicationIcon;
+        complicationValueColor = complicationValue;
+        complicationLabelColor = complicationLabel;
     }
 }

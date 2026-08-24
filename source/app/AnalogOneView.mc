@@ -17,6 +17,10 @@ class AnalogOneView extends WatchUi.WatchFace {
     var _settingsManager as SettingsManager;
     var _isAwake = true;
 
+    //Complications
+    var _dateRenderer as DateRenderer;
+    var _stepsRenderer as StepsRenderer;
+
     function initialize() {
         WatchFace.initialize();
 
@@ -24,7 +28,6 @@ class AnalogOneView extends WatchUi.WatchFace {
 
         _themeManager = new ThemeManager(_settingsManager.getThemeId());
 
-        _themeManager = new ThemeManager(_settingsManager.getThemeId());
         _theme = _themeManager.getTheme();
 
         _dataManager = new DataManager();
@@ -35,6 +38,10 @@ class AnalogOneView extends WatchUi.WatchFace {
         _timeRenderer = new TimeRenderer(_dataManager, _layoutManager);
         _centerCapRenderer = new CenterCapRenderer(_theme);
         _logoRenderer = new LogoRenderer(_theme);
+
+        //Complications
+        _dateRenderer = new DateRenderer(_theme);
+        _stepsRenderer = new StepsRenderer(_theme);
     }
 
     // Load your resources here
@@ -52,8 +59,14 @@ class AnalogOneView extends WatchUi.WatchFace {
         var offsetY = 0;
 
         if (_isAwake) {
+            var watchFaceData = _dataManager.getWatchFaceData();
+
             _logoRenderer.draw(dc);
             _dialRenderer.draw(dc);
+
+            //Complications
+            _dateRenderer.draw(dc, watchFaceData.date);
+            _stepsRenderer.draw(dc, watchFaceData.activity);
         } else {
             var alwaysOnOffset = getAlwaysOnOffset();
 
