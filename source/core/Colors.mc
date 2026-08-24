@@ -33,6 +33,11 @@ module AnalogColors {
     const MICHIGAN_STATE_RING = 0x2f806e;
     const GHOST_GREEN = 0x0c241f;
 
+    const OREGON_GREEN = 0x154733;
+    const OREGON_RING = 0x2f805d;
+    const OREGON_YELLOW = 0xfee123;
+    const GHOST_OREGON = 0x0a241a;
+
     // Semantic weather colors
     const WEATHER_SUN = 0xffc400;
     const WEATHER_CLOUD = 0xd9d9d9;

@@ -10,6 +10,8 @@ class ThemeManager {
             _activeTheme = createNavyWhite();
         } else if (themeId == ThemeIds.SPARTAN_GREEN) {
             _activeTheme = createSpartanGreen();
+        } else if (themeId == ThemeIds.OREGON_GREEN) {
+            _activeTheme = createOregonGreen();
         } else {
             _activeTheme = createAnalogOneClassic();
         }
@@ -94,6 +96,22 @@ class ThemeManager {
             AnalogColors.GHOST_GREEN,
             AnalogColors.MICHIGAN_STATE_RING,
             AnalogColors.HAND_WHITE,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY
+        );
+    }
+
+    function createOregonGreen() as Theme {
+        return new Theme(
+            AnalogColors.TRUE_BLACK,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY,
+            AnalogColors.HAND_WHITE,
+            AnalogColors.OREGON_GREEN,
+            AnalogColors.OREGON_YELLOW,
+            AnalogColors.GHOST_OREGON,
+            AnalogColors.OREGON_RING,
+            AnalogColors.OREGON_YELLOW,
             AnalogColors.DIAL_WHITE,
             AnalogColors.MINUTE_GRAY
         );

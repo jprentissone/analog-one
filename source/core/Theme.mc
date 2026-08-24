@@ -5,6 +5,7 @@ module ThemeIds {
     const MAIZE_BLUE = 2;
     const NAVY_WHITE = 3;
     const SPARTAN_GREEN = 4;
+    const OREGON_GREEN = 5;
 }
 
 class Theme {
