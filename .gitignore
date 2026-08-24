@@ -7,3 +7,8 @@ bin/
 
 # VS Code user settings
 .vscode/settings.json
+
+# Benchcraft sports service
+services/sports-api/node_modules/
+services/sports-api/.dev.vars*
+services/sports-api/.env*
