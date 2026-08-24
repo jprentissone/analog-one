@@ -14,6 +14,12 @@ class ThemeManager {
             _activeTheme = createOregonGreen();
         } else if (themeId == ThemeIds.USC_CARDINAL) {
             _activeTheme = createUscCardinal();
+        } else if (themeId == ThemeIds.WISCONSIN_RED) {
+            _activeTheme = createWisconsinRed();
+        } else if (themeId == ThemeIds.IOWA_BLACK_GOLD) {
+            _activeTheme = createIowaBlackGold();
+        } else if (themeId == ThemeIds.WASHINGTON_PURPLE) {
+            _activeTheme = createWashingtonPurple();
         } else {
             _activeTheme = createAnalogOneClassic();
         }
@@ -130,6 +136,54 @@ class ThemeManager {
             AnalogColors.GHOST_USC,
             AnalogColors.USC_RING,
             AnalogColors.USC_GOLD,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY
+        );
+    }
+
+    function createWisconsinRed() as Theme {
+        return new Theme(
+            AnalogColors.TRUE_BLACK,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY,
+            AnalogColors.HAND_WHITE,
+            AnalogColors.WISCONSIN_RED,
+            AnalogColors.HAND_WHITE,
+            AnalogColors.GHOST_WISCONSIN,
+            AnalogColors.WISCONSIN_RING,
+            AnalogColors.HAND_WHITE,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY
+        );
+    }
+
+    function createIowaBlackGold() as Theme {
+        return new Theme(
+            AnalogColors.TRUE_BLACK,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY,
+            AnalogColors.HAND_WHITE,
+            AnalogColors.IOWA_GRAPHITE,
+            AnalogColors.IOWA_GOLD,
+            AnalogColors.GHOST_IOWA,
+            AnalogColors.IOWA_RING,
+            AnalogColors.IOWA_GOLD,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY
+        );
+    }
+
+    function createWashingtonPurple() as Theme {
+        return new Theme(
+            AnalogColors.TRUE_BLACK,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY,
+            AnalogColors.HAND_WHITE,
+            AnalogColors.WASHINGTON_PURPLE,
+            AnalogColors.WASHINGTON_GOLD,
+            AnalogColors.GHOST_WASHINGTON,
+            AnalogColors.WASHINGTON_RING,
+            AnalogColors.WASHINGTON_GOLD,
             AnalogColors.DIAL_WHITE,
             AnalogColors.MINUTE_GRAY
         );

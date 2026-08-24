@@ -43,6 +43,21 @@ module AnalogColors {
     const USC_GOLD = 0xffc72c;
     const GHOST_USC = 0x330000;
 
+    const WISCONSIN_RED = 0xc5050c;
+    const WISCONSIN_RING = 0xe32636;
+    const GHOST_WISCONSIN = 0x3a0004;
+
+    // Iowa black is lifted to graphite only where black-on-black would vanish.
+    const IOWA_GRAPHITE = 0x303030;
+    const IOWA_RING = 0x555555;
+    const IOWA_GOLD = 0xffcd00;
+    const GHOST_IOWA = 0x181818;
+
+    const WASHINGTON_PURPLE = 0x4b2e83;
+    const WASHINGTON_RING = 0x7655a6;
+    const WASHINGTON_GOLD = 0xb7a57a;
+    const GHOST_WASHINGTON = 0x24163f;
+
     // Semantic weather colors
     const WEATHER_SUN = 0xffc400;
     const WEATHER_CLOUD = 0xd9d9d9;

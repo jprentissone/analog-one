@@ -7,6 +7,9 @@ module ThemeIds {
     const SPARTAN_GREEN = 4;
     const OREGON_GREEN = 5;
     const USC_CARDINAL = 6;
+    const WISCONSIN_RED = 7;
+    const IOWA_BLACK_GOLD = 8;
+    const WASHINGTON_PURPLE = 9;
 }
 
 class Theme {
