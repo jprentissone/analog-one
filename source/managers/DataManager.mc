@@ -49,7 +49,7 @@ class DataManager {
     }
 
     function getSportsData() {
-        return _sportsService.parseResponse(null);
+        return _sportsService.getData();
     }
 
     function getWeatherData() {

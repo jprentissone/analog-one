@@ -1,7 +1,20 @@
+import Toybox.Application;
 import Toybox.Lang;
 
 class SportsService {
+    const STORAGE_KEY = "sportsData";
+
     function initialize() {}
+
+    function getData() {
+        var response = Application.Storage.getValue(STORAGE_KEY);
+
+        if (response instanceof Dictionary) {
+            return parseResponse(response as Dictionary);
+        }
+
+        return createNoGameData();
+    }
 
     function parseResponse(response) {
         if (response == null) {
