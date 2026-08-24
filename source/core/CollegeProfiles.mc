@@ -5,6 +5,7 @@ module CollegeProfileIds {
     const PENN_STATE = "penn_state";
     const MICHIGAN_STATE = "michigan_state";
     const OREGON = "oregon";
+    const USC = "usc";
 
     function forSchool(schoolId) {
         if (schoolId == SchoolIds.MICHIGAN) {
@@ -15,6 +16,8 @@ module CollegeProfileIds {
             return MICHIGAN_STATE;
         } else if (schoolId == SchoolIds.OREGON) {
             return OREGON;
+        } else if (schoolId == SchoolIds.USC) {
+            return USC;
         }
 
         return OSU;
@@ -29,6 +32,8 @@ module CollegeProfileIds {
             return "MSU";
         } else if (schoolId == SchoolIds.OREGON) {
             return "ORE";
+        } else if (schoolId == SchoolIds.USC) {
+            return "USC";
         }
 
         return "OSU";

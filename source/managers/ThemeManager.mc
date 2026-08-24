@@ -12,6 +12,8 @@ class ThemeManager {
             _activeTheme = createSpartanGreen();
         } else if (themeId == ThemeIds.OREGON_GREEN) {
             _activeTheme = createOregonGreen();
+        } else if (themeId == ThemeIds.USC_CARDINAL) {
+            _activeTheme = createUscCardinal();
         } else {
             _activeTheme = createAnalogOneClassic();
         }
@@ -112,6 +114,22 @@ class ThemeManager {
             AnalogColors.GHOST_OREGON,
             AnalogColors.OREGON_RING,
             AnalogColors.OREGON_YELLOW,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY
+        );
+    }
+
+    function createUscCardinal() as Theme {
+        return new Theme(
+            AnalogColors.TRUE_BLACK,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY,
+            AnalogColors.HAND_WHITE,
+            AnalogColors.USC_CARDINAL,
+            AnalogColors.USC_GOLD,
+            AnalogColors.GHOST_USC,
+            AnalogColors.USC_RING,
+            AnalogColors.USC_GOLD,
             AnalogColors.DIAL_WHITE,
             AnalogColors.MINUTE_GRAY
         );

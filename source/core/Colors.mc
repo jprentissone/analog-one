@@ -38,6 +38,11 @@ module AnalogColors {
     const OREGON_YELLOW = 0xfee123;
     const GHOST_OREGON = 0x0a241a;
 
+    const USC_CARDINAL = 0x990000;
+    const USC_RING = 0xc62828;
+    const USC_GOLD = 0xffc72c;
+    const GHOST_USC = 0x330000;
+
     // Semantic weather colors
     const WEATHER_SUN = 0xffc400;
     const WEATHER_CLOUD = 0xd9d9d9;

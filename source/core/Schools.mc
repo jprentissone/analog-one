@@ -6,6 +6,7 @@ module SchoolIds {
     const PENN_STATE = 3;
     const MICHIGAN_STATE = 4;
     const OREGON = 5;
+    const USC = 6;
 
     function themeForSchool(schoolId) {
         if (schoolId == OHIO_STATE) {
@@ -18,6 +19,8 @@ module SchoolIds {
             return ThemeIds.SPARTAN_GREEN;
         } else if (schoolId == OREGON) {
             return ThemeIds.OREGON_GREEN;
+        } else if (schoolId == USC) {
+            return ThemeIds.USC_CARDINAL;
         }
 
         return ThemeIds.CLASSIC;
@@ -34,6 +37,8 @@ module SchoolIds {
             return MICHIGAN_STATE;
         } else if (themeId == ThemeIds.OREGON_GREEN) {
             return OREGON;
+        } else if (themeId == ThemeIds.USC_CARDINAL) {
+            return USC;
         }
 
         return NEUTRAL;

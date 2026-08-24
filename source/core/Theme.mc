@@ -6,6 +6,7 @@ module ThemeIds {
     const NAVY_WHITE = 3;
     const SPARTAN_GREEN = 4;
     const OREGON_GREEN = 5;
+    const USC_CARDINAL = 6;
 }
 
 class Theme {
