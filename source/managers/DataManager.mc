@@ -6,7 +6,11 @@ import Toybox.Weather;
 import Toybox.Math;
 
 class DataManager {
-    function initialize() {}
+    var _sportsService as SportsService;
+
+    function initialize() {
+        _sportsService = new SportsService();
+    }
 
     function getClockTime() {
         return System.getClockTime();
@@ -33,16 +37,7 @@ class DataManager {
         var weatherData = getWeatherData();
 
         // NCAA score integration
-        var sportsData = new SportsData(
-            SportsStates.NONE,
-            "",
-            0,
-            "",
-            0,
-            "",
-            "",
-            ""
-        );
+        var sportsData = getSportsData();
 
         return new WatchFaceData(
             weatherData,
@@ -51,6 +46,10 @@ class DataManager {
             batteryData,
             sportsData
         );
+    }
+
+    function getSportsData() {
+        return _sportsService.parseResponse(null);
     }
 
     function getWeatherData() {
