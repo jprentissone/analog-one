@@ -15,6 +15,7 @@ class DialRenderer {
 
     const MINUTE_TICK_LENGTH = 6;
     const HOUR_TICK_LENGTH = 18;
+    const ALWAYS_ON_TICK_LENGTH = 10;
 
     // ==========================================================
     // Colors
@@ -130,5 +131,31 @@ class DialRenderer {
 
     function degreesToRadians(degrees) {
         return (degrees * Math.PI) / 180.0;
+    }
+
+    function drawAlwaysOn(dc as Graphics.Dc) {
+        dc.setColor(_theme.minuteTrackColor, Graphics.COLOR_TRANSPARENT);
+
+        var centerX = dc.getWidth() / 2;
+        var centerY = dc.getHeight() / 2;
+        var radius = dc.getWidth() / 2 - DIAL_INSET;
+
+        drawAlwaysOnMarker(dc, centerX, centerY, radius, 270);
+        drawAlwaysOnMarker(dc, centerX, centerY, radius, 0);
+        drawAlwaysOnMarker(dc, centerX, centerY, radius, 90);
+        drawAlwaysOnMarker(dc, centerX, centerY, radius, 180);
+    }
+
+    function drawAlwaysOnMarker(dc, centerX, centerY, radius, angle) {
+        var outerPoint = polarToPoint(centerX, centerY, radius, angle);
+
+        var innerPoint = polarToPoint(
+            centerX,
+            centerY,
+            radius - ALWAYS_ON_TICK_LENGTH,
+            angle
+        );
+
+        dc.drawLine(outerPoint[0], outerPoint[1], innerPoint[0], innerPoint[1]);
     }
 }

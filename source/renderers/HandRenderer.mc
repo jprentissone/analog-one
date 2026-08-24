@@ -64,7 +64,7 @@ class HandRenderer {
         _theme = theme;
     }
 
-    function draw(dc as Graphics.Dc) {
+    function draw(dc as Graphics.Dc, isAwake) {
         var centerX = dc.getWidth() / 2;
         var centerY = dc.getHeight() / 2;
 
@@ -101,7 +101,9 @@ class HandRenderer {
 
         drawMinuteHand(dc, centerX, centerY, minuteAngle);
 
-        drawSecondHand(dc, centerX, centerY, secondAngle);
+        if (isAwake) {
+            drawSecondHand(dc, centerX, centerY, secondAngle);
+        }
     }
 
     // ==========================================================

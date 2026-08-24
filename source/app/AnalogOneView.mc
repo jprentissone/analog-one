@@ -15,6 +15,7 @@ class AnalogOneView extends WatchUi.WatchFace {
     var _themeManager as ThemeManager;
     var _theme as Theme;
     var _settingsManager as SettingsManager;
+    var _isAwake = true;
 
     function initialize() {
         WatchFace.initialize();
@@ -47,20 +48,27 @@ class AnalogOneView extends WatchUi.WatchFace {
     function onUpdate(dc as Dc) as Void {
         _backgroundRenderer.draw(dc);
 
-        _logoRenderer.draw(dc);
+        if (_isAwake) {
+            _logoRenderer.draw(dc);
+            _dialRenderer.draw(dc);
+        } else {
+            _dialRenderer.drawAlwaysOn(dc);
+        }
 
-        _dialRenderer.draw(dc);
-
-        _handRenderer.draw(dc);
+        _handRenderer.draw(dc, _isAwake);
 
         _centerCapRenderer.draw(dc);
     }
 
     function onHide() as Void {}
 
-    // The user has just looked at their watch.
-    function onExitSleep() as Void {}
+    function onExitSleep() as Void {
+        _isAwake = true;
+        WatchUi.requestUpdate();
+    }
 
-    // Prepare for slow updates.
-    function onEnterSleep() as Void {}
+    function onEnterSleep() as Void {
+        _isAwake = false;
+        WatchUi.requestUpdate();
+    }
 }
