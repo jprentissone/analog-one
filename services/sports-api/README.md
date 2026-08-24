@@ -7,7 +7,12 @@ response.
 ## Routes
 
 - `GET /health`
-- `GET /v1/ncaa/football`
+- `GET /v1/ncaa/football?team=osu`
+
+The `team` parameter selects an allow-listed college profile. The current
+profiles are `osu` and `michigan`; omitting the parameter defaults to `osu` for
+backward compatibility. Each profile owns the stable CFBD team ID, compact
+display abbreviation, and primary and secondary brand colors.
 
 ## Sports states
 

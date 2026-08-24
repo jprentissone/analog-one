@@ -5,8 +5,6 @@ import worker from "../src/index.ts";
 
 const env = {
   CFBD_API_KEY: "test-key",
-  FEATURED_TEAM_ID: "194",
-  FEATURED_ABBREVIATION: "OSU",
   TIME_ZONE: "America/New_York",
 };
 
@@ -28,19 +26,11 @@ test("keeps provider failures distinct from a legitimate no-game response", asyn
   }
 });
 
-test("rejects an invalid featured-team configuration", async () => {
-  const originalFetch = globalThis.fetch;
-  globalThis.fetch = async () =>
-    Response.json([], { headers: { "Content-Type": "application/json" } });
+test("rejects an unknown college profile before calling the provider", async () => {
+  const response = await worker.fetch(
+    new Request("https://example.com/v1/ncaa/football?team=unknown"),
+    env,
+  );
 
-  try {
-    const response = await worker.fetch(
-      new Request("https://example.com/v1/ncaa/football"),
-      { ...env, FEATURED_TEAM_ID: "not-a-team-id" },
-    );
-
-    assert.equal(response.status, 500);
-  } finally {
-    globalThis.fetch = originalFetch;
-  }
+  assert.equal(response.status, 400);
 });

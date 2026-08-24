@@ -7,7 +7,7 @@ import Toybox.System;
 (:background)
 class SportsServiceDelegate extends System.ServiceDelegate {
     const SPORTS_URL =
-        "https://benchcraft-sports-api.benchcraft-sports-api.workers.dev/v1/ncaa/football";
+        "https://benchcraft-sports-api.benchcraft-sports-api.workers.dev/v1/ncaa/football?team=osu";
 
     function initialize() {
         ServiceDelegate.initialize();

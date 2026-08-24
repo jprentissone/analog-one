@@ -3,11 +3,10 @@ import {
   type ScoreboardGame,
   type WatchSportsResponse,
 } from "./normalize.ts";
+import { getCollegeProfile } from "./profiles.ts";
 
 type Env = {
   CFBD_API_KEY: string;
-  FEATURED_TEAM_ID: string;
-  FEATURED_ABBREVIATION: string;
   TIME_ZONE: string;
 };
 
@@ -26,6 +25,13 @@ export default {
       return jsonResponse({ error: "Not found" }, 404, 60);
     }
 
+    const profileId = url.searchParams.get("team") ?? "osu";
+    const profile = getCollegeProfile(profileId);
+
+    if (profile == null) {
+      return jsonResponse({ error: "Unknown college profile" }, 400, 60);
+    }
+
     try {
       const providerResponse = await fetch(CFBD_SCOREBOARD_URL, {
         headers: {
@@ -38,15 +44,9 @@ export default {
       }
 
       const games = (await providerResponse.json()) as ScoreboardGame[];
-      const featuredTeamId = Number(env.FEATURED_TEAM_ID);
-
-      if (!Number.isInteger(featuredTeamId)) {
-        return jsonResponse({ error: "Invalid team configuration" }, 500, 60);
-      }
-
       const result = normalizeScoreboard(games, {
-        featuredTeamId,
-        featuredAbbreviation: env.FEATURED_ABBREVIATION,
+        featuredTeamId: profile.cfbdTeamId,
+        featuredAbbreviation: profile.abbreviation,
         timeZone: env.TIME_ZONE,
       });
 
