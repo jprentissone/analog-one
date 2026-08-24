@@ -6,13 +6,7 @@ class SettingsManager {
     function initialize() {}
 
     function getThemeId() {
-        var savedTheme = Application.Properties.getValue(THEME_KEY);
-
-        if (savedTheme == null) {
-            return ThemeIds.CLASSIC;
-        }
-
-        return savedTheme;
+        return Application.Properties.getValue(THEME_KEY);
     }
 
     function setThemeId(themeId) as Void {
