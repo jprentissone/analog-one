@@ -1,6 +1,8 @@
+(:background)
 module ThemeIds {
     const CLASSIC = 0;
     const SCARLET_NIGHT = 1;
+    const MAIZE_BLUE = 2;
 }
 
 class Theme {

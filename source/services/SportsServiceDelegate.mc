@@ -1,19 +1,27 @@
+import Toybox.Application;
 import Toybox.Background;
 import Toybox.Communications;
 import Toybox.Lang;
 import Toybox.PersistedContent;
 import Toybox.System;
+import Toybox.Time;
 
 (:background)
 class SportsServiceDelegate extends System.ServiceDelegate {
     const SPORTS_URL =
-        "https://benchcraft-sports-api.benchcraft-sports-api.workers.dev/v1/ncaa/football?team=osu";
+        "https://benchcraft-sports-api.benchcraft-sports-api.workers.dev/v1/ncaa/football";
 
     function initialize() {
         ServiceDelegate.initialize();
     }
 
     function onTemporalEvent() as Void {
+        Background.registerForTemporalEvent(new Time.Duration(5 * 60));
+
+        var themeId = Application.Properties.getValue("theme");
+        var profileId = CollegeProfileIds.forTheme(themeId);
+        var requestUrl = SPORTS_URL + "?team=" + profileId;
+
         var options = {
             :method => Communications.HTTP_REQUEST_METHOD_GET,
             :headers => {},
@@ -21,7 +29,7 @@ class SportsServiceDelegate extends System.ServiceDelegate {
         };
 
         Communications.makeWebRequest(
-            SPORTS_URL,
+            requestUrl,
             null,
             options,
             method(:onReceive)

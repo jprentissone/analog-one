@@ -17,6 +17,7 @@ class ComplicationRenderer {
     var _theme as Theme;
 
     var _valueFont;
+    var _compactValueFont;
     var _fontsReady = false;
 
     var _detailFont;
@@ -31,6 +32,7 @@ class ComplicationRenderer {
         }
 
         _valueFont = null;
+        _compactValueFont = null;
         _detailFont = null;
 
         if (Graphics has :getVectorFont) {
@@ -40,6 +42,11 @@ class ComplicationRenderer {
             _valueFont = Graphics.getVectorFont({
                 :face => ["RobotoCondensedRegular", "RobotoRegular"],
                 :size => valueSize,
+            });
+
+            _compactValueFont = Graphics.getVectorFont({
+                :face => ["RobotoCondensedRegular", "RobotoRegular"],
+                :size => (dc.getWidth() * 15) / 454,
             });
 
             _detailFont = Graphics.getVectorFont({
@@ -54,6 +61,10 @@ class ComplicationRenderer {
 
         if (_detailFont == null) {
             _detailFont = Graphics.FONT_XTINY;
+        }
+
+        if (_compactValueFont == null) {
+            _compactValueFont = _detailFont;
         }
 
         _fontsReady = true;
@@ -260,7 +271,7 @@ class ComplicationRenderer {
         dc.drawText(
             centerX,
             centerY - 19,
-            _valueFont,
+            getScoreFont(awayText),
             awayText,
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
         );
@@ -280,7 +291,7 @@ class ComplicationRenderer {
         dc.drawText(
             centerX,
             centerY + 2,
-            _valueFont,
+            getScoreFont(homeText),
             homeText,
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
         );
@@ -296,6 +307,14 @@ class ComplicationRenderer {
         );
 
         dc.setPenWidth(1);
+    }
+
+    function getScoreFont(text) {
+        if (text.length() > 7) {
+            return _compactValueFont;
+        }
+
+        return _valueFont;
     }
 
     function drawStepsIcon(dc as Graphics.Dc, centerX, centerY) {

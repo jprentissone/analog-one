@@ -10,6 +10,16 @@ class SportsService {
         var response = Application.Storage.getValue(STORAGE_KEY);
 
         if (response instanceof Dictionary) {
+            var themeId = Application.Properties.getValue("theme");
+            var expectedTeam =
+                CollegeProfileIds.abbreviationForTheme(themeId);
+            var receivedTeam = response["featured"];
+
+            if (!(receivedTeam instanceof String) ||
+                !expectedTeam.equals(receivedTeam)) {
+                return createNoGameData();
+            }
+
             return parseResponse(response as Dictionary);
         }
 

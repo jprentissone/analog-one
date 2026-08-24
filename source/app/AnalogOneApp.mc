@@ -22,8 +22,15 @@ class AnalogOneApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() as [Views] or [Views, InputDelegates] {
-        if (Background.getTemporalEventRegisteredTime() == null) {
-            Background.registerForTemporalEvent(new Time.Duration(5 * 60));
+        var refreshInterval = new Time.Duration(5 * 60);
+        var lastRefresh = Background.getLastTemporalEventTime();
+
+        if (lastRefresh != null) {
+            Background.registerForTemporalEvent(
+                lastRefresh.add(refreshInterval)
+            );
+        } else {
+            Background.registerForTemporalEvent(Time.now());
         }
 
         return [ new AnalogOneView() ];

@@ -8,6 +8,7 @@
         <settingConfig type="list">
             <listEntry value="0">@Strings.ThemeClassic</listEntry>
             <listEntry value="1">@Strings.ThemeScarletNight</listEntry>
+            <listEntry value="2">@Strings.ThemeMaizeBlue</listEntry>
         </settingConfig>
     </setting>
 
