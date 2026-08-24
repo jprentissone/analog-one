@@ -17,8 +17,16 @@ module AnalogColors {
     const GHOST_SCARLET = 0x300000;
 
     const MICHIGAN_BLUE = 0x00274c;
+    // Thin blue rings need a brighter display variant on true-black AMOLED.
+    const MICHIGAN_RING = 0x1b5f9c;
     const MAIZE = 0xffcb05;
     const GHOST_BLUE = 0x001426;
+
+    const PENN_STATE_NAVY = 0x041e42;
+    // Preserve official navy above; use this only for thin display details.
+    const PENN_STATE_RING = 0x1f5f8f;
+    const PENN_STATE_WHITE = 0xffffff;
+    const GHOST_NAVY = 0x020f21;
 
     // Semantic weather colors
     const WEATHER_SUN = 0xffc400;

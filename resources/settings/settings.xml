@@ -9,6 +9,7 @@
             <listEntry value="0">@Strings.ThemeClassic</listEntry>
             <listEntry value="1">@Strings.ThemeScarletNight</listEntry>
             <listEntry value="2">@Strings.ThemeMaizeBlue</listEntry>
+            <listEntry value="3">@Strings.ThemeNavyWhite</listEntry>
         </settingConfig>
     </setting>
 
