@@ -32,9 +32,17 @@ class DataManager {
 
         var weatherData = getWeatherData();
 
-        // NCAA score integration will be added in a later lesson.
-
-        var sportsData = new SportsData("", 0, "", 0, "", "", false);
+        // NCAA score integration
+        var sportsData = new SportsData(
+            SportsStates.NONE,
+            "",
+            0,
+            "",
+            0,
+            "",
+            "",
+            ""
+        );
 
         return new WatchFaceData(
             weatherData,

@@ -31,6 +31,11 @@
 
 ## Future
 - NCAA Live Complications
+  - Explicit states: UPCOMING, LIVE, FINAL, NONE
+  - Show upcoming opponent and start time
+  - Show live score and game status
+  - Show a clearly labeled final score for a limited period (target: 48 hours)
+  - Hide the tile or use an approved fallback when no relevant game exists
 - Golf Edition
 - Hiking Edition
 - Workout Edition

@@ -49,31 +49,44 @@ class BatteryData {
     }
 }
 
+module SportsStates {
+    const NONE = 0;
+    const UPCOMING = 1;
+    const LIVE = 2;
+    const FINAL = 3;
+}
+
 class SportsData {
+    var state;
     var awayTeam;
     var awayScore;
     var homeTeam;
     var homeScore;
     var gameStatus;
     var featuredTeam;
+    var startTime;
     var isAvailable;
 
     function initialize(
+        currentState,
         currentAwayTeam,
         currentAwayScore,
         currentHomeTeam,
         currentHomeScore,
         currentGameStatus,
         currentFeaturedTeam,
-        available
+        currentStartTime
     ) {
+        state = currentState;
         awayTeam = currentAwayTeam;
         awayScore = currentAwayScore;
         homeTeam = currentHomeTeam;
         homeScore = currentHomeScore;
         gameStatus = currentGameStatus;
         featuredTeam = currentFeaturedTeam;
-        isAvailable = available;
+        startTime = currentStartTime;
+
+        isAvailable = state != SportsStates.NONE;
     }
 }
 
