@@ -7,15 +7,16 @@ class DialRenderer {
     // ==========================================================
 
     const DIAL_INSET = 3;
-    const NUMERAL_OFFSET = 26;
+    const NUMERAL_OFFSET = 32;
 
     // ==========================================================
     // Dial Markers
     // ==========================================================
 
-    const MINUTE_TICK_LENGTH = 6;
-    const HOUR_TICK_LENGTH = 18;
+    const MINUTE_TICK_LENGTH = 6; // 1-59
+    const HOUR_TICK_LENGTH = 18; //
     const ALWAYS_ON_TICK_LENGTH = 10;
+    const CARDINAL_TICK_LENGTH = 10; // 12, 3, 6, 9
 
     // ==========================================================
     // Colors
@@ -59,15 +60,13 @@ class DialRenderer {
 
     function drawMinuteTrack(dc, centerX, centerY, radius) {
         for (var minute = 0; minute < 60; minute += 1) {
-            if (isCardinalPosition(minute)) {
-                continue;
-            }
-
             var angle = (270 + minute * 6) % 360;
 
             var tickLength = MINUTE_TICK_LENGTH;
 
-            if (isHourMarker(minute)) {
+            if (isCardinalPosition(minute)) {
+                tickLength = CARDINAL_TICK_LENGTH;
+            } else if (isHourMarker(minute)) {
                 tickLength = HOUR_TICK_LENGTH;
             }
 
@@ -80,7 +79,9 @@ class DialRenderer {
                 angle
             );
 
-            if (isHourMarker(minute)) {
+            if (minute == 0) {
+                dc.setColor(_theme.accentColor, Graphics.COLOR_TRANSPARENT);
+            } else if (isHourMarker(minute)) {
                 dc.setColor(_theme.dialColor, Graphics.COLOR_TRANSPARENT);
             } else {
                 dc.setColor(
@@ -88,12 +89,49 @@ class DialRenderer {
                     Graphics.COLOR_TRANSPARENT
                 );
             }
-            dc.drawLine(
-                outerPoint[0],
-                outerPoint[1],
-                innerPoint[0],
-                innerPoint[1]
-            );
+
+            if (isHourMarker(minute)) {
+                dc.setPenWidth(2);
+            } else {
+                dc.setPenWidth(1);
+            }
+
+            if (isCardinalPosition(minute)) {
+                drawCardinalMarker(dc, minute, outerPoint, innerPoint);
+            } else {
+                dc.drawLine(
+                    outerPoint[0],
+                    outerPoint[1],
+                    innerPoint[0],
+                    innerPoint[1]
+                );
+            }
+        }
+
+        dc.setPenWidth(1);
+    }
+
+    function drawCardinalMarker(dc, minute, outerPoint, innerPoint) {
+        for (var offset = -2; offset <= 2; offset += 1) {
+            if (minute == 0 || minute == 30) {
+                // The 12 and 6 markers are vertical,
+                // so spread their lines horizontally.
+                dc.drawLine(
+                    outerPoint[0] + offset,
+                    outerPoint[1],
+                    innerPoint[0] + offset,
+                    innerPoint[1]
+                );
+            } else {
+                // The 3 and 9 markers are horizontal,
+                // so spread their lines vertically.
+                dc.drawLine(
+                    outerPoint[0],
+                    outerPoint[1] + offset,
+                    innerPoint[0],
+                    innerPoint[1] + offset
+                );
+            }
         }
     }
 
