@@ -20,6 +20,7 @@ class AnalogOneView extends WatchUi.WatchFace {
     //Complications
     var _dateRenderer as DateRenderer;
     var _stepsRenderer as StepsRenderer;
+    var _weatherRenderer as WeatherRenderer;
 
     function initialize() {
         WatchFace.initialize();
@@ -42,6 +43,7 @@ class AnalogOneView extends WatchUi.WatchFace {
         //Complications
         _dateRenderer = new DateRenderer(_theme);
         _stepsRenderer = new StepsRenderer(_theme);
+        _weatherRenderer = new WeatherRenderer(_theme);
     }
 
     // Load your resources here
@@ -65,6 +67,7 @@ class AnalogOneView extends WatchUi.WatchFace {
             _dialRenderer.draw(dc);
 
             //Complications
+            _weatherRenderer.draw(dc, watchFaceData.weather);
             _dateRenderer.draw(dc, watchFaceData.date);
             _stepsRenderer.draw(dc, watchFaceData.activity);
         } else {

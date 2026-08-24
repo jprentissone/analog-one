@@ -2,6 +2,8 @@ import Toybox.ActivityMonitor;
 import Toybox.System;
 import Toybox.Time;
 import Toybox.Time.Gregorian;
+import Toybox.Weather;
+import Toybox.Math;
 
 class DataManager {
     function initialize() {}
@@ -26,8 +28,7 @@ class DataManager {
 
         var activityData = new ActivityData(steps, stepsAvailable);
 
-        // Weather integration will be added in a later lesson.
-        var weatherData = new WeatherData(0, 0, false);
+        var weatherData = getWeatherData();
 
         // NCAA score integration will be added in a later lesson.
         var sportsData = new SportsData("", 0, "", 0, "", false);
@@ -38,5 +39,35 @@ class DataManager {
             activityData,
             sportsData
         );
+    }
+
+    function getWeatherData() {
+        var currentConditions = Weather.getCurrentConditions();
+
+        if (currentConditions == null) {
+            return new WeatherData(0, -1, false);
+        }
+
+        var currentTemperature = currentConditions.temperature;
+
+        if (currentTemperature == null) {
+            return new WeatherData(0, -1, false);
+        }
+
+        var temperature = currentTemperature.toFloat();
+
+        if (System.getDeviceSettings().temperatureUnits != System.UNIT_METRIC) {
+            temperature = (temperature * 9.0) / 5.0 + 32.0;
+        }
+
+        var roundedTemperature = Math.round(temperature).toNumber();
+
+        var conditionCode = -1;
+
+        if (currentConditions.condition != null) {
+            conditionCode = currentConditions.condition;
+        }
+
+        return new WeatherData(roundedTemperature, conditionCode, true);
     }
 }
