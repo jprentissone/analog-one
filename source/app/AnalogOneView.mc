@@ -22,6 +22,7 @@ class AnalogOneView extends WatchUi.WatchFace {
     var _stepsRenderer as StepsRenderer;
     var _weatherRenderer as WeatherRenderer;
     var _batteryRenderer as BatteryRenderer;
+    var _sportsRenderer as SportsRenderer;
 
     function initialize() {
         WatchFace.initialize();
@@ -46,6 +47,7 @@ class AnalogOneView extends WatchUi.WatchFace {
         _stepsRenderer = new StepsRenderer(_theme);
         _weatherRenderer = new WeatherRenderer(_theme);
         _batteryRenderer = new BatteryRenderer(_theme);
+        _sportsRenderer = new SportsRenderer(_theme);
     }
 
     // Load your resources here
@@ -73,6 +75,7 @@ class AnalogOneView extends WatchUi.WatchFace {
             _dateRenderer.draw(dc, watchFaceData.date);
             _stepsRenderer.draw(dc, watchFaceData.activity);
             _batteryRenderer.draw(dc, watchFaceData.battery);
+            _sportsRenderer.draw(dc, watchFaceData.sports);
         } else {
             var alwaysOnOffset = getAlwaysOnOffset();
 

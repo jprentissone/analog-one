@@ -228,6 +228,76 @@ class ComplicationRenderer {
         }
     }
 
+    function drawScore(
+        dc as Graphics.Dc,
+        centerX,
+        centerY,
+        awayText,
+        homeText,
+        statusText,
+        awayIsFeatured
+    ) {
+        configureFonts(dc);
+
+        dc.setPenWidth(1);
+
+        dc.setColor(_theme.complicationBorderColor, Graphics.COLOR_TRANSPARENT);
+
+        dc.drawCircle(centerX, centerY, RADIUS);
+
+        if (awayIsFeatured) {
+            dc.setColor(
+                _theme.complicationIconColor,
+                Graphics.COLOR_TRANSPARENT
+            );
+        } else {
+            dc.setColor(
+                _theme.complicationValueColor,
+                Graphics.COLOR_TRANSPARENT
+            );
+        }
+
+        dc.drawText(
+            centerX,
+            centerY - 19,
+            _valueFont,
+            awayText,
+            Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
+        );
+
+        if (awayIsFeatured) {
+            dc.setColor(
+                _theme.complicationValueColor,
+                Graphics.COLOR_TRANSPARENT
+            );
+        } else {
+            dc.setColor(
+                _theme.complicationIconColor,
+                Graphics.COLOR_TRANSPARENT
+            );
+        }
+
+        dc.drawText(
+            centerX,
+            centerY + 2,
+            _valueFont,
+            homeText,
+            Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
+        );
+
+        dc.setColor(_theme.complicationLabelColor, Graphics.COLOR_TRANSPARENT);
+
+        dc.drawText(
+            centerX,
+            centerY + 24,
+            _detailFont,
+            statusText,
+            Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
+        );
+
+        dc.setPenWidth(1);
+    }
+
     function drawStepsIcon(dc as Graphics.Dc, centerX, centerY) {
         dc.setColor(_theme.complicationIconColor, Graphics.COLOR_TRANSPARENT);
 

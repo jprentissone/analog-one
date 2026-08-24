@@ -55,6 +55,7 @@ class SportsData {
     var homeTeam;
     var homeScore;
     var gameStatus;
+    var featuredTeam;
     var isAvailable;
 
     function initialize(
@@ -63,6 +64,7 @@ class SportsData {
         currentHomeTeam,
         currentHomeScore,
         currentGameStatus,
+        currentFeaturedTeam,
         available
     ) {
         awayTeam = currentAwayTeam;
@@ -70,6 +72,7 @@ class SportsData {
         homeTeam = currentHomeTeam;
         homeScore = currentHomeScore;
         gameStatus = currentGameStatus;
+        featuredTeam = currentFeaturedTeam;
         isAvailable = available;
     }
 }
