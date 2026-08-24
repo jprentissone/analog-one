@@ -10,6 +10,9 @@ module ThemeIds {
     const WISCONSIN_RED = 7;
     const IOWA_BLACK_GOLD = 8;
     const WASHINGTON_PURPLE = 9;
+    const NEBRASKA_SCARLET = 10;
+    const MINNESOTA_MAROON = 11;
+    const NORTHWESTERN_PURPLE = 12;
 }
 
 class Theme {

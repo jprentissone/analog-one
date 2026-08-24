@@ -20,6 +20,12 @@ class ThemeManager {
             _activeTheme = createIowaBlackGold();
         } else if (themeId == ThemeIds.WASHINGTON_PURPLE) {
             _activeTheme = createWashingtonPurple();
+        } else if (themeId == ThemeIds.NEBRASKA_SCARLET) {
+            _activeTheme = createNebraskaScarlet();
+        } else if (themeId == ThemeIds.MINNESOTA_MAROON) {
+            _activeTheme = createMinnesotaMaroon();
+        } else if (themeId == ThemeIds.NORTHWESTERN_PURPLE) {
+            _activeTheme = createNorthwesternPurple();
         } else {
             _activeTheme = createAnalogOneClassic();
         }
@@ -184,6 +190,54 @@ class ThemeManager {
             AnalogColors.GHOST_WASHINGTON,
             AnalogColors.WASHINGTON_RING,
             AnalogColors.WASHINGTON_GOLD,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY
+        );
+    }
+
+    function createNebraskaScarlet() as Theme {
+        return new Theme(
+            AnalogColors.TRUE_BLACK,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY,
+            AnalogColors.HAND_WHITE,
+            AnalogColors.NEBRASKA_SCARLET,
+            AnalogColors.NEBRASKA_CREAM,
+            AnalogColors.GHOST_NEBRASKA,
+            AnalogColors.NEBRASKA_RING,
+            AnalogColors.NEBRASKA_CREAM,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY
+        );
+    }
+
+    function createMinnesotaMaroon() as Theme {
+        return new Theme(
+            AnalogColors.TRUE_BLACK,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY,
+            AnalogColors.HAND_WHITE,
+            AnalogColors.MINNESOTA_MAROON,
+            AnalogColors.MINNESOTA_GOLD,
+            AnalogColors.GHOST_MINNESOTA,
+            AnalogColors.MINNESOTA_RING,
+            AnalogColors.MINNESOTA_GOLD,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY
+        );
+    }
+
+    function createNorthwesternPurple() as Theme {
+        return new Theme(
+            AnalogColors.TRUE_BLACK,
+            AnalogColors.DIAL_WHITE,
+            AnalogColors.MINUTE_GRAY,
+            AnalogColors.HAND_WHITE,
+            AnalogColors.NORTHWESTERN_PURPLE,
+            AnalogColors.HAND_WHITE,
+            AnalogColors.GHOST_NORTHWESTERN,
+            AnalogColors.NORTHWESTERN_RING,
+            AnalogColors.HAND_WHITE,
             AnalogColors.DIAL_WHITE,
             AnalogColors.MINUTE_GRAY
         );

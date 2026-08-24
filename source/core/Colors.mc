@@ -58,6 +58,20 @@ module AnalogColors {
     const WASHINGTON_GOLD = 0xb7a57a;
     const GHOST_WASHINGTON = 0x24163f;
 
+    const NEBRASKA_SCARLET = 0xe41c38;
+    const NEBRASKA_RING = 0xf04a5d;
+    const NEBRASKA_CREAM = 0xfdf2d0;
+    const GHOST_NEBRASKA = 0x41080f;
+
+    const MINNESOTA_MAROON = 0x7a0019;
+    const MINNESOTA_RING = 0xa82a46;
+    const MINNESOTA_GOLD = 0xffcc33;
+    const GHOST_MINNESOTA = 0x30000a;
+
+    const NORTHWESTERN_PURPLE = 0x4e2a84;
+    const NORTHWESTERN_RING = 0x7a5aad;
+    const GHOST_NORTHWESTERN = 0x261440;
+
     // Semantic weather colors
     const WEATHER_SUN = 0xffc400;
     const WEATHER_CLOUD = 0xd9d9d9;
