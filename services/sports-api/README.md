@@ -10,7 +10,7 @@ response.
 - `GET /v1/ncaa/football?team=osu`
 
 The `team` parameter selects an allow-listed college profile. The current
-profiles are `osu` and `michigan`; omitting the parameter defaults to `osu` for
+profiles cover all 18 Big Ten schools; omitting the parameter defaults to `osu` for
 backward compatibility. Each profile owns the stable CFBD team ID, compact
 display abbreviation, and primary and secondary brand colors.
 

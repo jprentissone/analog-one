@@ -23,6 +23,34 @@ test("defines a reusable Michigan profile", () => {
 });
 
 test("lists only supported profile IDs", () => {
-  assert.deepEqual(getCollegeProfileIds().sort(), ["michigan", "osu"]);
+  assert.deepEqual(getCollegeProfileIds().sort(), [
+    "illinois",
+    "indiana",
+    "iowa",
+    "maryland",
+    "michigan",
+    "michigan_state",
+    "minnesota",
+    "nebraska",
+    "northwestern",
+    "oregon",
+    "osu",
+    "penn_state",
+    "purdue",
+    "rutgers",
+    "ucla",
+    "usc",
+    "washington",
+    "wisconsin",
+  ]);
   assert.equal(getCollegeProfile("unknown"), null);
+});
+
+test("defines all Big Ten profiles with unique stable IDs and abbreviations", () => {
+  const profiles = getCollegeProfileIds().map((id) => getCollegeProfile(id));
+
+  assert.equal(profiles.length, 18);
+  assert.ok(profiles.every((profile) => profile !== null));
+  assert.equal(new Set(profiles.map((profile) => profile?.cfbdTeamId)).size, 18);
+  assert.equal(new Set(profiles.map((profile) => profile?.abbreviation)).size, 18);
 });
