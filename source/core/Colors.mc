@@ -21,4 +21,9 @@ module AnalogColors {
     const WEATHER_CLOUD = 0xd9d9d9;
     const WEATHER_RAIN = 0x3fa9f5;
     const WEATHER_SNOW = 0xcfefff;
+
+    // Semantic battery colors
+    const BATTERY_CHARGING = 0x00c853;
+    const BATTERY_WARNING = 0xffb300;
+    const BATTERY_CRITICAL = 0xff0000;
 }

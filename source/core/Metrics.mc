@@ -30,6 +30,25 @@ class ActivityData {
     }
 }
 
+class BatteryData {
+    var percentage;
+    var daysRemaining;
+    var isCharging;
+    var hasDaysEstimate;
+
+    function initialize(
+        currentPercentage,
+        currentDaysRemaining,
+        charging,
+        daysEstimateAvailable
+    ) {
+        percentage = currentPercentage;
+        daysRemaining = currentDaysRemaining;
+        isCharging = charging;
+        hasDaysEstimate = daysEstimateAvailable;
+    }
+}
+
 class SportsData {
     var awayTeam;
     var awayScore;
@@ -59,12 +78,20 @@ class WatchFaceData {
     var weather;
     var date;
     var activity;
+    var battery;
     var sports;
 
-    function initialize(weatherData, dateData, activityData, sportsData) {
+    function initialize(
+        weatherData,
+        dateData,
+        activityData,
+        batteryData,
+        sportsData
+    ) {
         weather = weatherData;
         date = dateData;
         activity = activityData;
+        battery = batteryData;
         sports = sportsData;
     }
 }

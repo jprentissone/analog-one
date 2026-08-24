@@ -28,6 +28,8 @@ class DataManager {
 
         var activityData = new ActivityData(steps, stepsAvailable);
 
+        var batteryData = getBatteryData();
+
         var weatherData = getWeatherData();
 
         // NCAA score integration will be added in a later lesson.
@@ -37,6 +39,7 @@ class DataManager {
             weatherData,
             dateData,
             activityData,
+            batteryData,
             sportsData
         );
     }
@@ -69,5 +72,27 @@ class DataManager {
         }
 
         return new WeatherData(roundedTemperature, conditionCode, true);
+    }
+
+    function getBatteryData() {
+        var systemStats = System.getSystemStats();
+
+        var percentage = Math.round(systemStats.battery).toNumber();
+
+        var daysRemaining = 0.0;
+        var hasDaysEstimate = false;
+
+        if (systemStats has :batteryInDays) {
+            daysRemaining = systemStats.batteryInDays.toFloat();
+
+            hasDaysEstimate = true;
+        }
+
+        return new BatteryData(
+            percentage,
+            daysRemaining,
+            systemStats.charging,
+            hasDaysEstimate
+        );
     }
 }

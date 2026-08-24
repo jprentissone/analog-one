@@ -124,6 +124,37 @@ class ComplicationRenderer {
         dc.setPenWidth(1);
     }
 
+    function drawBattery(
+        dc as Graphics.Dc,
+        centerX,
+        centerY,
+        value,
+        percentage,
+        isCharging
+    ) {
+        configureFonts(dc);
+
+        dc.setPenWidth(1);
+
+        dc.setColor(_theme.complicationBorderColor, Graphics.COLOR_TRANSPARENT);
+
+        dc.drawCircle(centerX, centerY, RADIUS);
+
+        drawBatteryIcon(dc, centerX, centerY - 12, percentage, isCharging);
+
+        dc.setColor(_theme.complicationValueColor, Graphics.COLOR_TRANSPARENT);
+
+        dc.drawText(
+            centerX,
+            centerY + 12,
+            _valueFont,
+            value,
+            Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
+        );
+
+        dc.setPenWidth(1);
+    }
+
     function drawIcon(dc as Graphics.Dc, centerX, centerY, iconType) {
         if (iconType == ComplicationIcons.CALENDAR) {
             drawCalendarIcon(dc, centerX, centerY);
@@ -157,6 +188,44 @@ class ComplicationRenderer {
         dc.drawLine(left + 4, top, left + 4, top + 4);
 
         dc.drawLine(left + width - 4, top, left + width - 4, top + 4);
+    }
+
+    function drawBatteryIcon(
+        dc as Graphics.Dc,
+        centerX,
+        centerY,
+        percentage,
+        isCharging
+    ) {
+        var iconColor = _theme.complicationValueColor;
+
+        if (isCharging) {
+            iconColor = AnalogColors.BATTERY_CHARGING;
+        } else if (percentage <= 10) {
+            iconColor = AnalogColors.BATTERY_CRITICAL;
+        } else if (percentage <= 20) {
+            iconColor = AnalogColors.BATTERY_WARNING;
+        }
+
+        dc.setColor(iconColor, Graphics.COLOR_TRANSPARENT);
+
+        var left = centerX - 9;
+        var top = centerY - 5;
+        var width = 16;
+        var height = 10;
+
+        // Horizontal battery body
+        dc.drawRectangle(left, top, width, height);
+
+        // Positive terminal
+        dc.fillRectangle(left + width, centerY - 2, 2, 4);
+
+        // Charge-level fill
+        var fillWidth = ((width - 4) * percentage) / 100;
+
+        if (fillWidth > 0) {
+            dc.fillRectangle(left + 2, top + 2, fillWidth, height - 4);
+        }
     }
 
     function drawStepsIcon(dc as Graphics.Dc, centerX, centerY) {
