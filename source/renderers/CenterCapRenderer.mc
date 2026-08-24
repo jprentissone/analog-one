@@ -21,9 +21,9 @@ class CenterCapRenderer {
         _theme = theme;
     }
 
-    function draw(dc as Graphics.Dc) {
-        var centerX = dc.getWidth() / 2;
-        var centerY = dc.getHeight() / 2;
+    function draw(dc as Graphics.Dc, offsetX, offsetY) {
+        var centerX = dc.getWidth() / 2 + offsetX;
+        var centerY = dc.getHeight() / 2 + offsetY;
 
         drawCenterCap(dc, centerX, centerY);
     }

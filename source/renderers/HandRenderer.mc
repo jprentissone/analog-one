@@ -64,9 +64,9 @@ class HandRenderer {
         _theme = theme;
     }
 
-    function draw(dc as Graphics.Dc, isAwake) {
-        var centerX = dc.getWidth() / 2;
-        var centerY = dc.getHeight() / 2;
+    function draw(dc as Graphics.Dc, isAwake, offsetX, offsetY) {
+        var centerX = dc.getWidth() / 2 + offsetX;
+        var centerY = dc.getHeight() / 2 + offsetY;
 
         var clockTime = System.getClockTime();
 

@@ -48,16 +48,24 @@ class AnalogOneView extends WatchUi.WatchFace {
     function onUpdate(dc as Dc) as Void {
         _backgroundRenderer.draw(dc);
 
+        var offsetX = 0;
+        var offsetY = 0;
+
         if (_isAwake) {
             _logoRenderer.draw(dc);
             _dialRenderer.draw(dc);
         } else {
-            _dialRenderer.drawAlwaysOn(dc);
+            var alwaysOnOffset = getAlwaysOnOffset();
+
+            offsetX = alwaysOnOffset[0];
+            offsetY = alwaysOnOffset[1];
+
+            _dialRenderer.drawAlwaysOn(dc, offsetX, offsetY);
         }
 
-        _handRenderer.draw(dc, _isAwake);
+        _handRenderer.draw(dc, _isAwake, offsetX, offsetY);
 
-        _centerCapRenderer.draw(dc);
+        _centerCapRenderer.draw(dc, offsetX, offsetY);
     }
 
     function onHide() as Void {}
@@ -70,5 +78,20 @@ class AnalogOneView extends WatchUi.WatchFace {
     function onEnterSleep() as Void {
         _isAwake = false;
         WatchUi.requestUpdate();
+    }
+
+    function getAlwaysOnOffset() {
+        var minute = System.getClockTime().min;
+        var position = minute % 4;
+
+        if (position == 0) {
+            return [-4, -4];
+        } else if (position == 1) {
+            return [4, -4];
+        } else if (position == 2) {
+            return [4, 4];
+        }
+
+        return [-4, 4];
     }
 }

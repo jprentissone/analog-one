@@ -171,11 +171,11 @@ class DialRenderer {
         return (degrees * Math.PI) / 180.0;
     }
 
-    function drawAlwaysOn(dc as Graphics.Dc) {
+    function drawAlwaysOn(dc as Graphics.Dc, offsetX, offsetY) {
         dc.setColor(_theme.minuteTrackColor, Graphics.COLOR_TRANSPARENT);
 
-        var centerX = dc.getWidth() / 2;
-        var centerY = dc.getHeight() / 2;
+        var centerX = dc.getWidth() / 2 + offsetX;
+        var centerY = dc.getHeight() / 2 + offsetY;
         var radius = dc.getWidth() / 2 - DIAL_INSET;
 
         drawAlwaysOnMarker(dc, centerX, centerY, radius, 270);
