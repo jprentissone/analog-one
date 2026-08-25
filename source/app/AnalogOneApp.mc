@@ -36,6 +36,58 @@ class AnalogOneApp extends Application.AppBase {
         return [_mainView];
     }
 
+    function getSettingsView()
+        as [WatchUi.Views] or [WatchUi.Views, WatchUi.InputDelegates] or Null {
+        var currentSchoolId = new SettingsManager().getSchoolId();
+        var menu = new WatchUi.Menu2({
+            :title => Rez.Strings.SchoolTitle,
+        });
+
+        addSchoolMenuItem(
+            menu,
+            Rez.Strings.SchoolOhioState,
+            SchoolIds.OHIO_STATE,
+            currentSchoolId
+        );
+        addSchoolMenuItem(
+            menu,
+            Rez.Strings.SchoolMichigan,
+            SchoolIds.MICHIGAN,
+            currentSchoolId
+        );
+        addSchoolMenuItem(
+            menu,
+            Rez.Strings.SchoolPennState,
+            SchoolIds.PENN_STATE,
+            currentSchoolId
+        );
+
+        return [menu, new SchoolSettingsDelegate()];
+    }
+
+    function addSchoolMenuItem(menu, label, schoolId, currentSchoolId) as Void {
+        var subLabel = null;
+
+        if (schoolId == currentSchoolId) {
+            subLabel = Rez.Strings.SchoolSelected;
+        }
+
+        menu.addItem(
+            new WatchUi.MenuItem(label, subLabel, schoolId, {})
+        );
+    }
+
+    function applySchoolSelection(schoolId) as Void {
+        new SettingsManager().setSchoolId(schoolId);
+        Application.Storage.deleteValue("sportsData");
+
+        if (_mainView != null) {
+            _mainView.reloadSchoolTheme();
+        }
+
+        WatchUi.requestUpdate();
+    }
+
     function onSettingsChanged() as Void {
         if (_mainView != null) {
             _mainView.reloadSchoolTheme();
