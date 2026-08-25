@@ -39,7 +39,7 @@ class SportsRenderer {
 
             _statusFont = Graphics.getVectorFont({
                 :face => ["RobotoCondensedRegular", "RobotoRegular"],
-                :size => (dc.getWidth() * 18) / 454,
+                :size => (dc.getWidth() * 22) / 454,
             });
         }
 
