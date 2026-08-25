@@ -17,24 +17,24 @@ class SportsService {
 
             if (!(receivedTeam instanceof String) ||
                 !expectedTeam.equals(receivedTeam)) {
-                return createNoGameData();
+                return createNoGameData("UPDATING");
             }
 
             return parseResponse(response as Dictionary);
         }
 
-        return createNoGameData();
+        return createNoGameData("UPDATING");
     }
 
     function parseResponse(response) {
         if (response == null) {
-            return createNoGameData();
+            return createNoGameData("UPDATING");
         }
 
         var state = response["state"];
 
         if (state == SportsStates.NONE) {
-            return createNoGameData();
+            return createNoGameData("NO GAME");
         }
 
         return new SportsData(
@@ -49,15 +49,17 @@ class SportsService {
         );
     }
 
-    function createNoGameData() {
+    function createNoGameData(statusText) {
+        var schoolId = new SettingsManager().getSchoolId();
+
         return new SportsData(
             SportsStates.NONE,
             "",
             0,
             "",
             0,
-            "",
-            "",
+            statusText,
+            CollegeProfileIds.abbreviationForSchool(schoolId),
             ""
         );
     }

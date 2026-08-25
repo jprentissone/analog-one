@@ -23,7 +23,8 @@ class HandRenderer {
     // Seconds Hand
     // ==========================================================
 
-    const SECOND_HAND_LENGTH = 172;
+    // Reaches the inner five-minute pip band without touching the outer pips.
+    const SECOND_HAND_LENGTH = 210;
     const SECOND_HAND_WIDTH = 2;
 
     const SECOND_COUNTERWEIGHT = 18;

@@ -7,7 +7,7 @@ class DateRenderer {
     // ==========================================================
 
     const DATE_OFFSET_X = 0;
-    const DATE_OFFSET_Y = 130;
+    const DATE_OFFSET_Y = 150;
 
     // ==========================================================
     // Renderer

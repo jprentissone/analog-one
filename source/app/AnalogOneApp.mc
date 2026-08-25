@@ -33,7 +33,7 @@ class AnalogOneApp extends Application.AppBase {
         }
 
         _mainView = new AnalogOneView();
-        return [_mainView];
+        return [_mainView, new AnalogOneWatchFaceDelegate()];
     }
 
     function getSettingsView()
@@ -81,6 +81,8 @@ class AnalogOneApp extends Application.AppBase {
         new SettingsManager().setSchoolId(schoolId);
         Application.Storage.deleteValue("sportsData");
 
+        scheduleSportsRefresh();
+
         if (_mainView != null) {
             _mainView.reloadSchoolTheme();
         }
@@ -88,7 +90,27 @@ class AnalogOneApp extends Application.AppBase {
         WatchUi.requestUpdate();
     }
 
+    function scheduleSportsRefresh() as Void {
+        var refreshInterval = new Time.Duration(5 * 60);
+        var lastRefresh = Background.getLastTemporalEventTime();
+
+        try {
+            if (lastRefresh != null) {
+                Background.registerForTemporalEvent(
+                    lastRefresh.add(refreshInterval)
+                );
+            } else {
+                Background.registerForTemporalEvent(Time.now());
+            }
+        } catch (error) {
+            // Keep the existing schedule if Garmin rejects a nearer event.
+        }
+    }
+
     function onSettingsChanged() as Void {
+        Application.Storage.deleteValue("sportsData");
+        scheduleSportsRefresh();
+
         if (_mainView != null) {
             _mainView.reloadSchoolTheme();
         }

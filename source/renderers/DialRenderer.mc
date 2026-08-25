@@ -14,7 +14,10 @@ class DialRenderer {
     // ==========================================================
 
     const MINUTE_TICK_LENGTH = 6; // 1-59
-    const HOUR_TICK_LENGTH = 18; //
+    const HOUR_OUTER_PIP_LENGTH = 5;
+    const HOUR_OUTER_PIP_WIDTH = 3;
+    const HOUR_MARKER_GAP = 6;
+    const HOUR_INNER_PIP_LENGTH = 9;
     const ALWAYS_ON_TICK_LENGTH = 10;
     const CARDINAL_TICK_LENGTH = 10; // 12, 3, 6, 9
 
@@ -64,8 +67,6 @@ class DialRenderer {
 
             if (isCardinalPosition(minute)) {
                 tickLength = CARDINAL_TICK_LENGTH;
-            } else if (isHourMarker(minute)) {
-                tickLength = HOUR_TICK_LENGTH;
             }
 
             var outerPoint = polarToPoint(centerX, centerY, radius, angle);
@@ -88,15 +89,18 @@ class DialRenderer {
                 );
             }
 
-            if (isHourMarker(minute)) {
-                dc.setPenWidth(2);
-            } else {
-                dc.setPenWidth(1);
-            }
-
             if (isCardinalPosition(minute)) {
                 drawCardinalMarker(dc, minute, outerPoint, innerPoint);
+            } else if (isHourMarker(minute)) {
+                drawSplitHourMarker(
+                    dc,
+                    centerX,
+                    centerY,
+                    radius,
+                    angle
+                );
             } else {
+                dc.setPenWidth(1);
                 dc.drawLine(
                     outerPoint[0],
                     outerPoint[1],
@@ -107,6 +111,90 @@ class DialRenderer {
         }
 
         dc.setPenWidth(1);
+    }
+
+    function drawSplitHourMarker(
+        dc,
+        centerX,
+        centerY,
+        radius,
+        angle
+    ) {
+        var outerPipEndRadius = radius - HOUR_OUTER_PIP_LENGTH;
+        var innerPipStartRadius = outerPipEndRadius - HOUR_MARKER_GAP;
+        var innerPipEndRadius =
+            innerPipStartRadius - HOUR_INNER_PIP_LENGTH;
+
+        var outerPoint = polarToPoint(centerX, centerY, radius, angle);
+        var outerPipEnd = polarToPoint(
+            centerX,
+            centerY,
+            outerPipEndRadius,
+            angle
+        );
+        var innerPipStart = polarToPoint(
+            centerX,
+            centerY,
+            innerPipStartRadius,
+            angle
+        );
+        var innerPipEnd = polarToPoint(
+            centerX,
+            centerY,
+            innerPipEndRadius,
+            angle
+        );
+
+        drawRadialRectangle(
+            dc,
+            outerPoint,
+            outerPipEnd,
+            angle,
+            HOUR_OUTER_PIP_WIDTH
+        );
+
+        dc.setPenWidth(2);
+        dc.drawLine(
+            innerPipStart[0],
+            innerPipStart[1],
+            innerPipEnd[0],
+            innerPipEnd[1]
+        );
+    }
+
+    function drawRadialRectangle(dc, outerPoint, innerPoint, angle, width) {
+        var halfWidth = width / 2;
+        var outerLeft = polarToPoint(
+            outerPoint[0],
+            outerPoint[1],
+            halfWidth,
+            angle - 90
+        );
+        var outerRight = polarToPoint(
+            outerPoint[0],
+            outerPoint[1],
+            halfWidth,
+            angle + 90
+        );
+        var innerLeft = polarToPoint(
+            innerPoint[0],
+            innerPoint[1],
+            halfWidth,
+            angle - 90
+        );
+        var innerRight = polarToPoint(
+            innerPoint[0],
+            innerPoint[1],
+            halfWidth,
+            angle + 90
+        );
+
+        dc.fillPolygon([
+            [outerLeft[0], outerLeft[1]],
+            [innerLeft[0], innerLeft[1]],
+            [innerRight[0], innerRight[1]],
+            [outerRight[0], outerRight[1]],
+        ]);
     }
 
     function drawCardinalMarker(dc, minute, outerPoint, innerPoint) {

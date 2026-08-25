@@ -3,8 +3,8 @@ import Toybox.Lang;
 import Toybox.Weather;
 
 class WeatherRenderer {
-    const WEATHER_OFFSET_X = 130;
-    const WEATHER_OFFSET_Y = 75;
+    const WEATHER_OFFSET_X = 126;
+    const WEATHER_OFFSET_Y = 73;
 
     var _complicationRenderer as ComplicationRenderer;
 

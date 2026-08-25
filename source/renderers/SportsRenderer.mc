@@ -59,7 +59,10 @@ class SportsRenderer {
     }
 
     function draw(dc as Graphics.Dc, sportsData as SportsData) {
-        if (sportsData.state == SportsStates.NONE) {
+        if (sportsData.state != SportsStates.UPCOMING &&
+            sportsData.state != SportsStates.LIVE &&
+            sportsData.state != SportsStates.FINAL) {
+            drawEmptyState(dc, sportsData);
             return;
         }
 
@@ -105,6 +108,44 @@ class SportsRenderer {
         dc.drawText(
             centerX,
             firstRowY + ROW_SPACING * 2,
+            _statusFont,
+            statusText,
+            Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
+        );
+    }
+
+    function drawEmptyState(dc as Graphics.Dc, sportsData as SportsData) {
+        configureFonts(dc);
+
+        var centerX = dc.getWidth() / 2;
+        var firstRowY = dc.getHeight() / 2 + SCORE_TOP_OFFSET_Y;
+        var schoolId = new SettingsManager().getSchoolId();
+        var schoolText = CollegeProfileIds.abbreviationForSchool(schoolId);
+        var statusText = sportsData.gameStatus;
+
+        if (!(statusText instanceof String) || statusText.length() == 0) {
+            statusText = "UPDATING";
+        }
+
+        dc.setColor(
+            _theme.complicationIconColor,
+            Graphics.COLOR_TRANSPARENT
+        );
+        dc.drawText(
+            centerX,
+            firstRowY + ROW_SPACING / 2,
+            _teamFont,
+            schoolText,
+            Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
+        );
+
+        dc.setColor(
+            _theme.complicationLabelColor,
+            Graphics.COLOR_TRANSPARENT
+        );
+        dc.drawText(
+            centerX,
+            firstRowY + ROW_SPACING * 3 / 2,
             _statusFont,
             statusText,
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
