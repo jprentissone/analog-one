@@ -10,7 +10,7 @@ class SettingsManager {
     function getSchoolId() {
         var schoolId = Application.Properties.getValue(SCHOOL_KEY);
 
-        if (schoolId != null && schoolId >= SchoolIds.NEUTRAL) {
+        if (SchoolIds.isSupported(schoolId)) {
             return schoolId;
         }
 
@@ -26,6 +26,10 @@ class SettingsManager {
     }
 
     function setSchoolId(schoolId) as Void {
+        if (!SchoolIds.isSupported(schoolId)) {
+            schoolId = SchoolIds.OHIO_STATE;
+        }
+
         Application.Properties.setValue(SCHOOL_KEY, schoolId);
     }
 

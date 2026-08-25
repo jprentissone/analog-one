@@ -6,8 +6,8 @@ class StepsRenderer {
     // Complication Position
     // ==========================================================
 
-    const STEPS_OFFSET_X = -139;
-    const STEPS_OFFSET_Y = -51;
+    const STEPS_OFFSET_X = -130;
+    const STEPS_OFFSET_Y = 75;
 
     // ==========================================================
     // Renderer

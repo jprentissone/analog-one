@@ -53,8 +53,6 @@ class DialRenderer {
 
         drawDialNumber(dc, "3", 0, centerX, centerY, numeralRadius);
 
-        drawDialNumber(dc, "6", 90, centerX, centerY, numeralRadius);
-
         drawDialNumber(dc, "9", 180, centerX, centerY, numeralRadius);
     }
 

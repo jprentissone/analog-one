@@ -6,8 +6,8 @@ class DateRenderer {
     // Complication Position
     // ==========================================================
 
-    const DATE_OFFSET_X = -101;
-    const DATE_OFFSET_Y = 108;
+    const DATE_OFFSET_X = 0;
+    const DATE_OFFSET_Y = 130;
 
     // ==========================================================
     // Renderer

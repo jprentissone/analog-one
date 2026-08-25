@@ -72,7 +72,7 @@ class ThemeManager {
             AnalogColors.DARK_SCARLET,
             AnalogColors.SCARLET,
             AnalogColors.GHOST_SCARLET,
-            AnalogColors.DARK_SCARLET,
+            AnalogColors.SCARLET_RING,
             AnalogColors.SCARLET,
             AnalogColors.DIAL_WHITE,
             AnalogColors.MINUTE_GRAY

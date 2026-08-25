@@ -14,6 +14,8 @@ module AnalogColors {
     // Benchcraft accent tones
     const SCARLET = 0xd00000;
     const DARK_SCARLET = 0x660000;
+    // Brighter scarlet for thin rings on true-black AMOLED displays.
+    const SCARLET_RING = 0xe33a3a;
     const GHOST_SCARLET = 0x300000;
 
     const MICHIGAN_BLUE = 0x00274c;

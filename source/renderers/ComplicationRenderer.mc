@@ -12,7 +12,7 @@ module ComplicationIcons {
 }
 
 class ComplicationRenderer {
-    const RADIUS = 42;
+    const RADIUS = 50;
 
     var _theme as Theme;
 
@@ -36,8 +36,8 @@ class ComplicationRenderer {
         _detailFont = null;
 
         if (Graphics has :getVectorFont) {
-            var valueSize = (dc.getWidth() * 18) / 454;
-            var detailSize = (dc.getWidth() * 12) / 454;
+            var valueSize = (dc.getWidth() * 23) / 454;
+            var detailSize = (dc.getWidth() * 14) / 454;
 
             _valueFont = Graphics.getVectorFont({
                 :face => ["RobotoCondensedRegular", "RobotoRegular"],
@@ -46,7 +46,7 @@ class ComplicationRenderer {
 
             _compactValueFont = Graphics.getVectorFont({
                 :face => ["RobotoCondensedRegular", "RobotoRegular"],
-                :size => (dc.getWidth() * 15) / 454,
+                :size => (dc.getWidth() * 18) / 454,
             });
 
             _detailFont = Graphics.getVectorFont({
@@ -79,13 +79,13 @@ class ComplicationRenderer {
 
         dc.drawCircle(centerX, centerY, RADIUS);
 
-        drawIcon(dc, centerX, centerY - 12, iconType);
+        drawIcon(dc, centerX, centerY - 15, iconType);
 
         dc.setColor(_theme.complicationValueColor, Graphics.COLOR_TRANSPARENT);
 
         dc.drawText(
             centerX,
-            centerY + 12,
+            centerY + 16,
             _valueFont,
             value,
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
@@ -110,13 +110,13 @@ class ComplicationRenderer {
 
         dc.drawCircle(centerX, centerY, RADIUS);
 
-        drawIcon(dc, centerX, centerY - 21, iconType);
+        drawIcon(dc, centerX, centerY - 24, iconType);
 
         dc.setColor(_theme.complicationValueColor, Graphics.COLOR_TRANSPARENT);
 
         dc.drawText(
             centerX,
-            centerY + 1,
+            centerY + 2,
             _valueFont,
             value,
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
@@ -126,7 +126,7 @@ class ComplicationRenderer {
 
         dc.drawText(
             centerX,
-            centerY + 22,
+            centerY + 27,
             _detailFont,
             detail,
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
@@ -185,20 +185,20 @@ class ComplicationRenderer {
     }
 
     function drawCalendarIcon(dc as Graphics.Dc, centerX, centerY) {
-        var left = centerX - 7;
-        var top = centerY - 7;
-        var width = 14;
-        var height = 14;
+        var left = centerX - 9;
+        var top = centerY - 9;
+        var width = 18;
+        var height = 18;
 
         dc.setColor(_theme.complicationIconColor, Graphics.COLOR_TRANSPARENT);
 
         dc.drawRectangle(left, top + 2, width, height - 2);
 
-        dc.drawLine(left, top + 6, left + width, top + 6);
+        dc.drawLine(left, top + 7, left + width, top + 7);
 
-        dc.drawLine(left + 4, top, left + 4, top + 4);
+        dc.drawLine(left + 5, top, left + 5, top + 5);
 
-        dc.drawLine(left + width - 4, top, left + width - 4, top + 4);
+        dc.drawLine(left + width - 5, top, left + width - 5, top + 5);
     }
 
     function drawBatteryIcon(
@@ -321,14 +321,14 @@ class ComplicationRenderer {
         dc.setColor(_theme.complicationIconColor, Graphics.COLOR_TRANSPARENT);
 
         // Left footprint
-        dc.fillCircle(centerX - 4, centerY + 2, 3);
+        dc.fillCircle(centerX - 5, centerY + 3, 4);
 
-        dc.fillCircle(centerX - 5, centerY - 4, 2);
+        dc.fillCircle(centerX - 6, centerY - 5, 3);
 
         // Right footprint
-        dc.fillCircle(centerX + 4, centerY - 2, 3);
+        dc.fillCircle(centerX + 5, centerY - 2, 4);
 
-        dc.fillCircle(centerX + 5, centerY - 8, 2);
+        dc.fillCircle(centerX + 6, centerY - 10, 3);
     }
 
     function setIconColor(dc as Graphics.Dc) {
@@ -338,20 +338,20 @@ class ComplicationRenderer {
     function drawSunIcon(dc as Graphics.Dc, centerX, centerY) {
         dc.setColor(AnalogColors.WEATHER_SUN, Graphics.COLOR_TRANSPARENT);
 
-        dc.drawCircle(centerX, centerY, 4);
+        dc.drawCircle(centerX, centerY, 5);
 
-        dc.drawLine(centerX, centerY - 9, centerX, centerY - 6);
-        dc.drawLine(centerX, centerY + 6, centerX, centerY + 9);
-        dc.drawLine(centerX - 9, centerY, centerX - 6, centerY);
-        dc.drawLine(centerX + 6, centerY, centerX + 9, centerY);
+        dc.drawLine(centerX, centerY - 11, centerX, centerY - 7);
+        dc.drawLine(centerX, centerY + 7, centerX, centerY + 11);
+        dc.drawLine(centerX - 11, centerY, centerX - 7, centerY);
+        dc.drawLine(centerX + 7, centerY, centerX + 11, centerY);
 
-        dc.drawLine(centerX - 6, centerY - 6, centerX - 4, centerY - 4);
+        dc.drawLine(centerX - 8, centerY - 8, centerX - 5, centerY - 5);
 
-        dc.drawLine(centerX + 4, centerY + 4, centerX + 6, centerY + 6);
+        dc.drawLine(centerX + 5, centerY + 5, centerX + 8, centerY + 8);
 
-        dc.drawLine(centerX + 4, centerY - 4, centerX + 6, centerY - 6);
+        dc.drawLine(centerX + 5, centerY - 5, centerX + 8, centerY - 8);
 
-        dc.drawLine(centerX - 6, centerY + 6, centerX - 4, centerY + 4);
+        dc.drawLine(centerX - 8, centerY + 8, centerX - 5, centerY + 5);
     }
 
     function drawPartlyCloudyIcon(dc as Graphics.Dc, centerX, centerY) {

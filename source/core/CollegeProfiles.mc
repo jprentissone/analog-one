@@ -3,57 +3,12 @@ module CollegeProfileIds {
     const OSU = "osu";
     const MICHIGAN = "michigan";
     const PENN_STATE = "penn_state";
-    const MICHIGAN_STATE = "michigan_state";
-    const OREGON = "oregon";
-    const USC = "usc";
-    const WISCONSIN = "wisconsin";
-    const IOWA = "iowa";
-    const WASHINGTON = "washington";
-    const NEBRASKA = "nebraska";
-    const MINNESOTA = "minnesota";
-    const NORTHWESTERN = "northwestern";
-    const ILLINOIS = "illinois";
-    const INDIANA = "indiana";
-    const MARYLAND = "maryland";
-    const PURDUE = "purdue";
-    const RUTGERS = "rutgers";
-    const UCLA = "ucla";
 
     function forSchool(schoolId) {
         if (schoolId == SchoolIds.MICHIGAN) {
             return MICHIGAN;
         } else if (schoolId == SchoolIds.PENN_STATE) {
             return PENN_STATE;
-        } else if (schoolId == SchoolIds.MICHIGAN_STATE) {
-            return MICHIGAN_STATE;
-        } else if (schoolId == SchoolIds.OREGON) {
-            return OREGON;
-        } else if (schoolId == SchoolIds.USC) {
-            return USC;
-        } else if (schoolId == SchoolIds.WISCONSIN) {
-            return WISCONSIN;
-        } else if (schoolId == SchoolIds.IOWA) {
-            return IOWA;
-        } else if (schoolId == SchoolIds.WASHINGTON) {
-            return WASHINGTON;
-        } else if (schoolId == SchoolIds.NEBRASKA) {
-            return NEBRASKA;
-        } else if (schoolId == SchoolIds.MINNESOTA) {
-            return MINNESOTA;
-        } else if (schoolId == SchoolIds.NORTHWESTERN) {
-            return NORTHWESTERN;
-        } else if (schoolId == SchoolIds.ILLINOIS) {
-            return ILLINOIS;
-        } else if (schoolId == SchoolIds.INDIANA) {
-            return INDIANA;
-        } else if (schoolId == SchoolIds.MARYLAND) {
-            return MARYLAND;
-        } else if (schoolId == SchoolIds.PURDUE) {
-            return PURDUE;
-        } else if (schoolId == SchoolIds.RUTGERS) {
-            return RUTGERS;
-        } else if (schoolId == SchoolIds.UCLA) {
-            return UCLA;
         }
 
         return OSU;
@@ -64,36 +19,6 @@ module CollegeProfileIds {
             return "MICH";
         } else if (schoolId == SchoolIds.PENN_STATE) {
             return "PSU";
-        } else if (schoolId == SchoolIds.MICHIGAN_STATE) {
-            return "MSU";
-        } else if (schoolId == SchoolIds.OREGON) {
-            return "ORE";
-        } else if (schoolId == SchoolIds.USC) {
-            return "USC";
-        } else if (schoolId == SchoolIds.WISCONSIN) {
-            return "WIS";
-        } else if (schoolId == SchoolIds.IOWA) {
-            return "IOWA";
-        } else if (schoolId == SchoolIds.WASHINGTON) {
-            return "WASH";
-        } else if (schoolId == SchoolIds.NEBRASKA) {
-            return "NEB";
-        } else if (schoolId == SchoolIds.MINNESOTA) {
-            return "MINN";
-        } else if (schoolId == SchoolIds.NORTHWESTERN) {
-            return "NW";
-        } else if (schoolId == SchoolIds.ILLINOIS) {
-            return "ILL";
-        } else if (schoolId == SchoolIds.INDIANA) {
-            return "IND";
-        } else if (schoolId == SchoolIds.MARYLAND) {
-            return "MD";
-        } else if (schoolId == SchoolIds.PURDUE) {
-            return "PUR";
-        } else if (schoolId == SchoolIds.RUTGERS) {
-            return "RUTG";
-        } else if (schoolId == SchoolIds.UCLA) {
-            return "UCLA";
         }
 
         return "OSU";

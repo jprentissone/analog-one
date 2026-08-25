@@ -6,25 +6,9 @@
         title="@Strings.SchoolTitle">
 
         <settingConfig type="list">
-            <listEntry value="0">@Strings.SchoolNeutral</listEntry>
             <listEntry value="1">@Strings.SchoolOhioState</listEntry>
             <listEntry value="2">@Strings.SchoolMichigan</listEntry>
             <listEntry value="3">@Strings.SchoolPennState</listEntry>
-            <listEntry value="4">@Strings.SchoolMichiganState</listEntry>
-            <listEntry value="5">@Strings.SchoolOregon</listEntry>
-            <listEntry value="6">@Strings.SchoolUSC</listEntry>
-            <listEntry value="7">@Strings.SchoolWisconsin</listEntry>
-            <listEntry value="8">@Strings.SchoolIowa</listEntry>
-            <listEntry value="9">@Strings.SchoolWashington</listEntry>
-            <listEntry value="10">@Strings.SchoolNebraska</listEntry>
-            <listEntry value="11">@Strings.SchoolMinnesota</listEntry>
-            <listEntry value="12">@Strings.SchoolNorthwestern</listEntry>
-            <listEntry value="13">@Strings.SchoolIllinois</listEntry>
-            <listEntry value="14">@Strings.SchoolIndiana</listEntry>
-            <listEntry value="15">@Strings.SchoolMaryland</listEntry>
-            <listEntry value="16">@Strings.SchoolPurdue</listEntry>
-            <listEntry value="17">@Strings.SchoolRutgers</listEntry>
-            <listEntry value="18">@Strings.SchoolUCLA</listEntry>
         </settingConfig>
     </setting>
 
