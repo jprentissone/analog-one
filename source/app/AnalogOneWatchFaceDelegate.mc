@@ -3,7 +3,7 @@ import Toybox.Lang;
 import Toybox.WatchUi;
 
 class AnalogOneWatchFaceDelegate extends WatchUi.WatchFaceDelegate {
-    // The current beta supports the 454 x 454 fēnix 8 target.
+    // The current release supports the 454 x 454 fēnix 8 target.
     const STEPS_CENTER_X = 101;
     const STEPS_CENTER_Y = 300;
     const DATE_CENTER_X = 227;

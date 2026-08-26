@@ -23,6 +23,29 @@ This creates:
 
 The script stops before building if the manifest is not using the beta app ID.
 
+## Package a production release candidate
+
+From the AnalogOne project folder, run:
+
+```bash
+scripts/package-production.zsh 1.0.0
+```
+
+This creates:
+
+- `dist/AnalogOne-1.0.0.iq`
+- `dist/AnalogOne-1.0.0.iq.sha256`
+
+The production script stops if the manifest does not contain the production app
+ID or if temporary marketing-preview or fake-score markers remain in source.
+
+## Production listing metadata
+
+- Launch price: `$6.99`
+- Privacy policy: `https://analogonewatch.com/privacy`
+- Support page: `https://analogonewatch.com/support`
+- Support email: `jsp@benchcraftstudio.com`
+
 ## Upload checklist
 
 1. Confirm the package filename contains the intended version.

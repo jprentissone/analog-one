@@ -1,0 +1,70 @@
+#!/bin/zsh
+
+set -euo pipefail
+
+if [[ $# -ne 1 ]]; then
+    echo "Usage: scripts/package-production.zsh <version>"
+    echo "Example: scripts/package-production.zsh 1.0.0"
+    exit 1
+fi
+
+VERSION="$1"
+PROJECT_DIR="${0:A:h:h}"
+MANIFEST="$PROJECT_DIR/manifest.xml"
+DIST_DIR="$PROJECT_DIR/dist"
+OUTPUT="$DIST_DIR/AnalogOne-$VERSION.iq"
+CHECKSUM="$OUTPUT.sha256"
+
+PRODUCTION_APP_ID="dd421c74-331e-4f10-b546-339b0d608b6f"
+SDK_CONFIG="$HOME/Library/Application Support/Garmin/ConnectIQ/current-sdk.cfg"
+DEVELOPER_KEY="$HOME/Documents/Garmin/developer_key"
+
+if ! grep -q "id=\"$PRODUCTION_APP_ID\"" "$MANIFEST"; then
+    echo "Packaging stopped: manifest.xml is not using the Analog One production app ID."
+    exit 1
+fi
+
+if grep -R -E -n \
+    "TEMPORARY MARKETING SCREENSHOT MODE|FAKE SCORE|MARKETING_PREVIEW" \
+    "$PROJECT_DIR/source" >/dev/null 2>&1; then
+    echo "Packaging stopped: temporary preview or fake-score code is still present."
+    exit 1
+fi
+
+if [[ ! -f "$SDK_CONFIG" ]]; then
+    echo "Packaging stopped: Garmin current-sdk.cfg was not found."
+    exit 1
+fi
+
+SDK_ROOT="$(<"$SDK_CONFIG")"
+COMPILER="$SDK_ROOT/bin/monkeybrains.jar"
+
+if [[ ! -f "$COMPILER" ]]; then
+    echo "Packaging stopped: Garmin compiler was not found at $COMPILER."
+    exit 1
+fi
+
+if [[ ! -f "$DEVELOPER_KEY" ]]; then
+    echo "Packaging stopped: Garmin developer key was not found."
+    exit 1
+fi
+
+mkdir -p "$DIST_DIR"
+
+java -Xms1g \
+    -Dfile.encoding=UTF-8 \
+    -Djava.awt.headless=true \
+    -jar "$COMPILER" \
+    -o "$OUTPUT" \
+    -e \
+    -f "$PROJECT_DIR/monkey.jungle" \
+    -y "$DEVELOPER_KEY" \
+    -w
+
+shasum -a 256 "$OUTPUT" > "$CHECKSUM"
+
+echo ""
+echo "Production package ready:"
+echo "$OUTPUT"
+echo "Checksum:"
+cat "$CHECKSUM"
