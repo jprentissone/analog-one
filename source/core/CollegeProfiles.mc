@@ -8,6 +8,11 @@ module CollegeProfileIds {
     const USC = "usc";
     const WISCONSIN = "wisconsin";
     const IOWA = "iowa";
+    const WASHINGTON = "washington";
+    const NEBRASKA = "nebraska";
+    const MINNESOTA = "minnesota";
+    const NORTHWESTERN = "northwestern";
+    const ILLINOIS = "illinois";
 
     function forSchool(schoolId) {
         if (schoolId == SchoolIds.MICHIGAN) {
@@ -24,6 +29,16 @@ module CollegeProfileIds {
             return WISCONSIN;
         } else if (schoolId == SchoolIds.IOWA) {
             return IOWA;
+        } else if (schoolId == SchoolIds.WASHINGTON) {
+            return WASHINGTON;
+        } else if (schoolId == SchoolIds.NEBRASKA) {
+            return NEBRASKA;
+        } else if (schoolId == SchoolIds.MINNESOTA) {
+            return MINNESOTA;
+        } else if (schoolId == SchoolIds.NORTHWESTERN) {
+            return NORTHWESTERN;
+        } else if (schoolId == SchoolIds.ILLINOIS) {
+            return ILLINOIS;
         }
 
         return OSU;
@@ -44,6 +59,16 @@ module CollegeProfileIds {
             return "WIS";
         } else if (schoolId == SchoolIds.IOWA) {
             return "IOWA";
+        } else if (schoolId == SchoolIds.WASHINGTON) {
+            return "WASH";
+        } else if (schoolId == SchoolIds.NEBRASKA) {
+            return "NEB";
+        } else if (schoolId == SchoolIds.MINNESOTA) {
+            return "MINN";
+        } else if (schoolId == SchoolIds.NORTHWESTERN) {
+            return "NW";
+        } else if (schoolId == SchoolIds.ILLINOIS) {
+            return "ILL";
         }
 
         return "OSU";

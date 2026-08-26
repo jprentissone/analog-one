@@ -8,6 +8,11 @@ module SchoolIds {
     const USC = 6;
     const WISCONSIN = 7;
     const IOWA = 8;
+    const WASHINGTON = 9;
+    const NEBRASKA = 10;
+    const MINNESOTA = 11;
+    const NORTHWESTERN = 12;
+    const ILLINOIS = 13;
 
     function isSupported(schoolId) {
         return schoolId == OHIO_STATE ||
@@ -17,7 +22,12 @@ module SchoolIds {
             schoolId == OREGON ||
             schoolId == USC ||
             schoolId == WISCONSIN ||
-            schoolId == IOWA;
+            schoolId == IOWA ||
+            schoolId == WASHINGTON ||
+            schoolId == NEBRASKA ||
+            schoolId == MINNESOTA ||
+            schoolId == NORTHWESTERN ||
+            schoolId == ILLINOIS;
     }
 
     function themeForSchool(schoolId) {
@@ -37,6 +47,16 @@ module SchoolIds {
             return ThemeIds.WISCONSIN_RED;
         } else if (schoolId == IOWA) {
             return ThemeIds.IOWA_BLACK_GOLD;
+        } else if (schoolId == WASHINGTON) {
+            return ThemeIds.WASHINGTON_PURPLE;
+        } else if (schoolId == NEBRASKA) {
+            return ThemeIds.NEBRASKA_SCARLET;
+        } else if (schoolId == MINNESOTA) {
+            return ThemeIds.MINNESOTA_MAROON;
+        } else if (schoolId == NORTHWESTERN) {
+            return ThemeIds.NORTHWESTERN_PURPLE;
+        } else if (schoolId == ILLINOIS) {
+            return ThemeIds.ILLINOIS_ORANGE;
         }
 
         return ThemeIds.SCARLET_NIGHT;
@@ -59,6 +79,16 @@ module SchoolIds {
             return WISCONSIN;
         } else if (themeId == ThemeIds.IOWA_BLACK_GOLD) {
             return IOWA;
+        } else if (themeId == ThemeIds.WASHINGTON_PURPLE) {
+            return WASHINGTON;
+        } else if (themeId == ThemeIds.NEBRASKA_SCARLET) {
+            return NEBRASKA;
+        } else if (themeId == ThemeIds.MINNESOTA_MAROON) {
+            return MINNESOTA;
+        } else if (themeId == ThemeIds.NORTHWESTERN_PURPLE) {
+            return NORTHWESTERN;
+        } else if (themeId == ThemeIds.ILLINOIS_ORANGE) {
+            return ILLINOIS;
         }
 
         return OHIO_STATE;
