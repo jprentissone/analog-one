@@ -115,7 +115,7 @@ class AnalogOneView extends WatchUi.WatchFace {
         WatchUi.requestUpdate();
     }
 
-    function getAlwaysOnOffset() {
+    function getAlwaysOnOffset() as Array<Number> {
         var minute = System.getClockTime().min;
         var position = minute % 4;
 

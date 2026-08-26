@@ -45,6 +45,8 @@ class SportsServiceDelegate extends System.ServiceDelegate {
             return;
         }
 
-        Background.exit(null);
+        Background.exit({
+            "requestFailed" => true
+        });
     }
 }

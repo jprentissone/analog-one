@@ -1,4 +1,5 @@
 import Toybox.Graphics;
+import Toybox.Lang;
 import Toybox.Math;
 import Toybox.System;
 
@@ -357,7 +358,7 @@ class HandRenderer {
     // Geometry Helpers
     // ==========================================================
 
-    function polarToPoint(centerX, centerY, radius, degrees) {
+    function polarToPoint(centerX, centerY, radius, degrees) as Array {
         var radians = degreesToRadians(degrees);
 
         return [

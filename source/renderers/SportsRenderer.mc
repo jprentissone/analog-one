@@ -3,9 +3,9 @@ import Toybox.Lang;
 
 class SportsRenderer {
     const SCORE_TOP_OFFSET_Y = -143;
-    const TEAM_LEFT_OFFSET_X = -90;
-    const SCORE_RIGHT_OFFSET_X = 90;
-    const ROW_SPACING = 32;
+    const TEAM_LEFT_OFFSET_X = -96;
+    const SCORE_RIGHT_OFFSET_X = 96;
+    const ROW_SPACING = 36;
 
     var _theme as Theme;
     var _teamFont;
@@ -29,12 +29,12 @@ class SportsRenderer {
         if (Graphics has :getVectorFont) {
             _teamFont = Graphics.getVectorFont({
                 :face => ["RobotoCondensedRegular", "RobotoRegular"],
-                :size => (dc.getWidth() * 30) / 454,
+                :size => (dc.getWidth() * 34) / 454,
             });
 
             _compactTeamFont = Graphics.getVectorFont({
                 :face => ["RobotoCondensedRegular", "RobotoRegular"],
-                :size => (dc.getWidth() * 26) / 454,
+                :size => (dc.getWidth() * 30) / 454,
             });
 
             _statusFont = Graphics.getVectorFont({
@@ -83,6 +83,10 @@ class SportsRenderer {
             awayScore = Lang.format("$1$", [sportsData.awayScore]);
             homeScore = Lang.format("$1$", [sportsData.homeScore]);
             statusText = "FINAL";
+        }
+
+        if (sportsData.isStale) {
+            statusText = "OFFLINE";
         }
 
         drawTeamRow(
@@ -197,7 +201,7 @@ class SportsRenderer {
     }
 
     function getTeamFont(teamText) {
-        if (teamText.length() > 10) {
+        if (teamText.length() > 8) {
             return _compactTeamFont;
         }
 

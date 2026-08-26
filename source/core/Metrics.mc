@@ -66,6 +66,7 @@ class SportsData {
     var featuredTeam;
     var startTime;
     var isAvailable;
+    var isStale;
 
     function initialize(
         currentState,
@@ -75,7 +76,8 @@ class SportsData {
         currentHomeScore,
         currentGameStatus,
         currentFeaturedTeam,
-        currentStartTime
+        currentStartTime,
+        currentIsStale
     ) {
         state = currentState;
         awayTeam = currentAwayTeam;
@@ -85,6 +87,7 @@ class SportsData {
         gameStatus = currentGameStatus;
         featuredTeam = currentFeaturedTeam;
         startTime = currentStartTime;
+        isStale = currentIsStale;
 
         isAvailable = state != SportsStates.NONE;
     }

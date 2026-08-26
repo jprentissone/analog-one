@@ -1,6 +1,8 @@
 # Garmin build output
 bin/
 *.prg
+dist/*.iq
+dist/*.sha256
 
 # macOS metadata
 .DS_Store

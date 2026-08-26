@@ -1,4 +1,5 @@
 import Toybox.Graphics;
+import Toybox.Lang;
 import Toybox.Math;
 
 class DialRenderer {
@@ -162,7 +163,13 @@ class DialRenderer {
         );
     }
 
-    function drawRadialRectangle(dc, outerPoint, innerPoint, angle, width) {
+    function drawRadialRectangle(
+        dc,
+        outerPoint as Array,
+        innerPoint as Array,
+        angle,
+        width
+    ) {
         var halfWidth = width / 2;
         var outerLeft = polarToPoint(
             outerPoint[0],
@@ -197,7 +204,12 @@ class DialRenderer {
         ]);
     }
 
-    function drawCardinalMarker(dc, minute, outerPoint, innerPoint) {
+    function drawCardinalMarker(
+        dc,
+        minute,
+        outerPoint as Array,
+        innerPoint as Array
+    ) {
         for (var offset = -2; offset <= 2; offset += 1) {
             if (minute == 0 || minute == 30) {
                 // The 12 and 6 markers are vertical,
@@ -244,7 +256,7 @@ class DialRenderer {
         return minute % 5 == 0;
     }
 
-    function polarToPoint(centerX, centerY, radius, degrees) {
+    function polarToPoint(centerX, centerY, radius, degrees) as Array {
         var radians = degreesToRadians(degrees);
 
         return [

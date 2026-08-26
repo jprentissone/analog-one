@@ -80,6 +80,7 @@ class AnalogOneApp extends Application.AppBase {
     function applySchoolSelection(schoolId) as Void {
         new SettingsManager().setSchoolId(schoolId);
         Application.Storage.deleteValue("sportsData");
+        Application.Storage.setValue("sportsRefreshFailed", false);
 
         scheduleSportsRefresh();
 
@@ -109,6 +110,7 @@ class AnalogOneApp extends Application.AppBase {
 
     function onSettingsChanged() as Void {
         Application.Storage.deleteValue("sportsData");
+        Application.Storage.setValue("sportsRefreshFailed", false);
         scheduleSportsRefresh();
 
         if (_mainView != null) {
@@ -124,9 +126,17 @@ class AnalogOneApp extends Application.AppBase {
 
     function onBackgroundData(data) as Void {
         if (data instanceof Dictionary) {
-            Application.Storage.setValue("sportsData", data);
-            WatchUi.requestUpdate();
+            if (data["requestFailed"] == true) {
+                Application.Storage.setValue("sportsRefreshFailed", true);
+            } else {
+                Application.Storage.setValue("sportsData", data);
+                Application.Storage.setValue("sportsRefreshFailed", false);
+            }
+        } else {
+            Application.Storage.setValue("sportsRefreshFailed", true);
         }
+
+        WatchUi.requestUpdate();
     }
 }
 
