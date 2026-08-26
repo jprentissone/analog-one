@@ -121,6 +121,36 @@ class AnalogOneApp extends Application.AppBase {
             SchoolIds.ILLINOIS,
             currentSchoolId
         );
+        addSchoolMenuItem(
+            menu,
+            Rez.Strings.SchoolIndiana,
+            SchoolIds.INDIANA,
+            currentSchoolId
+        );
+        addSchoolMenuItem(
+            menu,
+            Rez.Strings.SchoolMaryland,
+            SchoolIds.MARYLAND,
+            currentSchoolId
+        );
+        addSchoolMenuItem(
+            menu,
+            Rez.Strings.SchoolPurdue,
+            SchoolIds.PURDUE,
+            currentSchoolId
+        );
+        addSchoolMenuItem(
+            menu,
+            Rez.Strings.SchoolRutgers,
+            SchoolIds.RUTGERS,
+            currentSchoolId
+        );
+        addSchoolMenuItem(
+            menu,
+            Rez.Strings.SchoolUCLA,
+            SchoolIds.UCLA,
+            currentSchoolId
+        );
 
         return [menu, new SchoolSettingsDelegate()];
     }

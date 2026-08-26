@@ -19,6 +19,11 @@
             <listEntry value="11">@Strings.SchoolMinnesota</listEntry>
             <listEntry value="12">@Strings.SchoolNorthwestern</listEntry>
             <listEntry value="13">@Strings.SchoolIllinois</listEntry>
+            <listEntry value="14">@Strings.SchoolIndiana</listEntry>
+            <listEntry value="15">@Strings.SchoolMaryland</listEntry>
+            <listEntry value="16">@Strings.SchoolPurdue</listEntry>
+            <listEntry value="17">@Strings.SchoolRutgers</listEntry>
+            <listEntry value="18">@Strings.SchoolUCLA</listEntry>
         </settingConfig>
     </setting>
 
