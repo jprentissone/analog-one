@@ -61,6 +61,36 @@ class AnalogOneApp extends Application.AppBase {
             SchoolIds.PENN_STATE,
             currentSchoolId
         );
+        addSchoolMenuItem(
+            menu,
+            Rez.Strings.SchoolMichiganState,
+            SchoolIds.MICHIGAN_STATE,
+            currentSchoolId
+        );
+        addSchoolMenuItem(
+            menu,
+            Rez.Strings.SchoolOregon,
+            SchoolIds.OREGON,
+            currentSchoolId
+        );
+        addSchoolMenuItem(
+            menu,
+            Rez.Strings.SchoolUSC,
+            SchoolIds.USC,
+            currentSchoolId
+        );
+        addSchoolMenuItem(
+            menu,
+            Rez.Strings.SchoolWisconsin,
+            SchoolIds.WISCONSIN,
+            currentSchoolId
+        );
+        addSchoolMenuItem(
+            menu,
+            Rez.Strings.SchoolIowa,
+            SchoolIds.IOWA,
+            currentSchoolId
+        );
 
         return [menu, new SchoolSettingsDelegate()];
     }
