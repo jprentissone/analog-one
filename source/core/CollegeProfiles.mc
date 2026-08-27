@@ -1,101 +1,57 @@
 (:background)
 module CollegeProfileIds {
-    const OSU = "osu";
-    const MICHIGAN = "michigan";
-    const PENN_STATE = "penn_state";
-    const MICHIGAN_STATE = "michigan_state";
-    const OREGON = "oregon";
-    const USC = "usc";
-    const WISCONSIN = "wisconsin";
-    const IOWA = "iowa";
-    const WASHINGTON = "washington";
-    const NEBRASKA = "nebraska";
-    const MINNESOTA = "minnesota";
-    const NORTHWESTERN = "northwestern";
-    const ILLINOIS = "illinois";
-    const INDIANA = "indiana";
-    const MARYLAND = "maryland";
-    const PURDUE = "purdue";
-    const RUTGERS = "rutgers";
-    const UCLA = "ucla";
+    const ALABAMA = "alabama";
+    const ARKANSAS = "arkansas";
+    const AUBURN = "auburn";
+    const FLORIDA = "florida";
+    const GEORGIA = "georgia";
+    const KENTUCKY = "kentucky";
+    const LSU = "lsu";
+    const MISSISSIPPI_STATE = "mississippi_state";
+    const MISSOURI = "missouri";
+    const OKLAHOMA = "oklahoma";
+    const OLE_MISS = "ole_miss";
+    const SOUTH_CAROLINA = "south_carolina";
+    const TENNESSEE = "tennessee";
+    const TEXAS = "texas";
+    const TEXAS_AM = "texas_am";
+    const VANDERBILT = "vanderbilt";
 
     function forSchool(schoolId) {
-        if (schoolId == SchoolIds.MICHIGAN) {
-            return MICHIGAN;
-        } else if (schoolId == SchoolIds.PENN_STATE) {
-            return PENN_STATE;
-        } else if (schoolId == SchoolIds.MICHIGAN_STATE) {
-            return MICHIGAN_STATE;
-        } else if (schoolId == SchoolIds.OREGON) {
-            return OREGON;
-        } else if (schoolId == SchoolIds.USC) {
-            return USC;
-        } else if (schoolId == SchoolIds.WISCONSIN) {
-            return WISCONSIN;
-        } else if (schoolId == SchoolIds.IOWA) {
-            return IOWA;
-        } else if (schoolId == SchoolIds.WASHINGTON) {
-            return WASHINGTON;
-        } else if (schoolId == SchoolIds.NEBRASKA) {
-            return NEBRASKA;
-        } else if (schoolId == SchoolIds.MINNESOTA) {
-            return MINNESOTA;
-        } else if (schoolId == SchoolIds.NORTHWESTERN) {
-            return NORTHWESTERN;
-        } else if (schoolId == SchoolIds.ILLINOIS) {
-            return ILLINOIS;
-        } else if (schoolId == SchoolIds.INDIANA) {
-            return INDIANA;
-        } else if (schoolId == SchoolIds.MARYLAND) {
-            return MARYLAND;
-        } else if (schoolId == SchoolIds.PURDUE) {
-            return PURDUE;
-        } else if (schoolId == SchoolIds.RUTGERS) {
-            return RUTGERS;
-        } else if (schoolId == SchoolIds.UCLA) {
-            return UCLA;
-        }
-
-        return OSU;
+        if (schoolId == SchoolIds.ARKANSAS) { return ARKANSAS; }
+        else if (schoolId == SchoolIds.AUBURN) { return AUBURN; }
+        else if (schoolId == SchoolIds.FLORIDA) { return FLORIDA; }
+        else if (schoolId == SchoolIds.GEORGIA) { return GEORGIA; }
+        else if (schoolId == SchoolIds.KENTUCKY) { return KENTUCKY; }
+        else if (schoolId == SchoolIds.LSU) { return LSU; }
+        else if (schoolId == SchoolIds.MISSISSIPPI_STATE) { return MISSISSIPPI_STATE; }
+        else if (schoolId == SchoolIds.MISSOURI) { return MISSOURI; }
+        else if (schoolId == SchoolIds.OKLAHOMA) { return OKLAHOMA; }
+        else if (schoolId == SchoolIds.OLE_MISS) { return OLE_MISS; }
+        else if (schoolId == SchoolIds.SOUTH_CAROLINA) { return SOUTH_CAROLINA; }
+        else if (schoolId == SchoolIds.TENNESSEE) { return TENNESSEE; }
+        else if (schoolId == SchoolIds.TEXAS) { return TEXAS; }
+        else if (schoolId == SchoolIds.TEXAS_AM) { return TEXAS_AM; }
+        else if (schoolId == SchoolIds.VANDERBILT) { return VANDERBILT; }
+        return ALABAMA;
     }
 
     function abbreviationForSchool(schoolId) {
-        if (schoolId == SchoolIds.MICHIGAN) {
-            return "MICH";
-        } else if (schoolId == SchoolIds.PENN_STATE) {
-            return "PSU";
-        } else if (schoolId == SchoolIds.MICHIGAN_STATE) {
-            return "MSU";
-        } else if (schoolId == SchoolIds.OREGON) {
-            return "ORE";
-        } else if (schoolId == SchoolIds.USC) {
-            return "USC";
-        } else if (schoolId == SchoolIds.WISCONSIN) {
-            return "WIS";
-        } else if (schoolId == SchoolIds.IOWA) {
-            return "IOWA";
-        } else if (schoolId == SchoolIds.WASHINGTON) {
-            return "WASH";
-        } else if (schoolId == SchoolIds.NEBRASKA) {
-            return "NEB";
-        } else if (schoolId == SchoolIds.MINNESOTA) {
-            return "MINN";
-        } else if (schoolId == SchoolIds.NORTHWESTERN) {
-            return "NW";
-        } else if (schoolId == SchoolIds.ILLINOIS) {
-            return "ILL";
-        } else if (schoolId == SchoolIds.INDIANA) {
-            return "IND";
-        } else if (schoolId == SchoolIds.MARYLAND) {
-            return "MD";
-        } else if (schoolId == SchoolIds.PURDUE) {
-            return "PUR";
-        } else if (schoolId == SchoolIds.RUTGERS) {
-            return "RUTG";
-        } else if (schoolId == SchoolIds.UCLA) {
-            return "UCLA";
-        }
-
-        return "OSU";
+        if (schoolId == SchoolIds.ARKANSAS) { return "ARK"; }
+        else if (schoolId == SchoolIds.AUBURN) { return "AUB"; }
+        else if (schoolId == SchoolIds.FLORIDA) { return "FLA"; }
+        else if (schoolId == SchoolIds.GEORGIA) { return "UGA"; }
+        else if (schoolId == SchoolIds.KENTUCKY) { return "UK"; }
+        else if (schoolId == SchoolIds.LSU) { return "LSU"; }
+        else if (schoolId == SchoolIds.MISSISSIPPI_STATE) { return "MSST"; }
+        else if (schoolId == SchoolIds.MISSOURI) { return "MIZ"; }
+        else if (schoolId == SchoolIds.OKLAHOMA) { return "OU"; }
+        else if (schoolId == SchoolIds.OLE_MISS) { return "MISS"; }
+        else if (schoolId == SchoolIds.SOUTH_CAROLINA) { return "SC"; }
+        else if (schoolId == SchoolIds.TENNESSEE) { return "TENN"; }
+        else if (schoolId == SchoolIds.TEXAS) { return "TEX"; }
+        else if (schoolId == SchoolIds.TEXAS_AM) { return "TAMU"; }
+        else if (schoolId == SchoolIds.VANDERBILT) { return "VAN"; }
+        return "BAMA";
     }
 }

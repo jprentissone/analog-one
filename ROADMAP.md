@@ -1,4 +1,4 @@
-# Analog One Roadmap
+# Analog One College South Roadmap
 
 ## v0.1 - Bootstrap ✅
 - SDK installed
@@ -24,10 +24,11 @@
 - Heart Rate
 - Steps
 
-## v0.5 - Brand Packs
-- Ohio State
-- Michigan
-- Notre Dame
+## College South Edition
+- 16 selectable school-inspired color profiles
+- Independent Connect IQ app identity and store listing
+- Shared factual-score service with College North
+- No school or conference logos or affiliation claims
 
 ## Future
 - NCAA Live Complications

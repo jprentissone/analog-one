@@ -43,19 +43,34 @@ type NormalizeOptions = {
 const FINAL_RETENTION_MS = 48 * 60 * 60 * 1000;
 
 const TEAM_ABBREVIATIONS: Record<number, string> = {
+  2: "AUB",
+  8: "ARK",
   30: "USC",
+  57: "FLA",
+  61: "UGA",
   77: "NW",
   84: "IND",
+  96: "UK",
+  99: "LSU",
   120: "MD",
   130: "MICH",
+  142: "MIZ",
+  145: "MISS",
   158: "NEB",
   194: "OSU",
+  201: "OU",
+  238: "VAN",
+  245: "TAMU",
   251: "TEX",
+  333: "BAMA",
+  344: "MSST",
   356: "ILL",
   2050: "BALL ST",
   2294: "IOWA",
   2309: "KENT ST",
   2483: "ORE",
+  2579: "SC",
+  2633: "TENN",
 };
 
 export function emptySportsResponse(): WatchSportsResponse {

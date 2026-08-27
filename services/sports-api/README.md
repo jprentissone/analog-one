@@ -1,8 +1,7 @@
 # Benchcraft Sports API
 
 This Cloudflare Worker keeps the CollegeFootballData API key off the watch and
-normalizes the current Ohio State football game into Analog One's compact sports
-response.
+normalizes college football games into Analog One's compact sports response.
 
 ## Routes
 
@@ -10,8 +9,8 @@ response.
 - `GET /v1/ncaa/football?team=osu`
 
 The `team` parameter selects an allow-listed college profile. The current
-profiles cover all 18 Big Ten schools; omitting the parameter defaults to `osu` for
-backward compatibility. Each profile owns the stable CFBD team ID, compact
+profiles cover the College North and College South editions; omitting the
+parameter defaults to `osu` for backward compatibility. Each profile owns the stable CFBD team ID, compact
 display abbreviation, and primary and secondary brand colors.
 
 ## Sports states

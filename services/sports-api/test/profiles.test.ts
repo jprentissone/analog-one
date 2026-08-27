@@ -24,33 +24,49 @@ test("defines a reusable Michigan profile", () => {
 
 test("lists only supported profile IDs", () => {
   assert.deepEqual(getCollegeProfileIds().sort(), [
+    "alabama",
+    "arkansas",
+    "auburn",
+    "florida",
+    "georgia",
     "illinois",
     "indiana",
     "iowa",
+    "kentucky",
+    "lsu",
     "maryland",
     "michigan",
     "michigan_state",
     "minnesota",
+    "mississippi_state",
+    "missouri",
     "nebraska",
     "northwestern",
+    "oklahoma",
+    "ole_miss",
     "oregon",
     "osu",
     "penn_state",
     "purdue",
     "rutgers",
+    "south_carolina",
+    "tennessee",
+    "texas",
+    "texas_am",
     "ucla",
     "usc",
+    "vanderbilt",
     "washington",
     "wisconsin",
   ]);
   assert.equal(getCollegeProfile("unknown"), null);
 });
 
-test("defines all Big Ten profiles with unique stable IDs and abbreviations", () => {
+test("defines both edition catalogs with unique stable IDs and abbreviations", () => {
   const profiles = getCollegeProfileIds().map((id) => getCollegeProfile(id));
 
-  assert.equal(profiles.length, 18);
+  assert.equal(profiles.length, 34);
   assert.ok(profiles.every((profile) => profile !== null));
-  assert.equal(new Set(profiles.map((profile) => profile?.cfbdTeamId)).size, 18);
-  assert.equal(new Set(profiles.map((profile) => profile?.abbreviation)).size, 18);
+  assert.equal(new Set(profiles.map((profile) => profile?.cfbdTeamId)).size, 34);
+  assert.equal(new Set(profiles.map((profile) => profile?.abbreviation)).size, 34);
 });

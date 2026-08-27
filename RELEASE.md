@@ -1,16 +1,15 @@
-# Analog One Release Process
+# Analog One College South Release Process
 
 ## Release identities
 
-- Production app ID: `dd421c74-331e-4f10-b546-339b0d608b6f`
-- Beta app ID: `6ab2b611-8edf-4f73-8d7d-a56c8a7cf152`
+- App ID: `6c548c4b-c3ca-44cc-94e5-ddb38715f562`
 
-The beta ID may remain in the local working copy for testing, but it must not be
-committed in place of the production ID.
+College South is a separate Connect IQ app and must never reuse the College
+North app ID. A separate beta ID can be introduced later if needed.
 
 ## Package a beta
 
-From the AnalogOne project folder, run:
+From the AnalogOneCollegeSouth project folder, run:
 
 ```bash
 scripts/package-beta.zsh 1.4
@@ -18,14 +17,15 @@ scripts/package-beta.zsh 1.4
 
 This creates:
 
-- `dist/AnalogOne-Beta-1.4.iq`
-- `dist/AnalogOne-Beta-1.4.iq.sha256`
+- `dist/AnalogOne-College-South-Beta-1.4.iq`
+- `dist/AnalogOne-College-South-Beta-1.4.iq.sha256`
 
-The script stops before building if the manifest is not using the beta app ID.
+The script stops before building if the manifest is not using the College South
+app ID.
 
 ## Package a production release candidate
 
-From the AnalogOne project folder, run:
+From the AnalogOneCollegeSouth project folder, run:
 
 ```bash
 scripts/package-production.zsh 1.0.0
@@ -33,8 +33,8 @@ scripts/package-production.zsh 1.0.0
 
 This creates:
 
-- `dist/AnalogOne-1.0.0.iq`
-- `dist/AnalogOne-1.0.0.iq.sha256`
+- `dist/AnalogOne-College-South-1.0.0.iq`
+- `dist/AnalogOne-College-South-1.0.0.iq.sha256`
 
 The production script stops if the manifest does not contain the production app
 ID or if temporary marketing-preview or fake-score markers remain in source.
@@ -61,8 +61,8 @@ ID or if temporary marketing-preview or fake-score markers remain in source.
 
 - Commit source and resource changes only after simulator and physical testing.
 - Do not commit `.iq` packages or checksum files.
-- Do not commit the temporary beta app ID.
-- Tag a public release only after restoring and verifying the production app ID.
+- Never replace the College South app ID with the College North app ID.
+- Tag a public release only after verifying the College South app ID.
 
 ## Connect IQ production review checklist
 

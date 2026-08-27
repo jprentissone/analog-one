@@ -103,6 +103,79 @@ module AnalogColors {
     const UCLA_GOLD = 0xf2a900;
     const GHOST_UCLA = 0x132e57;
 
+    // College South palettes. Brighter ring variants preserve thin details on
+    // true-black AMOLED displays while the core colors remain recognizable.
+    const ALABAMA_CRIMSON = 0x9e1b32;
+    const ALABAMA_RING = 0xd13a55;
+    const GHOST_ALABAMA = 0x310810;
+
+    const ARKANSAS_CARDINAL = 0x9d2235;
+    const ARKANSAS_RING = 0xd04459;
+    const GHOST_ARKANSAS = 0x310b11;
+
+    const AUBURN_NAVY = 0x0c2340;
+    const AUBURN_RING = 0x285a8b;
+    const AUBURN_ORANGE = 0xf26522;
+    const GHOST_AUBURN = 0x061221;
+
+    const FLORIDA_BLUE = 0x0021a5;
+    const FLORIDA_RING = 0x2c59d6;
+    const FLORIDA_ORANGE = 0xfa4616;
+    const GHOST_FLORIDA = 0x001052;
+
+    const GEORGIA_RED = 0xba0c2f;
+    const GEORGIA_RING = 0xe13c5a;
+    const GHOST_GEORGIA = 0x3b040f;
+
+    const KENTUCKY_BLUE = 0x0033a0;
+    const KENTUCKY_RING = 0x3566cf;
+    const GHOST_KENTUCKY = 0x001950;
+
+    const LSU_PURPLE = 0x461d7c;
+    const LSU_RING = 0x7650a6;
+    const LSU_GOLD = 0xfdd023;
+    const GHOST_LSU = 0x230f3e;
+
+    const MISSISSIPPI_STATE_MAROON = 0x5d1725;
+    const MISSISSIPPI_STATE_RING = 0x9c4355;
+    const GHOST_MISSISSIPPI_STATE = 0x2e0b12;
+
+    const MISSOURI_GRAPHITE = 0x303030;
+    const MISSOURI_RING = 0x626262;
+    const MISSOURI_GOLD = 0xf1b82d;
+    const GHOST_MISSOURI = 0x181818;
+
+    const OKLAHOMA_CRIMSON = 0x841617;
+    const OKLAHOMA_RING = 0xbb4142;
+    const OKLAHOMA_CREAM = 0xfdf9d8;
+    const GHOST_OKLAHOMA = 0x2a0707;
+
+    const OLE_MISS_NAVY = 0x14213d;
+    const OLE_MISS_RING = 0x4b82ad;
+    const OLE_MISS_RED = 0xce1126;
+    const GHOST_OLE_MISS = 0x0a111f;
+
+    const SOUTH_CAROLINA_GARNET = 0x73000a;
+    const SOUTH_CAROLINA_RING = 0xaa3440;
+    const GHOST_SOUTH_CAROLINA = 0x240003;
+
+    const TENNESSEE_ORANGE = 0xff8200;
+    const TENNESSEE_RING = 0xffa33e;
+    const GHOST_TENNESSEE = 0x4c2700;
+
+    const TEXAS_BURNT_ORANGE = 0xbf5700;
+    const TEXAS_RING = 0xe57e2b;
+    const GHOST_TEXAS = 0x3b1b00;
+
+    const TEXAS_AM_MAROON = 0x500000;
+    const TEXAS_AM_RING = 0x9a3c45;
+    const GHOST_TEXAS_AM = 0x280000;
+
+    const VANDERBILT_GRAPHITE = 0x303030;
+    const VANDERBILT_RING = 0x74664d;
+    const VANDERBILT_GOLD = 0xcfae70;
+    const GHOST_VANDERBILT = 0x181818;
+
     // Semantic weather colors
     const WEATHER_SUN = 0xffc400;
     const WEATHER_CLOUD = 0xd9d9d9;

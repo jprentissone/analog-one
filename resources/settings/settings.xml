@@ -1,30 +1,23 @@
 <settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
-
-    <setting
-        propertyKey="@Properties.school"
-        title="@Strings.SchoolTitle">
-
+    <setting propertyKey="@Properties.school" title="@Strings.SchoolTitle">
         <settingConfig type="list">
-            <listEntry value="1">@Strings.SchoolOhioState</listEntry>
-            <listEntry value="2">@Strings.SchoolMichigan</listEntry>
-            <listEntry value="3">@Strings.SchoolPennState</listEntry>
-            <listEntry value="4">@Strings.SchoolMichiganState</listEntry>
-            <listEntry value="5">@Strings.SchoolOregon</listEntry>
-            <listEntry value="6">@Strings.SchoolUSC</listEntry>
-            <listEntry value="7">@Strings.SchoolWisconsin</listEntry>
-            <listEntry value="8">@Strings.SchoolIowa</listEntry>
-            <listEntry value="9">@Strings.SchoolWashington</listEntry>
-            <listEntry value="10">@Strings.SchoolNebraska</listEntry>
-            <listEntry value="11">@Strings.SchoolMinnesota</listEntry>
-            <listEntry value="12">@Strings.SchoolNorthwestern</listEntry>
-            <listEntry value="13">@Strings.SchoolIllinois</listEntry>
-            <listEntry value="14">@Strings.SchoolIndiana</listEntry>
-            <listEntry value="15">@Strings.SchoolMaryland</listEntry>
-            <listEntry value="16">@Strings.SchoolPurdue</listEntry>
-            <listEntry value="17">@Strings.SchoolRutgers</listEntry>
-            <listEntry value="18">@Strings.SchoolUCLA</listEntry>
+            <listEntry value="1">@Strings.SchoolAlabama</listEntry>
+            <listEntry value="2">@Strings.SchoolArkansas</listEntry>
+            <listEntry value="3">@Strings.SchoolAuburn</listEntry>
+            <listEntry value="4">@Strings.SchoolFlorida</listEntry>
+            <listEntry value="5">@Strings.SchoolGeorgia</listEntry>
+            <listEntry value="6">@Strings.SchoolKentucky</listEntry>
+            <listEntry value="7">@Strings.SchoolLSU</listEntry>
+            <listEntry value="8">@Strings.SchoolMississippiState</listEntry>
+            <listEntry value="9">@Strings.SchoolMissouri</listEntry>
+            <listEntry value="10">@Strings.SchoolOklahoma</listEntry>
+            <listEntry value="11">@Strings.SchoolOleMiss</listEntry>
+            <listEntry value="12">@Strings.SchoolSouthCarolina</listEntry>
+            <listEntry value="13">@Strings.SchoolTennessee</listEntry>
+            <listEntry value="14">@Strings.SchoolTexas</listEntry>
+            <listEntry value="15">@Strings.SchoolTexasAM</listEntry>
+            <listEntry value="16">@Strings.SchoolVanderbilt</listEntry>
         </settingConfig>
     </setting>
-
 </settings>

@@ -9,25 +9,16 @@ import Toybox.WatchUi;
 class AnalogOneApp extends Application.AppBase {
     var _mainView;
 
-    function initialize() {
-        AppBase.initialize();
-    }
-
-    // onStart() is called on application start up
+    function initialize() { AppBase.initialize(); }
     function onStart(state as Dictionary?) as Void {}
-
-    // onStop() is called when your application is exiting
     function onStop(state as Dictionary?) as Void {}
 
-    // Return the initial view of your application here
     function getInitialView() as [Views] or [Views, InputDelegates] {
         var refreshInterval = new Time.Duration(5 * 60);
         var lastRefresh = Background.getLastTemporalEventTime();
 
         if (lastRefresh != null) {
-            Background.registerForTemporalEvent(
-                lastRefresh.add(refreshInterval)
-            );
+            Background.registerForTemporalEvent(lastRefresh.add(refreshInterval));
         } else {
             Background.registerForTemporalEvent(Time.now());
         }
@@ -39,157 +30,49 @@ class AnalogOneApp extends Application.AppBase {
     function getSettingsView()
         as [WatchUi.Views] or [WatchUi.Views, WatchUi.InputDelegates] or Null {
         var currentSchoolId = new SettingsManager().getSchoolId();
-        var menu = new WatchUi.Menu2({
-            :title => Rez.Strings.SchoolTitle,
-        });
+        var menu = new WatchUi.Menu2({ :title => Rez.Strings.SchoolTitle });
 
-        addSchoolMenuItem(
-            menu,
-            Rez.Strings.SchoolOhioState,
-            SchoolIds.OHIO_STATE,
-            currentSchoolId
-        );
-        addSchoolMenuItem(
-            menu,
-            Rez.Strings.SchoolMichigan,
-            SchoolIds.MICHIGAN,
-            currentSchoolId
-        );
-        addSchoolMenuItem(
-            menu,
-            Rez.Strings.SchoolPennState,
-            SchoolIds.PENN_STATE,
-            currentSchoolId
-        );
-        addSchoolMenuItem(
-            menu,
-            Rez.Strings.SchoolMichiganState,
-            SchoolIds.MICHIGAN_STATE,
-            currentSchoolId
-        );
-        addSchoolMenuItem(
-            menu,
-            Rez.Strings.SchoolOregon,
-            SchoolIds.OREGON,
-            currentSchoolId
-        );
-        addSchoolMenuItem(
-            menu,
-            Rez.Strings.SchoolUSC,
-            SchoolIds.USC,
-            currentSchoolId
-        );
-        addSchoolMenuItem(
-            menu,
-            Rez.Strings.SchoolWisconsin,
-            SchoolIds.WISCONSIN,
-            currentSchoolId
-        );
-        addSchoolMenuItem(
-            menu,
-            Rez.Strings.SchoolIowa,
-            SchoolIds.IOWA,
-            currentSchoolId
-        );
-        addSchoolMenuItem(
-            menu,
-            Rez.Strings.SchoolWashington,
-            SchoolIds.WASHINGTON,
-            currentSchoolId
-        );
-        addSchoolMenuItem(
-            menu,
-            Rez.Strings.SchoolNebraska,
-            SchoolIds.NEBRASKA,
-            currentSchoolId
-        );
-        addSchoolMenuItem(
-            menu,
-            Rez.Strings.SchoolMinnesota,
-            SchoolIds.MINNESOTA,
-            currentSchoolId
-        );
-        addSchoolMenuItem(
-            menu,
-            Rez.Strings.SchoolNorthwestern,
-            SchoolIds.NORTHWESTERN,
-            currentSchoolId
-        );
-        addSchoolMenuItem(
-            menu,
-            Rez.Strings.SchoolIllinois,
-            SchoolIds.ILLINOIS,
-            currentSchoolId
-        );
-        addSchoolMenuItem(
-            menu,
-            Rez.Strings.SchoolIndiana,
-            SchoolIds.INDIANA,
-            currentSchoolId
-        );
-        addSchoolMenuItem(
-            menu,
-            Rez.Strings.SchoolMaryland,
-            SchoolIds.MARYLAND,
-            currentSchoolId
-        );
-        addSchoolMenuItem(
-            menu,
-            Rez.Strings.SchoolPurdue,
-            SchoolIds.PURDUE,
-            currentSchoolId
-        );
-        addSchoolMenuItem(
-            menu,
-            Rez.Strings.SchoolRutgers,
-            SchoolIds.RUTGERS,
-            currentSchoolId
-        );
-        addSchoolMenuItem(
-            menu,
-            Rez.Strings.SchoolUCLA,
-            SchoolIds.UCLA,
-            currentSchoolId
-        );
+        addSchoolMenuItem(menu, Rez.Strings.SchoolAlabama, SchoolIds.ALABAMA, currentSchoolId);
+        addSchoolMenuItem(menu, Rez.Strings.SchoolArkansas, SchoolIds.ARKANSAS, currentSchoolId);
+        addSchoolMenuItem(menu, Rez.Strings.SchoolAuburn, SchoolIds.AUBURN, currentSchoolId);
+        addSchoolMenuItem(menu, Rez.Strings.SchoolFlorida, SchoolIds.FLORIDA, currentSchoolId);
+        addSchoolMenuItem(menu, Rez.Strings.SchoolGeorgia, SchoolIds.GEORGIA, currentSchoolId);
+        addSchoolMenuItem(menu, Rez.Strings.SchoolKentucky, SchoolIds.KENTUCKY, currentSchoolId);
+        addSchoolMenuItem(menu, Rez.Strings.SchoolLSU, SchoolIds.LSU, currentSchoolId);
+        addSchoolMenuItem(menu, Rez.Strings.SchoolMississippiState, SchoolIds.MISSISSIPPI_STATE, currentSchoolId);
+        addSchoolMenuItem(menu, Rez.Strings.SchoolMissouri, SchoolIds.MISSOURI, currentSchoolId);
+        addSchoolMenuItem(menu, Rez.Strings.SchoolOklahoma, SchoolIds.OKLAHOMA, currentSchoolId);
+        addSchoolMenuItem(menu, Rez.Strings.SchoolOleMiss, SchoolIds.OLE_MISS, currentSchoolId);
+        addSchoolMenuItem(menu, Rez.Strings.SchoolSouthCarolina, SchoolIds.SOUTH_CAROLINA, currentSchoolId);
+        addSchoolMenuItem(menu, Rez.Strings.SchoolTennessee, SchoolIds.TENNESSEE, currentSchoolId);
+        addSchoolMenuItem(menu, Rez.Strings.SchoolTexas, SchoolIds.TEXAS, currentSchoolId);
+        addSchoolMenuItem(menu, Rez.Strings.SchoolTexasAM, SchoolIds.TEXAS_AM, currentSchoolId);
+        addSchoolMenuItem(menu, Rez.Strings.SchoolVanderbilt, SchoolIds.VANDERBILT, currentSchoolId);
 
         return [menu, new SchoolSettingsDelegate()];
     }
 
     function addSchoolMenuItem(menu, label, schoolId, currentSchoolId) as Void {
         var subLabel = null;
-
-        if (schoolId == currentSchoolId) {
-            subLabel = Rez.Strings.SchoolSelected;
-        }
-
-        menu.addItem(
-            new WatchUi.MenuItem(label, subLabel, schoolId, {})
-        );
+        if (schoolId == currentSchoolId) { subLabel = Rez.Strings.SchoolSelected; }
+        menu.addItem(new WatchUi.MenuItem(label, subLabel, schoolId, {}));
     }
 
     function applySchoolSelection(schoolId) as Void {
         new SettingsManager().setSchoolId(schoolId);
         Application.Storage.deleteValue("sportsData");
         Application.Storage.setValue("sportsRefreshFailed", false);
-
         scheduleSportsRefresh();
-
-        if (_mainView != null) {
-            _mainView.reloadSchoolTheme();
-        }
-
+        if (_mainView != null) { _mainView.reloadSchoolTheme(); }
         WatchUi.requestUpdate();
     }
 
     function scheduleSportsRefresh() as Void {
         var refreshInterval = new Time.Duration(5 * 60);
         var lastRefresh = Background.getLastTemporalEventTime();
-
         try {
             if (lastRefresh != null) {
-                Background.registerForTemporalEvent(
-                    lastRefresh.add(refreshInterval)
-                );
+                Background.registerForTemporalEvent(lastRefresh.add(refreshInterval));
             } else {
                 Background.registerForTemporalEvent(Time.now());
             }
@@ -202,11 +85,7 @@ class AnalogOneApp extends Application.AppBase {
         Application.Storage.deleteValue("sportsData");
         Application.Storage.setValue("sportsRefreshFailed", false);
         scheduleSportsRefresh();
-
-        if (_mainView != null) {
-            _mainView.reloadSchoolTheme();
-        }
-
+        if (_mainView != null) { _mainView.reloadSchoolTheme(); }
         WatchUi.requestUpdate();
     }
 
@@ -225,11 +104,6 @@ class AnalogOneApp extends Application.AppBase {
         } else {
             Application.Storage.setValue("sportsRefreshFailed", true);
         }
-
         WatchUi.requestUpdate();
     }
-}
-
-function getApp() as AnalogOneApp {
-    return Application.getApp() as AnalogOneApp;
 }

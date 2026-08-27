@@ -12,15 +12,15 @@ VERSION="$1"
 PROJECT_DIR="${0:A:h:h}"
 MANIFEST="$PROJECT_DIR/manifest.xml"
 DIST_DIR="$PROJECT_DIR/dist"
-OUTPUT="$DIST_DIR/AnalogOne-$VERSION.iq"
+OUTPUT="$DIST_DIR/AnalogOne-College-South-$VERSION.iq"
 CHECKSUM="$OUTPUT.sha256"
 
-PRODUCTION_APP_ID="dd421c74-331e-4f10-b546-339b0d608b6f"
+PRODUCTION_APP_ID="6c548c4b-c3ca-44cc-94e5-ddb38715f562"
 SDK_CONFIG="$HOME/Library/Application Support/Garmin/ConnectIQ/current-sdk.cfg"
 DEVELOPER_KEY="$HOME/Documents/Garmin/developer_key"
 
 if ! grep -q "id=\"$PRODUCTION_APP_ID\"" "$MANIFEST"; then
-    echo "Packaging stopped: manifest.xml is not using the Analog One production app ID."
+    echo "Packaging stopped: manifest.xml is not using the College South production app ID."
     exit 1
 fi
 

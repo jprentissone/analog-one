@@ -27,7 +27,7 @@ class SettingsManager {
 
     function setSchoolId(schoolId) as Void {
         if (!SchoolIds.isSupported(schoolId)) {
-            schoolId = SchoolIds.OHIO_STATE;
+            schoolId = SchoolIds.ALABAMA;
         }
 
         Application.Properties.setValue(SCHOOL_KEY, schoolId);

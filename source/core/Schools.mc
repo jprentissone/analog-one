@@ -1,126 +1,68 @@
 (:background)
 module SchoolIds {
-    const OHIO_STATE = 1;
-    const MICHIGAN = 2;
-    const PENN_STATE = 3;
-    const MICHIGAN_STATE = 4;
-    const OREGON = 5;
-    const USC = 6;
-    const WISCONSIN = 7;
-    const IOWA = 8;
-    const WASHINGTON = 9;
-    const NEBRASKA = 10;
-    const MINNESOTA = 11;
-    const NORTHWESTERN = 12;
-    const ILLINOIS = 13;
-    const INDIANA = 14;
-    const MARYLAND = 15;
-    const PURDUE = 16;
-    const RUTGERS = 17;
-    const UCLA = 18;
+    const ALABAMA = 1;
+    const ARKANSAS = 2;
+    const AUBURN = 3;
+    const FLORIDA = 4;
+    const GEORGIA = 5;
+    const KENTUCKY = 6;
+    const LSU = 7;
+    const MISSISSIPPI_STATE = 8;
+    const MISSOURI = 9;
+    const OKLAHOMA = 10;
+    const OLE_MISS = 11;
+    const SOUTH_CAROLINA = 12;
+    const TENNESSEE = 13;
+    const TEXAS = 14;
+    const TEXAS_AM = 15;
+    const VANDERBILT = 16;
 
     function isSupported(schoolId) {
-        return schoolId == OHIO_STATE ||
-            schoolId == MICHIGAN ||
-            schoolId == PENN_STATE ||
-            schoolId == MICHIGAN_STATE ||
-            schoolId == OREGON ||
-            schoolId == USC ||
-            schoolId == WISCONSIN ||
-            schoolId == IOWA ||
-            schoolId == WASHINGTON ||
-            schoolId == NEBRASKA ||
-            schoolId == MINNESOTA ||
-            schoolId == NORTHWESTERN ||
-            schoolId == ILLINOIS ||
-            schoolId == INDIANA ||
-            schoolId == MARYLAND ||
-            schoolId == PURDUE ||
-            schoolId == RUTGERS ||
-            schoolId == UCLA;
+        return schoolId == ALABAMA || schoolId == ARKANSAS ||
+            schoolId == AUBURN || schoolId == FLORIDA ||
+            schoolId == GEORGIA || schoolId == KENTUCKY ||
+            schoolId == LSU || schoolId == MISSISSIPPI_STATE ||
+            schoolId == MISSOURI || schoolId == OKLAHOMA ||
+            schoolId == OLE_MISS || schoolId == SOUTH_CAROLINA ||
+            schoolId == TENNESSEE || schoolId == TEXAS ||
+            schoolId == TEXAS_AM || schoolId == VANDERBILT;
     }
 
     function themeForSchool(schoolId) {
-        if (schoolId == OHIO_STATE) {
-            return ThemeIds.SCARLET_NIGHT;
-        } else if (schoolId == MICHIGAN) {
-            return ThemeIds.MAIZE_BLUE;
-        } else if (schoolId == PENN_STATE) {
-            return ThemeIds.NAVY_WHITE;
-        } else if (schoolId == MICHIGAN_STATE) {
-            return ThemeIds.SPARTAN_GREEN;
-        } else if (schoolId == OREGON) {
-            return ThemeIds.OREGON_GREEN;
-        } else if (schoolId == USC) {
-            return ThemeIds.USC_CARDINAL;
-        } else if (schoolId == WISCONSIN) {
-            return ThemeIds.WISCONSIN_RED;
-        } else if (schoolId == IOWA) {
-            return ThemeIds.IOWA_BLACK_GOLD;
-        } else if (schoolId == WASHINGTON) {
-            return ThemeIds.WASHINGTON_PURPLE;
-        } else if (schoolId == NEBRASKA) {
-            return ThemeIds.NEBRASKA_SCARLET;
-        } else if (schoolId == MINNESOTA) {
-            return ThemeIds.MINNESOTA_MAROON;
-        } else if (schoolId == NORTHWESTERN) {
-            return ThemeIds.NORTHWESTERN_PURPLE;
-        } else if (schoolId == ILLINOIS) {
-            return ThemeIds.ILLINOIS_ORANGE;
-        } else if (schoolId == INDIANA) {
-            return ThemeIds.INDIANA_CRIMSON;
-        } else if (schoolId == MARYLAND) {
-            return ThemeIds.MARYLAND_RED;
-        } else if (schoolId == PURDUE) {
-            return ThemeIds.PURDUE_BLACK_GOLD;
-        } else if (schoolId == RUTGERS) {
-            return ThemeIds.RUTGERS_SCARLET;
-        } else if (schoolId == UCLA) {
-            return ThemeIds.UCLA_BLUE_GOLD;
-        }
-
-        return ThemeIds.SCARLET_NIGHT;
+        if (schoolId == ARKANSAS) { return ThemeIds.ARKANSAS_CARDINAL; }
+        else if (schoolId == AUBURN) { return ThemeIds.AUBURN_NAVY; }
+        else if (schoolId == FLORIDA) { return ThemeIds.FLORIDA_BLUE; }
+        else if (schoolId == GEORGIA) { return ThemeIds.GEORGIA_RED; }
+        else if (schoolId == KENTUCKY) { return ThemeIds.KENTUCKY_BLUE; }
+        else if (schoolId == LSU) { return ThemeIds.LSU_PURPLE; }
+        else if (schoolId == MISSISSIPPI_STATE) { return ThemeIds.MISSISSIPPI_STATE_MAROON; }
+        else if (schoolId == MISSOURI) { return ThemeIds.MISSOURI_BLACK_GOLD; }
+        else if (schoolId == OKLAHOMA) { return ThemeIds.OKLAHOMA_CRIMSON; }
+        else if (schoolId == OLE_MISS) { return ThemeIds.OLE_MISS_NAVY; }
+        else if (schoolId == SOUTH_CAROLINA) { return ThemeIds.SOUTH_CAROLINA_GARNET; }
+        else if (schoolId == TENNESSEE) { return ThemeIds.TENNESSEE_ORANGE; }
+        else if (schoolId == TEXAS) { return ThemeIds.TEXAS_BURNT_ORANGE; }
+        else if (schoolId == TEXAS_AM) { return ThemeIds.TEXAS_AM_MAROON; }
+        else if (schoolId == VANDERBILT) { return ThemeIds.VANDERBILT_BLACK_GOLD; }
+        return ThemeIds.ALABAMA_CRIMSON;
     }
 
     function fromLegacyTheme(themeId) {
-        if (themeId == ThemeIds.SCARLET_NIGHT) {
-            return OHIO_STATE;
-        } else if (themeId == ThemeIds.MAIZE_BLUE) {
-            return MICHIGAN;
-        } else if (themeId == ThemeIds.NAVY_WHITE) {
-            return PENN_STATE;
-        } else if (themeId == ThemeIds.SPARTAN_GREEN) {
-            return MICHIGAN_STATE;
-        } else if (themeId == ThemeIds.OREGON_GREEN) {
-            return OREGON;
-        } else if (themeId == ThemeIds.USC_CARDINAL) {
-            return USC;
-        } else if (themeId == ThemeIds.WISCONSIN_RED) {
-            return WISCONSIN;
-        } else if (themeId == ThemeIds.IOWA_BLACK_GOLD) {
-            return IOWA;
-        } else if (themeId == ThemeIds.WASHINGTON_PURPLE) {
-            return WASHINGTON;
-        } else if (themeId == ThemeIds.NEBRASKA_SCARLET) {
-            return NEBRASKA;
-        } else if (themeId == ThemeIds.MINNESOTA_MAROON) {
-            return MINNESOTA;
-        } else if (themeId == ThemeIds.NORTHWESTERN_PURPLE) {
-            return NORTHWESTERN;
-        } else if (themeId == ThemeIds.ILLINOIS_ORANGE) {
-            return ILLINOIS;
-        } else if (themeId == ThemeIds.INDIANA_CRIMSON) {
-            return INDIANA;
-        } else if (themeId == ThemeIds.MARYLAND_RED) {
-            return MARYLAND;
-        } else if (themeId == ThemeIds.PURDUE_BLACK_GOLD) {
-            return PURDUE;
-        } else if (themeId == ThemeIds.RUTGERS_SCARLET) {
-            return RUTGERS;
-        } else if (themeId == ThemeIds.UCLA_BLUE_GOLD) {
-            return UCLA;
-        }
-
-        return OHIO_STATE;
+        if (themeId == ThemeIds.ARKANSAS_CARDINAL) { return ARKANSAS; }
+        else if (themeId == ThemeIds.AUBURN_NAVY) { return AUBURN; }
+        else if (themeId == ThemeIds.FLORIDA_BLUE) { return FLORIDA; }
+        else if (themeId == ThemeIds.GEORGIA_RED) { return GEORGIA; }
+        else if (themeId == ThemeIds.KENTUCKY_BLUE) { return KENTUCKY; }
+        else if (themeId == ThemeIds.LSU_PURPLE) { return LSU; }
+        else if (themeId == ThemeIds.MISSISSIPPI_STATE_MAROON) { return MISSISSIPPI_STATE; }
+        else if (themeId == ThemeIds.MISSOURI_BLACK_GOLD) { return MISSOURI; }
+        else if (themeId == ThemeIds.OKLAHOMA_CRIMSON) { return OKLAHOMA; }
+        else if (themeId == ThemeIds.OLE_MISS_NAVY) { return OLE_MISS; }
+        else if (themeId == ThemeIds.SOUTH_CAROLINA_GARNET) { return SOUTH_CAROLINA; }
+        else if (themeId == ThemeIds.TENNESSEE_ORANGE) { return TENNESSEE; }
+        else if (themeId == ThemeIds.TEXAS_BURNT_ORANGE) { return TEXAS; }
+        else if (themeId == ThemeIds.TEXAS_AM_MAROON) { return TEXAS_AM; }
+        else if (themeId == ThemeIds.VANDERBILT_BLACK_GOLD) { return VANDERBILT; }
+        return ALABAMA;
     }
 }
