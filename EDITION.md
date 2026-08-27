@@ -6,7 +6,8 @@ Analog One design system.
 ## Identity
 
 - Project folder: `AnalogOneCollegeSouth`
-- Connect IQ app ID: `6c548c4b-c3ca-44cc-94e5-ddb38715f562`
+- Production app ID: `fb93fef7-ebb9-4771-9695-f79d693810d3`
+- Beta app ID: `6c548c4b-c3ca-44cc-94e5-ddb38715f562`
 - Store-facing name: `Analog One - College South`
 - Internal resource name: `Analog One South`
 

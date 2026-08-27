@@ -4,9 +4,9 @@
 
 - Status: production ready
 - Verified: August 27, 2026
-- Connect IQ app ID: `6c548c4b-c3ca-44cc-94e5-ddb38715f562`
+- Connect IQ production app ID: `fb93fef7-ebb9-4771-9695-f79d693810d3`
 - Package: `dist/AnalogOne-College-South-1.0.0.iq`
-- SHA-256: `a94ce9fa3593bc56f2740eb8657a643cb056165e103af0c613035bcf66f2ee32`
+- SHA-256: `4463a2255dc619ea9447c45567db818b8453c33e0b66c8c65e86352387e176be`
 
 Verification completed:
 

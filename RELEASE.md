@@ -2,10 +2,12 @@
 
 ## Release identities
 
-- App ID: `6c548c4b-c3ca-44cc-94e5-ddb38715f562`
+- Production app ID: `fb93fef7-ebb9-4771-9695-f79d693810d3`
+- Beta app ID: `6c548c4b-c3ca-44cc-94e5-ddb38715f562`
 
 College South is a separate Connect IQ app and must never reuse the College
-North app ID. A separate beta ID can be introduced later if needed.
+North app ID. Garmin also requires its beta and production listings to use
+different app IDs.
 
 ## Package a beta
 
@@ -21,7 +23,7 @@ This creates:
 - `dist/AnalogOne-College-South-Beta-1.4.iq.sha256`
 
 The script stops before building if the manifest is not using the College South
-app ID.
+beta app ID. Switch the manifest to the beta ID before creating a beta package.
 
 ## Package a production release candidate
 
@@ -36,8 +38,9 @@ This creates:
 - `dist/AnalogOne-College-South-1.0.0.iq`
 - `dist/AnalogOne-College-South-1.0.0.iq.sha256`
 
-The production script stops if the manifest does not contain the production app
-ID or if temporary marketing-preview or fake-score markers remain in source.
+The production script stops if the manifest does not contain the College South
+production app ID or if temporary marketing-preview or fake-score markers remain
+in source.
 
 ## Production listing metadata
 

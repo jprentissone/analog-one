@@ -15,7 +15,7 @@ DIST_DIR="$PROJECT_DIR/dist"
 OUTPUT="$DIST_DIR/AnalogOne-College-South-$VERSION.iq"
 CHECKSUM="$OUTPUT.sha256"
 
-PRODUCTION_APP_ID="6c548c4b-c3ca-44cc-94e5-ddb38715f562"
+PRODUCTION_APP_ID="fb93fef7-ebb9-4771-9695-f79d693810d3"
 SDK_CONFIG="$HOME/Library/Application Support/Garmin/ConnectIQ/current-sdk.cfg"
 DEVELOPER_KEY="$HOME/Documents/Garmin/developer_key"
 
